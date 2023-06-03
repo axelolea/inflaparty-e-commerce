@@ -1,6 +1,7 @@
 # inflaparty-e-commerce
 ## Proyecto integrador de Equipo "Descompilados", de la Cohorte 27 de Generation Mx.
 
+
 - [@axelolea](https://github.com/axelolea)
 - [@Kassdominguez02](https://github.com/Kassdominguez02)
 - [@YeimiMC](https://github.com/YeimiMC)
