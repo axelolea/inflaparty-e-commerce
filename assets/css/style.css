@@ -1,0 +1,124 @@
+/* Estilo para la barra de navegación */
+.navbar {
+  background-color: var(--primary-color); /* Color de fondo */
+  padding: 5px; /* Espaciado interno */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Estilos de marca para pantallas grandes */
+@media (min-width: 768px) {
+  #logo-large {
+    display: inline;
+    height: 20px;
+    width: 110px;
+    padding: 0;
+  }
+
+  #logo-small {
+    display: none;
+  }
+}
+
+/* Estilos de marca para pantallas pequeñas */
+@media (max-width: 767px) {
+  #logo-large {
+    display: none;
+  }
+
+  #logo-small {
+    display: inline;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    padding-bottom: 3px;
+  }
+  .navbar {
+    padding: 5.2px;
+  }
+}
+
+.navbar .custom-icon {
+  color: white !important; /* Cambiar el color del icono a blanco */
+}
+
+/* Estilo para el botón de hamburguesa */
+.navbar-toggler {
+  margin-right: -15px;
+  border-style: none;
+  color: var(--primary-color);
+}
+
+/* Estilo para los elementos del menú */
+.navbar-nav .nav-link {
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: small;
+  margin-top: 3px;
+}
+
+/* Estilo para los elementos del menú desplegable */
+.dropdown-menu .dropdown-item {
+}
+
+/* Estilo para el botón "Acceder" */
+.navbar-nav .btn {
+  width: 75px;
+  height: 20px;
+  padding-top: 0px;
+  font-size: small;
+  margin-top: 8px;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Estilos del boton de acceder para pantallas grandes */
+@media (min-width: 768px) {
+  .navbar-nav .btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-40%);
+    transform: translateZ(100%);
+    right: 0;
+    margin-top: -0%;
+    margin-right: 20px;
+  }
+}
+
+/* Estilos para el footer en pantallas grandes */
+footer {
+  color: var(--white-color);
+  padding: 20px;
+  text-align: left;
+  font-size: 10px;
+}
+
+/* Estilos para el footer en pantallas pequeñas */
+@media (max-width: 767px) {
+  footer {
+    padding: 10px;
+  }
+
+  .col-6 {
+    font-size: 8px;
+    margin: 0%;
+    display: grid;
+  }
+
+  footer ul {
+    margin-bottom: 10px;
+  }
+
+  footer ul li {
+    display: inline-block;
+  }
+
+  footer ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 10px;
+  }
+}
