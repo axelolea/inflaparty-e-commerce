@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
 
+/* Variables */
 :root
 {
+    /* colores */
     --black-color: #010400;
     --grey-color: #30332E;
     --primary-color: #EC058E;
@@ -10,24 +12,33 @@
     --white-color: #FFFBFC;
 }
 
+/* Asignar font Fredoka a todos los elementos */
 body
 {
+    min-height: 100dvh;
     font-family: 'Fredoka', sans-serif;
 }
 
+/* Estilos para el footer */
 footer
 {
-    position: absolute;
-    bottom: 0;
+    text-align: left;
+    font-size: 16px;
     color: var(--white-color);
     background-color: var(--grey-color);    
 }
 
+/* Listas enfooter */
 footer ul
 {
     list-style-type: none;
 }
 
+footer ul li {
+    display: inline-block;
+}
+
+/* anchor */
 a
 {
     color: inherit;
@@ -36,4 +47,56 @@ a
 a:link
 {
     text-decoration-line: none;
+}
+
+a:hover
+{
+    color: var(--grey-color);
+    transition: 200ms;
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+    background-color: var(--primary-color); /* Color de fondo */
+}
+
+/* Estilos de marca */
+#logo-large
+{
+  height: 20px;
+  width: 110px;
+}
+
+#logo-small {
+  height: 20px;
+  width: 20px;
+}
+
+/* Estilo para los elementos del menú */
+.navbar-nav .nav-link {
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Cambiando estilos de bootstrap */
+.navbar-toggler-icon {
+    /* TODO Change color navbar burger */
+}  
+
+/* Desactivar estilos de bootstrap */
+
+.navbar-toggler
+{
+    border: none;
+}
+
+/* Estilo para el botón "Acceder" eliminar al implementar botonesde mariana*/
+.navbar-collapse .btn {
+    padding: 6px 20px;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-weight: 500;
 }
