@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+/*Boton de Confirmar Compra*/
+.buttonConfirmarCompra{
+    /*Background color: Yellow*/
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    margin-top: 10px;
+    /*Redondear todo los bordes */
+    border-radius: 50px;
+    height: 40px;
+    text-align: center;
+    border: none ;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position:relative;
+    font-size:20px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+
+.buttonConfirmarCompra:hover {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    transform: translateY(2px);
+} 
+
+
+.buttonConfirmarCompra:before,.buttonConfirmarCompra:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:15px;
+    height:2px;
+    width:0;
+    background: var(--secondary-color);
+    transition:400ms ease all;
+  }
+  .buttonConfirmarCompra:after{
+    right:inherit;
+    top:inherit;
+    left: 15px;
+    bottom:0;
+  }
+  .buttonConfirmarCompra:hover:before,.buttonConfirmarCompra:hover:after{
+    width:90%;
+    transition:800ms ease all;
+  }
+
+/*Fin de Boton Comfirmar Compra*/
+
+
+
+/*Boton de Agregar Imagen*/
+.buttonAgregarImagen{
+    /*Background color: Yellow*/
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    margin-top: 10px;
+    /*Redondear todo los bordes */
+    border-radius: 50px;
+    height: 40px;
+    width: 250px;
+    text-align: center;
+    border: none ;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position:relative;
+    font-size:20px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+
+.buttonAgregarImagen:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transform: translateY(2px);
+} 
+
+
+.buttonAgregarImagen:before,.buttonAgregarImagen:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:15px;
+    height:2px;
+    width:0;
+    background: var(--white-color);
+    transition:400ms ease all;
+  }
+  .buttonAgregarImagen:after{
+    right:inherit;
+    top:inherit;
+    left: 15px;
+    bottom:0;
+  }
+  .buttonAgregarImagen:hover:before,.buttonAgregarImagen:hover:after{
+    width:88%;
+    transition:800ms ease all;
+  }
+
+
+
+/*Boton de Agregar al Carrito*/
+.buttonAgregarAlCarrito{
+    /*Background color: Yellow*/
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    margin-top: 10px;
+    /*Redondear todo los bordes */
+    border-radius: 50px;
+    height: 40px;
+    width: 250px;
+    text-align: center;
+    border: none ;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position:relative;
+    font-size:20px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+
+.buttonAgregarAlCarrito:hover {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    transform: translateY(2px);
+} 
+
+
+.buttonAgregarAlCarrito:before,.buttonAgregarAlCarrito:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:15px;
+    height:2px;
+    width:0;
+    background: var(--secondary-color);
+    transition:400ms ease all;
+  }
+  .buttonAgregarAlCarrito:after{
+    right:inherit;
+    top:inherit;
+    left: 15px;
+    bottom:0;
+  }
+  .buttonAgregarAlCarrito:hover:before,.buttonAgregarAlCarrito:hover:after{
+    width:88%;
+    transition:800ms ease all;
+  }
+
+
+/*Boton de Registrar*/
+.buttonRegistrarse{
+    /*Background color: Yellow*/
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    margin-top: 10px;
+    /*Redondear todo los bordes */
+    border-radius: 50px;
+    height: 40px;
+    width: 155px;
+    text-align: center;
+    border: none ;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position:relative;
+    font-size:20px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+
+.buttonRegistrarse:hover {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    transform: translateY(2px);
+} 
+
+
+.buttonRegistrarse:before,.buttonRegistrarse:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:15px;
+    height:2px;
+    width:0;
+    background: var(--secondary-color);
+    transition:400ms ease all;
+  }
+  .buttonRegistrarse:after{
+    right:inherit;
+    top:inherit;
+    left: 15px;
+    bottom:0;
+  }
+  .buttonRegistrarse:hover:before,.buttonRegistrarse:hover:after{
+    width:84%;
+    transition:800ms ease all;
+  }
+
+
+/*Boton de Enviar*/
+.buttonEnviar{
+    /*Background color: Yellow*/
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    margin-top: 10px;
+    /*Redondear todo los bordes */
+    border-radius: 50px;
+    height: 40px;
+    width: 155px;
+    text-align: center;
+    border: none ;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position:relative;
+    font-size:20px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+
+.buttonEnviar:hover {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    transform: translateY(2px);
+} 
+
+
+.buttonEnviar:before,.buttonEnviar:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:15px;
+    height:2px;
+    width:0;
+    background: var(--secondary-color);
+    transition:400ms ease all;
+  }
+  .buttonEnviar:after{
+    right:inherit;
+    top:inherit;
+    left: 15px;
+    bottom:0;
+  }
+  .buttonEnviar:hover:before,.buttonEnviar:hover:after{
+    width:80%;
+    transition:800ms ease all;
+  }
+/*Fin Boton de Enviar*/
+
+
+/*Boton de Ingresar*/
+.buttonIngresar{
+    /*Background color: Yellow*/
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    margin-top: 10px;
+    /*Redondear todo los bordes */
+    border-radius: 50px;
+    height: 40px;
+    text-align: center;
+    border: none ;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position:relative;
+    font-size:20px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+
+.buttonIngresar:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transform: translateY(2px);
+} 
+
+
+.buttonIngresar:before,.buttonIngresar:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:15px;
+    height:2px;
+    width:0;
+    background: var(--white-color);
+    transition:400ms ease all;
+  }
+  .buttonIngresar:after{
+    right:inherit;
+    top:inherit;
+    left: 15px;
+    bottom:0;
+  }
+  .buttonIngresar:hover:before,.buttonIngresar:hover:after{
+    width:80%;
+    transition:800ms ease all;
+  }
+  
+ 
+
+/*Boton de Acceder */
+.buttonAcceder{
+    /*Background color: white*/
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    margin-top: 10px;
+    /*Redondear todo los bordes */
+    border-radius: 50px;
+    font-weight: 500;
+    height: 40px;
+    text-align: center;
+    border: none ;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position:relative;
+    font-size:20px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+
+.buttonAcceder:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transform: translateY(2px);
+} 
+
+
+.buttonAcceder:before,.buttonAcceder:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:15px;
+    height:2px;
+    width:0;
+    background: var(--white-color);
+    transition:400ms ease all;
+  }
+  .buttonAcceder:after{
+    right:inherit;
+    top:inherit;
+    left: 15px;
+    bottom:0;
+  }
+  .buttonAcceder:hover:before,.buttonAcceder:hover:after{
+    width:80%;
+    transition:800ms ease all;
+  }
+
+
+/*Boton de Mostrar Todo*/
+.buttonMostrarTodo{
+    background: linear-gradient(white 23%, var(--third-color) 7%);
+    color: var(--white-color);
+    border: none ;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 10px 10px 0 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position:relative;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+.buttonMostrarTodo:hover {
+    transform: translateY(2px);
+} 
+
+/*Boton Precio*/
+.buttonPrecio{
+    /*Background color: white*/
+    background-color: var(--third-color);
+    color: var(--white-color);
+    margin-top: 10px;
+    /*Redondear todo los bordes */
+    border-radius: 0px 20px 20px 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    border: none ;
+    height: 35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position:relative;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+
+.buttonPrecio:hover {
+    background-color: var(--white-color);
+    color: var(--third-color);
+    transform: translateY(2px);
+} 
+
+/*Fin button de Precio*/
+
+
+/*Button Disponabilidad*/
+.wrapper .buttonDisonabilidad{
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: var(--white-color);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rbga(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+} 
+
+.wrapper .buttonDisonabilidad:hover{
+    /*El ancho del Hover*/
+    width: 200px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--primary-color);
+    transform: translateY(2px);
+}
+
+.wrapper .buttonDisonabilidad .icon{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 50px;
+    border-radius: 50px;
+}
+
+.wrapper .buttonDisonabilidad .icon i{
+    font-size: 25px;
+    line-height: 50px;
+    color: var(--primary-color);
+}
+
+.wrapper .buttonDisonabilidad span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    color: var(--primary-color);
+}
+/*Fin de Boton Disponabilidad*/
+
+
+/*Boton Carrito*/
+.wrapperCarrito .buttonCarrito{
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: var(--white-color);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rbga(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapperCarrito .buttonCarrito:hover{
+    width: 130px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--primary-color);
+    transform: translateY(2px);
+}
+
+.wrapperCarrito .buttonCarrito .iconS{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 50px;
+    border-radius: 50px;
+}
+
+.wrapperCarrito .buttonCarrito .iconS i{
+    font-size: 25px;
+    line-height: 50px;
+    color: var(--primary-color);
+}
+
+.wrapperCarrito .buttonCarrito span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    color: var(--primary-color);
+}
+
+
+/*BOTONES Estatico FONDO AMARILLO & ICONOS BLANCO*/
+.wrapperCarritoEstatico .buttonCarritoEstatico{
+    display: inline-block;
+    margin-top: 15px;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: var(--secondary-color);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-out;
+}
+
+.wrapperCarritoEstatico .buttonCarritoEstatico:hover {
+    transform: translateY(2px);
+}
+
+.wrapperCarritoEstatico .buttonCarritoEstatico .iconSE{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 40px;
+    border-radius: 40px;
+}
+
+.wrapperCarritoEstatico .buttonCarritoEstatico .iconSE i{
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--white-color);
+}
+/*Fin BOTONES Estatico*/
+
+
+/*BOTONES Estatico FONDO BLANCO & ICONOS ROSADAS*/
+.wrapperCarritoEstaticoPink .buttonCarritoEstaticoPink{
+    display: inline-block;
+    margin-top: 15px;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: var(--white-color);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-out;
+}
+
+.wrapperCarritoEstaticoPink .buttonCarritoEstaticoPink:hover {
+    transform: translateY(2px);
+}
+
+.wrapperCarritoEstaticoPink .buttonCarritoEstaticoPink .iconSEP{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 40px;
+    border-radius: 40px;
+}
+
+.wrapperCarritoEstaticoPink .buttonCarritoEstaticoPink .iconSEP i{
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--primary-color);
+}
+
+
+/*BOTON CALENDARIO Estatico FONDO AMARILLO & ICONO BLANCO*/
+.wrapperCalendario .buttonCalendarioEstatico{
+    display: inline-block;
+    margin-top: 15px;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: var(--secondary-color);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-out;
+
+}
+
+.wrapperCalendario .buttonCalendarioEstatico:hover {
+    transform: translateY(2px);
+}
+
+.wrapperCalendario .buttonCalendarioEstatico .iconSC{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 60px;
+    border-radius: 40px;
+}
+
+.wrapperCalendario .buttonCalendarioEstatico .iconSC i{
+    font-size: 35px;
+    line-height: 60px;
+    color: var(--white-color);
+}
+
