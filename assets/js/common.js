@@ -1,23 +1,57 @@
-const rutaNavbar = 'navbar.html'
-const rutaFooter = 'footer.html'
+const rutaNavbar = './assets/templates/navbar.html'
+const rutaFooter = './assets/templates/footer.html'
 
 
-function lecturaHTML(ruta, callback){
-    fetch(ruta)
-        .then(resp => {
-            if(!resp.ok) throw new Error(`No se lee el documento ${ruta}`)
-            return resp.text()
-        })
-        .then(text => {
-            const component = new DOMParser().parseFromString(text, 'text/html')
-            callback(component.body.firstChild)
-        })
+export async function lecturaHTML(ruta){
+
+    // fetch al archivo html
+    const resp = await fetch(ruta)
+    
+    // revisar si la peticion fue correcta
+    if(!resp.ok) throw new Error(`No se lee el documento ${ruta}`)
+    
+    // convierto mi peticion a string
+    const text = await resp.text()
+
+    return text
 }
 
+// body del dom
 const body = document.querySelector('body')
 
-const injectNavbar = component => body.prepend(component)
-const injectFooter = component => body.prepend(component)
+// funciones inyectoras
+export const injectFirstChild = component => body.prepend(component)
+export const injectLastChild = component => body.append(component)
 
-lecturaHTML(rutaNavbar, injectNavbar)
-lecturaHTML(rutaFooter, injectFooter)
+export const parseComponent = text => {
+    // Creo un nuevo dom e integro mi text con parseFromString
+    const dom2 = new DOMParser().parseFromString(text, 'text/html')
+    // a mi no me interesa el dom nuevo, me interesa el contenido que parseo
+
+    // obtengo el elemento parseado
+    const component = dom2.body.firstChild
+
+    // retorno el elemento (por si una funcion async la nesesita)
+    return component
+}
+
+async function createNavbarFooter(){
+    // envocacion de funciones
+    const navbarText = await lecturaHTML(rutaNavbar)
+    const footerText = await lecturaHTML(rutaFooter)
+
+    const navbar = parseComponent(navbarText);
+    const footer = parseComponent(footerText);
+
+    injectFirstChild(navbar)
+    injectLastChild(footer)
+
+    
+    const heightNavbar = navbar.offsetHeight
+    const heightFooter = footer.offsetHeight
+    console.log(heightNavbar)
+    console.log(heightFooter)
+    // body.style.paddingTop = heightNavbar;
+}
+
+createNavbarFooter()
