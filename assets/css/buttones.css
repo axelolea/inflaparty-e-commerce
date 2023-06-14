@@ -6,7 +6,6 @@
     /*Background color: Yellow*/
     background-color: var(--secondary-color);
     color: var(--white-color);
-    margin-top: 10px;
     /*Redondear todo los bordes */
     border-radius: 50px;
     height: 40px;
@@ -60,7 +59,7 @@
     /*Background color: Yellow*/
     background-color: var(--white-color);
     color: var(--secondary-color);
-    margin-top: 10px;
+    margin: 8px;
     /*Redondear todo los bordes */
     border-radius: 50px;
     height: 40px;
@@ -113,7 +112,6 @@
     /*Background color: Yellow*/
     background-color: var(--secondary-color);
     color: var(--white-color);
-    margin-top: 10px;
     /*Redondear todo los bordes */
     border-radius: 50px;
     height: 40px;
@@ -165,7 +163,6 @@
     /*Background color: Yellow*/
     background-color: var(--secondary-color);
     color: var(--white-color);
-    margin-top: 10px;
     /*Redondear todo los bordes */
     border-radius: 50px;
     height: 40px;
@@ -217,7 +214,6 @@
     /*Background color: Yellow*/
     background-color: var(--secondary-color);
     color: var(--white-color);
-    margin-top: 10px;
     /*Redondear todo los bordes */
     border-radius: 50px;
     height: 40px;
@@ -270,7 +266,6 @@
     /*Background color: Yellow*/
     background-color: var(--white-color);
     color: var(--secondary-color);
-    margin-top: 10px;
     /*Redondear todo los bordes */
     border-radius: 50px;
     height: 40px;
@@ -322,7 +317,6 @@
     /*Background color: white*/
     background-color: var(--white-color);
     color: var(--primary-color);
-    margin-top: 10px;
     /*Redondear todo los bordes */
     border-radius: 50px;
     font-weight: 500;
@@ -341,32 +335,12 @@
 
 
 .buttonAcceder:hover {
-    background-color: var(--primary-color);
-    color: var(--white-color);
+  
     transform: translateY(2px);
 } 
 
 
-.buttonAcceder:before,.buttonAcceder:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:15px;
-    height:2px;
-    width:0;
-    background: var(--white-color);
-    transition:400ms ease all;
-  }
-  .buttonAcceder:after{
-    right:inherit;
-    top:inherit;
-    left: 15px;
-    bottom:0;
-  }
-  .buttonAcceder:hover:before,.buttonAcceder:hover:after{
-    width:80%;
-    transition:800ms ease all;
-  }
+
 
 
 /*Boton de Mostrar Todo*/
@@ -396,7 +370,6 @@
     /*Background color: white*/
     background-color: var(--third-color);
     color: var(--white-color);
-    margin-top: 10px;
     /*Redondear todo los bordes */
     border-radius: 0px 20px 20px 0px;
     font-family: 'Open Sans', sans-serif;
@@ -423,7 +396,6 @@
 
 /*Button Disponabilidad*/
 .wrapper .buttonDisonabilidad{
-    margin-top: 15px;
     height: 50px;
     width: 50px;
     margin: 0 5px;
@@ -470,7 +442,6 @@
 
 /*Boton Carrito*/
 .wrapperCarrito .buttonCarrito{
-    margin-top: 25px;
     height: 50px;
     width: 50px;
     margin: 0 5px;
@@ -516,7 +487,6 @@
 /*BOTONES Estatico FONDO AMARILLO & ICONOS BLANCO*/
 .wrapperCarritoEstatico .buttonCarritoEstatico{
     display: inline-block;
-    margin-top: 15px;
     height: 40px;
     width: 40px;
     margin: 0 5px;
@@ -553,7 +523,6 @@
 /*BOTONES Estatico FONDO BLANCO & ICONOS ROSADAS*/
 .wrapperCarritoEstaticoPink .buttonCarritoEstaticoPink{
     display: inline-block;
-    margin-top: 15px;
     height: 40px;
     width: 40px;
     margin: 0 5px;
@@ -589,7 +558,6 @@
 /*BOTON CALENDARIO Estatico FONDO AMARILLO & ICONO BLANCO*/
 .wrapperCalendario .buttonCalendarioEstatico{
     display: inline-block;
-    margin-top: 15px;
     height: 60px;
     width: 60px;
     margin: 0 5px;
