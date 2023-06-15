@@ -48,11 +48,12 @@ function validarFormulario(event) {
         return regex.test(telefono);
     }
 
-    if (validarTelefono(telefono)) {
+    if (!validarTelefono(telefono) || telefono.length == 0) {
 
-        alert("el numero es correcto");
+        alert("El dato que ingreso no es un numero de telefono correcto, por favor ingrese un numero de 10 digitos");
 
-    } else { alert("El dato que ingreso no es un numero de telefono"); }
+        return
+    }
 
 
     //validacion del mensaje
@@ -62,11 +63,13 @@ function validarFormulario(event) {
         return
     }
 
-    alert("tu mensanje se ha enviado con exito");
 
-
-    console.log(telefono);
+    alert("su mensaje se ha enviado con exito");
+    this.submit();
 
 }
+
+
+
 
 
