@@ -1,0 +1,33 @@
+.container{
+    margin-top: 50px;
+}
+
+
+#tituloLogin{
+    margin-bottom: 25px;
+}
+
+button{
+    display:inline
+}
+
+.loginForm{
+    margin: 10PX;
+    text-align: left;
+}
+
+.form-label{
+    font-weight:bolder
+}
+
+.form-control{
+        
+        background-color: rgba(90, 89, 89, 0.144);
+       width: 500px;
+    
+
+    
+}
+
+
+ 
