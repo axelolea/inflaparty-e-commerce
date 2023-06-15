@@ -1,0 +1,132 @@
+[
+    {
+        "id": 1,
+        "nombre": "El nombre de inflable 1",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 2,
+        "nombre": "El nombre de inflable 2",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "type": "inflable"
+    },
+    {
+        "id": 3,
+        "nombre": "El nombre de inflable 3",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "type": "inflable"
+    },
+    {
+        "id": 4,
+        "nombre": "El nombre de inflable 4",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "type": "inflable"
+    },
+    {
+        "id": 5,
+        "nombre": "El nombre de inflable 5",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "type": "inflable"
+    },
+    {
+        "id": 6,
+        "nombre": "El nombre de inflable 6",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "type": "inflable"
+    },
+    {
+        "id": 7,
+        "nombre": "El nombre de inflable 7",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "type": "inflable"
+    },
+    {
+        "id": 8,
+        "nombre": "El nombre de inflable 8",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "type": "inflable"
+    },
+    {
+        "id": 9,
+        "nombre": "El nombre de inflable 9",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "type": "inflable"
+    },
+    {
+        "id": 10,
+        "nombre": "El nombre de inflable 10",
+        "imagenes": {
+            "small-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "medium-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU",
+            "large-image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sZU837Y_r7mfFKWZkOV-rJoaG0cASv6k-Q&usqp=CAU"
+        },
+        "precio": 400,
+        "estrellas": 5.0,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "type": "inflable"
+    }
+]
