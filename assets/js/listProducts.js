@@ -12,7 +12,9 @@ fetch(listProductosURL)//con fetch() vamos realizar una solicitud HTTP a un arch
   .then(json => {
     json.forEach(element => {
       console.log(element.nombre);//se muestra el nombre de cada elemento en la consola 
-    });
+    }); 
+
+    //ERROR: Aquí hay que crear componentes. No sirve porque está llamando al JSON en lugar de los componentes
   })
   .catch(error => {
     console.log("Error:", error);//Si ocurre algún error durante el proceso, se captura y se muestra en la consola
