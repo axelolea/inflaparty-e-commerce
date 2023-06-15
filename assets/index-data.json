@@ -1,0 +1,47 @@
+{
+    "carrousel": [
+        "https://live.staticflickr.com/65535/52976257423_340fe6b7ec_b.jpg",
+        "https://live.staticflickr.com/65535/52976174545_6639f5249e_b.jpg",
+        "https://live.staticflickr.com/65535/52975950229_52bf3da045_b.jpg",
+        "https://live.staticflickr.com/65535/52975881466_ac09f84c84_b.jpg",
+        "https://live.staticflickr.com/65535/52976250125_47a7fe29c4_b.jpg"
+    ],
+    "inflables": [
+        {
+            "image": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "name": "Inflable 1",
+            "price": 122,
+            "score": 5.0
+        },
+        {
+            "image": "https://live.staticflickr.com/65535/52975804976_08cc447a38_c.jpg",
+            "name": "Inflable 2",
+            "price": 122,
+            "score": 5.0
+        },
+        {
+            "image": "https://live.staticflickr.com/65535/52975949914_e74a96a8a9_c.jpg",
+            "name": "Inflable 3",
+            "price": 122,
+            "score": 5.0
+        },
+        {
+            "image": "https://live.staticflickr.com/65535/52976257193_feefb1a2ab_c.jpg",
+            "name": "Inflable 4",
+            "price": 122,
+            "score": 5.0
+        },
+        {
+            "image": "https://live.staticflickr.com/65535/52975949909_27b96d9f69_c.jpg",
+            "name": "Inflable 5",
+            "price": 122,
+            "score": 5.0
+        },
+        {
+            "image": "https://live.staticflickr.com/65535/52975949534_0215a8bb1c_n.jpg",
+            "name": "Inflable 6",
+            "price": 122,
+            "score": 5.0
+        }
+    ]
+}

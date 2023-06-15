@@ -1,0 +1,21 @@
+
+.form-control{
+    background-color: gainsboro;
+    width: 500px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
