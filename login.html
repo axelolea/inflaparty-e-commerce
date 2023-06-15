@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
     <!--CSS Botones-->
-    <link rel="stylesheet" href="./assets/css/buttones.css">
+    <link rel="stylesheet" href="./assets/css/buttons.css">
     <!-- Local CSS COMMON -->
     <link rel="stylesheet" href="assets/css/common.css">
     <!-- Link CSS lOGIN -->
@@ -40,7 +40,7 @@
             <div class="loginForm" id="password">
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label" id="password">Contraseña</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                    <input type="password" class="form-control" id="formGroupExampleInput2"
                         placeholder="Ingrese su contraseña">
                 </div>
             </div>
@@ -48,13 +48,15 @@
 
         <div class="botones">
             <!--Button de Ingresar-->
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <button type="button" class="btn buttonIngresar">Ingresar</button>
             </div>
 
             <!--Button de Registrar-->
             <div class="col-md-4">
-                <button class="buttonRegistrarse ">Registrar</button>
+                <a href="/register.html">
+                    <button class="buttonAmarillo ">Registrar</button>
+                </a>
             </div>
             <!--Fin button de Registrar-->
         </div>
