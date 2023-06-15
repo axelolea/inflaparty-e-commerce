@@ -47,11 +47,13 @@ async function createNavbarFooter(){
     injectLastChild(footer)
 
     
-    const heightNavbar = navbar.offsetHeight
-    const heightFooter = footer.offsetHeight
-    console.log(heightNavbar)
-    console.log(heightFooter)
-    // body.style.paddingTop = heightNavbar;
+    // const heightFooter = footer.offsetHeight
+    const getNavbarHeight = () => `${navbar.offsetHeight}px`
+    const resizePadding = () => body.style.paddingTop = getNavbarHeight();
+    
+    resizePadding()
+    
+    window.addEventListener("resize", resizePadding)
 }
 
 createNavbarFooter()
