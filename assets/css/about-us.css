@@ -1,0 +1,47 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+:root
+{
+    --black-color: #010400;
+    --grey-color: #30332E;
+    --primary-color: #EC058E;
+    --secondary-color: #FBAF00;
+    --third-color: #62BBC1;
+    --white-color: #FFFBFC;
+}
+
+
+.img{
+    margin-top: 20px; margin-bottom: 20px;
+    width: 150px; height: 180px;
+    border-radius: 20px;
+}
+
+
+.linkedinicon{
+    font-size:40px;
+    color: #62BBC1;
+}
+
+.githubicon{
+    font-size: 40px;
+    color: #EC058E;
+}
+
+.logo{
+   width: 200px; height: 130px;
+}
+
+.card-text{
+    background-color: #FBAF00;;
+}
+
+.card-title{
+    margin-top: 10px;
+    background-color: #FBAF00;
+}
+
+.containerFotos{
+    text-align: center;
+    border-radius: 10px;
+}
