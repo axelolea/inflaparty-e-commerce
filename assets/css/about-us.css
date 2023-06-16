@@ -10,11 +10,28 @@
     --white-color: #FFFBFC;
 }
 
+.container{
+    padding-top: 50px;
+}
+
+#containerMisionVision{
+    display: grid;
+    grid-column-gap: 50px;
+}
+
+.containerValores{
+    padding-top: 30px;
+}
+
+.listaValores{  
+    list-style: inside disc;
+    text-align: center;
+}
 
 .img{
     margin-top: 20px; margin-bottom: 20px;
-    width: 150px; height: 180px;
-    border-radius: 20px;
+    width: 150px; height: 150px;
+    border-radius: 80px;
 }
 
 
@@ -39,7 +56,7 @@
 }
 
 .card-title{
-    margin-top: 20px;
+    margin-top: 30px;
     background-color: #FBAF00;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -48,4 +65,10 @@
 .containerFotos{
     text-align: center;
     border-radius: 10px;
+    margin-top: 50px;
+}
+
+.parrafos{
+    text-align: center;
+    padding-top: 5px;
 }

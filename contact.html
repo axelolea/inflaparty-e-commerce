@@ -25,11 +25,12 @@
         <div class="row">
             <form id="formularioContacto">
 
-                <div class="col-12">
+                <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
 
-                    <!--Titulo del formulario-->
-                    <h1 id="contacto">Contacto</h1>
-                    <br>
+                    <!--Titulo del formulario de contacto-->
+                    <div class="mb-3 mt-3">
+                        <h1 id="contacto">Contacto</h1>
+                    </div>
 
 
                     <div class="mb-3">
@@ -40,13 +41,13 @@
 
 
                     <div class="mb-3">
-                        <label for="emailContacto" class="form-label">Email address</label>
-                        <input type="email" name="emailContacto" class="form-control" id="emailContacto"
-                            placeholder="name@example.com" required>
+                        <label for="emailContacto" class="form-label">Correo electrónico</label>
+                        <input type="text" name="emailContacto" class="form-control" id="emailContacto"
+                            placeholder="nombre@correo.com" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="telefonoContacto" class="form-label">Telefono</label>
+                        <label for="telefonoContacto" class="form-label">Teléfono</label>
                         <input type="tel" name="telefonoContacto" class="form-control" id="telefonoContacto"
                             placeholder="Escriba su numero de telefono de 10 digitos" maxlength="10" required>
                     </div>
@@ -60,7 +61,7 @@
 
 
                 <!--Boton de enviar-->
-                <div class="d-grid mx-auto justify-content-center">
+                <div class="d-grid mx-auto justify-content-center mb-3">
                     <button class="buttonAmarillo" type="submit">Enviar</button>
 
                 </div>

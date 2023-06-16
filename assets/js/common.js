@@ -13,6 +13,7 @@ async function lecturaHTML(ruta){
     // convierto mi peticion a string
     const text = await resp.text()
 
+    // return el text
     return text
 }
 
@@ -40,20 +41,36 @@ async function createNavbarFooter(){
     const navbarText = await lecturaHTML(rutaNavbar)
     const footerText = await lecturaHTML(rutaFooter)
 
+    // Convertir string a componente
     const navbar = parseComponent(navbarText);
     const footer = parseComponent(footerText);
 
+    // inyectar componentes
+
+    // como primer hijo al navbar
     injectFirstChild(navbar)
+
+    // como el ultimo hijo el footer
     injectLastChild(footer)
 
     
     // const heightFooter = footer.offsetHeight
     const getNavbarHeight = () => `${navbar.offsetHeight}px`
-    const resizePadding = () => body.style.paddingTop = getNavbarHeight();
+    // const getFooterHeight = () => `${footer.offsetHeight}px`
+
+    const resizeNavbarPadding = () => body.style.paddingTop = getNavbarHeight();
+    // const resizeFooterPadding = () => body.style.paddingBottom = getFooterHeight();
     
-    resizePadding()
+    // actualizar padding en navbar
+    resizeNavbarPadding()
+    // resizeFooterPadding()
     
-    window.addEventListener("resize", resizePadding)
+    // evento para actualizar padding al cambiar dimension del navegador
+    window.addEventListener("resize", () => {
+        resizeNavbarPadding()
+        // resizeFooterPadding()
+    })
 }
 
+// Arrancar funcion
 createNavbarFooter()
