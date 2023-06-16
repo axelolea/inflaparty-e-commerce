@@ -29,13 +29,21 @@ footer
     text-align: left;
     font-size: 16px;
     color: var(--white-color);
-    background-color: var(--grey-color);    
+    background-color: var(--grey-color);   
+    padding-top: auto;
+}
+
+.redes
+{
+    font-size: 2rem;
 }
 
 /* Listas enfooter */
 footer ul
 {
     list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
 }
 
 footer ul li {
