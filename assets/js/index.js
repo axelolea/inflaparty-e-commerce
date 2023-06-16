@@ -1,5 +1,3 @@
-const { title } = require("process")
-
 const dataUrl = "./assets/index-data.json"
 
 // imagenes en carrousel
