@@ -31,11 +31,17 @@ function validarFormulario(event) {
         return;
     }
 
-    // validacion de correo
+    // validacion de correo, usamos Regexp
 
-    if (email.length == 0) {
+    function validarCorreo(email) {
 
-        alert("Es necesario ingresar un correo electronico");
+        const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar un correo
+        return regexCorreo.test(email);
+    }
+
+    if (!validarCorreo(email) || email.length == 0) {
+
+        alert("Es necesario ingresar un correo electronico valido");
         return
     }
 
@@ -65,6 +71,8 @@ function validarFormulario(event) {
 
 
     alert("su mensaje se ha enviado con exito");
+
+    
     this.submit();
 
 }
