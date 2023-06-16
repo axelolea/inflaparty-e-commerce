@@ -1,54 +1,44 @@
+// Para generar la lista de productos:
 
-//Para obtener los datos desde un archivo JSON
-const listProductosURL = '/assets/list-products.json'; 
-fetch(listProductosURL)//con fetch() vamos realizar una solicitud HTTP a un archivo JSON
-  .then(resp => {
-    // Si la respuesta no es ok, marcar un error
-    if (!resp.ok) throw new Error("No se encontró archivo JSON");
-    // de la respuesta obtener un json
-    return resp.json();
-  })
-  // Iterar la lista sobre los elementos del JSON 
-  .then(json => {
-    json.forEach(element => {
-      console.log(element.nombre);//se muestra el nombre de cada elemento en la consola 
-    }); 
+var contenedorInflables = document.getElementById("contenedor-inflables");
+var urlJson = "/assets/list-products.json";
 
-    //ERROR: Aquí hay que crear componentes. No sirve porque está llamando al JSON en lugar de los componentes
+fetch(urlJson) // Petición para traer el JSON
+  .then(function (response) {
+    return response.json();
   })
-  .catch(error => {
-    console.log("Error:", error);//Si ocurre algún error durante el proceso, se captura y se muestra en la consola
+  .then(function (data) {
+    data.forEach(function (inflable) { // Vamos a recorrer cada uno de los objetos del JSON
+
+      //Aquí se van a crear los elementos que se verán en el listado
+      var divInflable = document.createElement("div");
+      divInflable.className = "inflable";
+
+      var imgSmall = document.createElement("img");
+      imgSmall.src = inflable.imagenes["small-image"];
+      divInflable.appendChild(imgSmall);
+
+      var nombre = document.createElement("h3");
+      nombre.textContent = inflable.nombre;
+      divInflable.appendChild(nombre);
+
+      var precio = document.createElement("p");
+      precio.textContent = "Precio: $" + inflable.precio;
+      divInflable.appendChild(precio);
+
+      var estrellas = document.createElement("p");
+      estrellas.textContent = "Estrellas: " + inflable.estrellas;
+      divInflable.appendChild(estrellas);
+
+      var descripcion = document.createElement("p");
+      descripcion.textContent = inflable.descripcion;
+      divInflable.appendChild(descripcion);
+
+      // Lo agregamos al contendor div que está en el HTML
+      contenedorInflables.appendChild(divInflable);
+    });
+  })
+  .catch(function (error) { //Colocamos el catch como buena práctica para que nos devuelva algún error que se presente
+    console.log("Error al obtener los datos del JSON:", error);
   });
 
-
-  /*Crear una función que cree componentes. Iterar cada objeto y convertirlo en un componente del DOM*/
-
-  //Aquí vamos a crear componentes del DOM a partir de los datos obtenidos
-  function createComponents(data) { 
-    const container = document.getElementById('container'); // Obtener el contenedor donde se agregarán los componentes
-  
-    // Iteramos sobre cada objeto en el array de datos
-    data.forEach(obj => {
-      // Se crean los elementos del componente
-      const component = document.createElement('div');
-      const title = document.createElement('h2');
-      const image = document.createElement('img');
-      const price = document.createElement('p');
-      const description = document.createElement('p');
-  
-      // Asignamos los valores correspondientes del objeto a los elementos del componente
-      title.textContent = obj.nombre;
-      image.src = obj.imagenes['medium-image'];
-      price.textContent = `Precio: ${obj.precio}`;
-      description.textContent = obj.description;
-  
-      // Agregamos los elementos al componente
-      component.appendChild(title);
-      component.appendChild(image);
-      component.appendChild(price);
-      component.appendChild(description);
-  
-      // Agregamps el componente al contenedor
-      container.appendChild(component);
-    });
-  }
