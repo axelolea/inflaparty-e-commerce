@@ -1,0 +1,44 @@
+{
+    "nombre": "Infleble divertido 1",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit orci tellus, nec condimentum sem pharetra non. Integer vestibulum, orci et fringilla scelerisque, orci risus volutpat diam, dapibus malesuada leo lorem et nulla. Phasellus hendrerit ullamcorper tellus non imperdiet.",
+    "puntaje": 4.5,
+    "precio": 400,
+    "imagenes": [
+        "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+        "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+        "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+        "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg"
+    ],
+    "sugerencias": [
+        {
+            "image": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "name": "Inflable 1",
+            "price": 122,
+            "score": 5.0
+        },
+        {
+            "image": "https://live.staticflickr.com/65535/52975804976_08cc447a38_c.jpg",
+            "name": "Inflable 2",
+            "price": 122,
+            "score": 5.0
+        },
+        {
+            "image": "https://live.staticflickr.com/65535/52975949914_e74a96a8a9_c.jpg",
+            "name": "Inflable 3",
+            "price": 122,
+            "score": 5.0
+        }
+    ],
+    "reseñas": [
+        {
+            "nombre": "Axel Olea",
+            "puntaje": 5,
+            "reseña": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit orci tellus, nec condimentum sem pharetra non. Integer vestibulum, orci et fringilla scelerisque, orci risus volutpat diam, dapibus malesuada leo lorem et nulla. Phasellus hendrerit ullamcorper tellus non imperdiet."
+        },
+        {
+            "nombre": "Axel Olea",
+            "puntaje": 4,
+            "reseña": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit orci tellus, nec condimentum sem pharetra non. Integer vestibulum, orci et fringilla scelerisque, orci risus volutpat diam, dapibus malesuada leo lorem et nulla. Phasellus hendrerit ullamcorper tellus non imperdiet."
+        }
+    ]
+}
