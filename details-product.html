@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InflaParty</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/marca/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+    <!--CSS Botones-->
+    <link rel="stylesheet" href="./assets/css/buttons.css">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/details.css">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div id="carouselExampleIndicators" class="carousel slide h-100 col-12 col-lg-8">
+                <div class="carousel-indicators">
+                    <!-- Inject indicators with js -->
+                </div>
+                <div class="carousel-inner rounded-4">
+                    <!-- Inject images with js -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="col-12 col-lg-4 d-flex flex-column">
+                <div class="score d-flex justify-content-between">
+                    <h1 id="title"></h1>
+                    <div>
+                        <span id="rate"></span>
+                        <i class="bi bi-star-fill star-rate"></i>
+                    </div>
+                </div>
+                <p id="description" class="body-text"></p>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Precio por dia:</td>
+                            <td id="price"></td>
+                        </tr>
+                        <tr>
+                            <td>Dias de servicio:</td>
+                            <td id="days"></td>
+                        </tr>
+                        <tr>
+                            <td>Precio total:</td>
+                            <td id="finalPrice"></td>
+                        </tr>
+                    </table>
+                    <button class="buttones">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <span class="sectionItems align-self-center">Sugerencias</span>
+
+        <div class="row justify-content-center row-gap-5" id="sugerencias">
+
+            <!-- Inyeccion de sugerencias con js -->
+
+        </div>
+
+        <span class="sectionItems align-self-center">Reseñas</span>
+        
+        <div id="reviews">
+
+            <!-- Inyeccion de review con js -->
+
+        </div>
+
+    </div>
+    <!-- Bootstrap Scripts -->
+    <script src="./assets/js/common.js" type="module"></script>
+    <script src="./assets/js/dialog.js" type="module"></script>
+    <script src="./assets/js/details.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
