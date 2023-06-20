@@ -20,6 +20,9 @@
 body
 {
     min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: 'Fredoka', sans-serif;
 }
 
@@ -152,4 +155,9 @@ footer a:hover
 .anim-conntainer:hover span
 {
     color: var(--primary-color);
+}
+
+.star-rate
+{
+    color: var(--secondary-color);
 }
