@@ -2,3 +2,38 @@
 .score{
     font-size: 1.5rem;
 }
+
+.icon
+{
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var( --white-color);
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.name-review,
+.rate-review
+{
+    font-size: 1.5rem;
+}
+
+.review .star-rate
+{
+    font-size: 1.5rem;
+}
+
+.review p
+{
+    font-size: 1.2rem;
+}
+
+.subtitle
+{
+    font-size: 1.5rem;
+    font-weight: 500;
+}

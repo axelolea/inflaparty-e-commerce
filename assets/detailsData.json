@@ -48,12 +48,12 @@
         {
             "nombre": "Axel Olea",
             "puntaje": 5,
-            "reseña": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit orci tellus, nec condimentum sem pharetra non. Integer vestibulum, orci et fringilla scelerisque, orci risus volutpat diam, dapibus malesuada leo lorem et nulla. Phasellus hendrerit ullamcorper tellus non imperdiet."
+            "resena": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit orci tellus, nec condimentum sem pharetra non. Integer vestibulum, orci et fringilla scelerisque, orci risus volutpat diam, dapibus malesuada leo lorem et nulla. Phasellus hendrerit ullamcorper tellus non imperdiet."
         },
         {
             "nombre": "Axel Olea",
             "puntaje": 4,
-            "reseña": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit orci tellus, nec condimentum sem pharetra non. Integer vestibulum, orci et fringilla scelerisque, orci risus volutpat diam, dapibus malesuada leo lorem et nulla. Phasellus hendrerit ullamcorper tellus non imperdiet."
+            "resena": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit orci tellus, nec condimentum sem pharetra non. Integer vestibulum, orci et fringilla scelerisque, orci risus volutpat diam, dapibus malesuada leo lorem et nulla. Phasellus hendrerit ullamcorper tellus non imperdiet."
         }
     ]
 }

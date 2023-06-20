@@ -69,6 +69,60 @@ export const sugerenciaComponent = data => {
     return componente
 }
 
-export const resenasComponent = resena => {
-    
+export const resenasComponent = ({nombre, puntaje, resena}) => {
+
+    const [
+        review,
+        headReview,
+        bodyReview,
+        reviewer,
+        rating,
+        icon,
+        name,
+        rate
+    ] = [
+        "div",
+        "div",
+        "p",
+        "div",
+        "div",
+        "div",
+        "span",
+        "span"
+    ].map(selector => document.createElement(selector));
+
+    review.classList.add("review", "d-flex", "flex-column", "gap-3");
+
+    headReview.classList.add("d-flex", "justify-content-between", "gap-3")
+    bodyReview.classList.add("body-text")
+
+    review.append(headReview)
+    review.append(bodyReview)
+
+    reviewer.classList.add("d-flex", "justify-content-start", "gap-3")
+    rating.classList.add("d-flex", "justify-content-start", "gap-3")
+
+    headReview.append(reviewer)
+    headReview.append(rating)
+
+    icon.classList.add("icon")
+    name.classList.add("my-auto", "name-review")
+
+    reviewer.append(icon)
+    reviewer.append(name)
+
+    rate.classList.add("rate-review", "my-auto")
+
+    rating.innerHTML = '<i class="bi bi-star-fill star-rate my-auto"></i>'
+
+    rating.append(rate)
+
+    // Agregar valores
+
+    bodyReview.textContent = resena
+    name.textContent = nombre
+    rate.textContent = `${puntaje}`
+    icon.textContent = `${nombre.at(0).toUpperCase()}`
+ 
+    return review
 }

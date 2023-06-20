@@ -1,5 +1,5 @@
 // Importando componentes
-import {indicadorComponent, sugerenciaComponent} from './components.js'
+import {indicadorComponent, sugerenciaComponent, resenasComponent} from './components.js'
 
 // Elementos del carrousel
 const carrousel = document.querySelector("#carouselExampleIndicators")
@@ -135,8 +135,23 @@ function actualizarSugerencias(data){
 
 }
 
-function actualizarResenas(resenas){
+function actualizarResenas(data){
     
-    
-    resenasContainer
+    // Creando fragment para contener las sugerencias a crear
+    const resenasFragment = document.createDocumentFragment()
+
+    // Iterar el array de las sugerencias
+    data.forEach(obj => {
+
+        // Creando componente sugerencia con cada elemento del array
+        const resena = resenasComponent(obj);
+
+        // Integrar al fragment
+        resenasFragment.appendChild(resena);
+
+    });
+
+    // Agregar el fragment al contenedor de sugerencias 
+    resenasContainer.append(resenasFragment)
+
 }
