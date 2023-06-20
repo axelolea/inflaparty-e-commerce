@@ -2,7 +2,7 @@ const rutaNavbar = './assets/templates/navbar.html'
 const rutaFooter = './assets/templates/footer.html'
 
 
-async function lecturaHTML(ruta){
+export async function lecturaHTML(ruta){
 
     // fetch al archivo html
     const resp = await fetch(ruta)
@@ -21,10 +21,10 @@ async function lecturaHTML(ruta){
 const body = document.querySelector('body')
 
 // funciones inyectoras
-const injectFirstChild = component => body.prepend(component)
-const injectLastChild = component => body.append(component)
+export const injectFirstChild = component => body.prepend(component)
+export const injectLastChild = component => body.append(component)
 
-const parseComponent = text => {
+export const parseComponent = text => {
     // Creo un nuevo dom e integro mi text con parseFromString
     const dom2 = new DOMParser().parseFromString(text, 'text/html')
     // a mi no me interesa el dom nuevo, me interesa el contenido que parseo
