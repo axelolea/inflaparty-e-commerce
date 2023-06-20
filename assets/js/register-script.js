@@ -109,39 +109,28 @@ function validarFormulario(event) {
     return
   }
 
+  function procesaTodo() {
+    const datos = new FormData(event.target);
+    const datosCompletos = Object.fromEntries(datos.entries());
+    console.log(JSON.stringify(datosCompletos));
+  }
+  
+  procesaTodo();  
   alert("Se ha registrado con exito");
   this.submit();
 }
 
+
+
+
+
+
+
+/*
   const procesaTodo = (event) =>{
     event.preventDefault();
     const datos = new FormData(event.target);
     const datosCompletos = Object.fromEntries(datos.entries());
     console.log(JSON.stringify(datosCompletos));
   }
-
-
-
-formularioContacto.addEventListener('submit', procesaTodo);
-
-
-//JSON Configurar con la validación de formulario (posiblemente funcione si se agrega dentro)
-/*formularioContacto.addEventListener("submit", formularioJSON);
-function formularioJSON(event) {
-  event.preventDefault();
-
-  const dataFormulario = new FormData(formularioContacto);
-  const data = Object.fromEntries(dataFormulario);
-  const jsonData = JSON.stringify(data);
-
-
-  fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: jsonData
-  }).then(res => res.json())
-    .then(result => console.log(result))
-    .catch(err => console.log(err))
-}*/
+*/
