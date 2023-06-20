@@ -20,6 +20,9 @@
 body
 {
     min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: 'Fredoka', sans-serif;
 }
 
@@ -128,6 +131,33 @@ footer a:hover
 #btn-calendario
 {
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.img-container
+{
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+
+.anim-conntainer img,
+.anim-conntainer span
+{
+    transition: all 500ms ease-in-out;
+}
+
+.anim-conntainer:hover img
+{
+    transform: scale(1.2);
+}
+
+.anim-conntainer:hover span
+{
+    color: var(--primary-color);
+}
+
+.star-rate
+{
+    color: var(--secondary-color);
 }

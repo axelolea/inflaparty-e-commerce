@@ -1,4 +1,4 @@
-const dataUrl = "./assets/index-data.json"
+const dataUrl = "./assets/indexData.json"
 
 // imagenes en carrousel
 const imagesCarrousel = document.querySelectorAll(".carousel-inner .carousel-item img")
