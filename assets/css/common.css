@@ -137,22 +137,23 @@ footer a:hover
 
 .img-container
 {
-    overflow: hidden;
-    transition: all 500ms ease-in-out;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
 }
 
-.anim-conntainer img,
-.anim-conntainer span
+.anim-container span
 {
     transition: all 500ms ease-in-out;
 }
 
-.anim-conntainer:hover img
+.anim-container:hover .img-container
 {
-    transform: scale(1.2);
+    background-size: 120%;
 }
 
-.anim-conntainer:hover span
+.anim-container:hover span
 {
     color: var(--primary-color);
 }
@@ -160,4 +161,10 @@ footer a:hover
 .star-rate
 {
     color: var(--secondary-color);
+}
+
+.hidden
+{
+    display: none !important;
+    visibility: hidden;
 }
