@@ -1,3 +1,5 @@
+import { carrito } from './shoppingCartManagement.js'
+
 // Funciones flecha para crear componentes
 export const indicadorComponent = num => {
     
@@ -24,26 +26,40 @@ export const sugerenciaComponent = data => {
     // Craendo elemntos
     const [
         componente,
-        imgContainer,
+        previewItem,
         infoContainer,
-        imgItem,
+        addBtn,
         titleItem,
         priceItem
     ] = [
+        "a",
         "div",
         "div",
         "div",
-        "img",
         "span",
         "button"
     ].map( selector => document.createElement(selector));
     // Agregando valores al componente
     componente.href = `${data.enlace}`;
-    componente.classList.add("col-lg-4", "col-md-6", "col-12", "item", "anim-conntainer")
+    componente.classList.add("col-lg-4", "col-md-6", "col-12", "item", "anim-container")
 
     //agregando clases a img container
-    imgContainer.classList.add("rounded-4", "mb-2", "img-container")
-    imgContainer.appendChild(imgItem)
+    previewItem.classList.add("rounded-4", "mb-2", "img-container", "wrapperCarritoEstatico", "position-relative")
+    previewItem.style.backgroundImage = `url(${data.imagen})`;    
+
+    if(!carrito.isInCart(data.id)){
+
+        previewItem.appendChild(addBtn)
+
+        addBtn.classList.add("buttonCarritoEstatico", "position-absolute", "top-0", "end-0")
+        addBtn.innerHTML = '<div class="iconSE"><i class="fas fa-plus"></i></div>'
+
+        addBtn.onclick = () => {
+            addBtn.remove()
+            carrito.setItemCart(data.id)
+        }
+    }
+
 
     // agregando clases a info  container
     infoContainer.classList.add("d-flex", "justify-content-between")
@@ -51,9 +67,8 @@ export const sugerenciaComponent = data => {
     infoContainer.appendChild(priceItem)
 
     // Agregando propiedades a imagen
-    imgItem.classList.add("imgItem", "card-img");
-    imgItem.alt = `Imagen de sugerencia de ${data.nombre}`;
-    imgItem.src = `${data.imagen}`
+    // imgItem.classList.add("imgItem", "card-img");
+    
 
     // Agregando propiedades a titulo y precio
     titleItem.classList.add("titleItem", "align-self-center");
@@ -63,7 +78,7 @@ export const sugerenciaComponent = data => {
     priceItem.textContent = `${data.precio} MXN`;
 
     // Agregando hijos a componente
-    componente.appendChild(imgContainer)
+    componente.appendChild(previewItem)
     componente.appendChild(infoContainer)
 
     return componente
