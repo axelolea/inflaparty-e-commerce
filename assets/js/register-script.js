@@ -1,7 +1,7 @@
 const forms = document.querySelector(".forms"),
   formularioContacto = document.getElementById("formulario");
 
-pwShowHide = document.querySelectorAll(".eye-icon");
+pwShowHide = document.querySelectorAll(".bi-eye-fill");
 
 //Mostrar contraseñas
 
@@ -12,11 +12,11 @@ pwShowHide.forEach(eyeIcon => {
     pwFields.forEach(password => {
       if (password.type === "password") {
         password.type = "text";
-        eyeIcon.classList.replace("bx-hide", "bx-show");
+        eyeIcon.classList.replace("bi-eye-slash", "bi-eye-fill");
         return;
       }
       password.type = "password";
-      eyeIcon.classList.replace("bx-show", "bx-hide");
+      eyeIcon.classList.replace("bi-eye-fill", "bi-eye-slash");
     })
   })
 })
@@ -24,12 +24,12 @@ pwShowHide.forEach(eyeIcon => {
 //Validar contraseñas
 
 function onChange() {
-  const password = document.querySelector('input[name=pwd]');
-  const confirm = document.querySelector('input[name=rpwd]');
+  const password = document.querySelector('input[name=contraseña1]');
+  const confirm = document.querySelector('input[name=contraseña2]');
   if (confirm.value === password.value) {
     confirm.setCustomValidity('');
   } else {
-    confirm.setCustomValidity('Passwords do not match');
+    confirm.setCustomValidity('Las contraseñas no coinciden');
   }
 }
 
