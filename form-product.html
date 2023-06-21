@@ -10,10 +10,6 @@
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-    <!--Icons-->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
-
-	<link rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css">
 
     <!--CSS-->
     <link rel="stylesheet" href="./assets/css/common.css">
@@ -23,55 +19,62 @@
 
 </head>
 <body>
-    <!--FORM-->
+
     <!--Div Padre-->
     <div class="container">
-        
-        <div class="form-wrapper">
-            <h1>Formulario del Producto</h1>
-
-            <form>
-                <div class="mb-3">
-                    <label for="nombreDelProducto" class="form-label">Nombre del Producto</label>
-                    <input type="text" class="form-control" id="nombreDelProducto">
-                </div>
-        
-                <div class="mb-3">
-                    <label for="precioDelProducto" class="form-label">Precio del Producto</label>
-                    <input type="text" class="form-control" id="precioDelProducto">
-                </div>
-        
-                <div class="mb-3">
-                    <label for="tipoDelProducto" class="form-label">Tipo del Producto</label>
-                    <input type="text" class="form-control" id="tipoDelProducto">
-                </div>
-        
-                <div class="mb-3">
-                    <label for="descripcionDelProducto" class="form-label">Descripción del Producto</label>
-                    <textarea class="form-control" id="descripcionDelProducto" rows="5"></textarea>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-8">
-                        <button class="buttonAgregarImagen">Agregar Imagen</button>
+        <!--Iniciando la fila-->
+        <div class="row form-wrapper">
+            <!--Respetando el Responsive Design con las Columnas-->
+            <div class="col-sm-12 col-md-8 col-lg-6">
+                <h1>Formulario del Producto</h1>
+                <!--FORM-->
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreDelProducto" class="form-label">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="nombreDelProducto" placeholder="Nombre de Producto">
                     </div>
 
-                    <div class="col-sm-6 col-m-6 col-lg-4">
-                        <button type="submit" class="buttonAmarillo">Enviar</button>
-                </div>
+                    <div class="mb-3">
+                        <label for="precioDelProducto" class="form-label">Precio del Producto</label>
+                        <input type="text" class="form-control" id="precioDelProducto">
+                    </div>
 
-            </form>
-        </div>
+                    <div class="mb-3">
+                        <label for="tipoDelProducto">Tipo del Producto</label>
+                        <select class="form-select" aria-label="Default select example" id="tipoDelProducto" class="form-control">
+                            <option selected>Seleccionar uno</option>
+                            <option value="1">Inflables</option>
+                            <option value="2">Trampolines</option>
+                            <option value="3">Mesas y Sillas</option>
+                          </select>
+                    </div>
 
 
-        </div>
+                    <div class="mb-3">
+                        <label for="descripcionDelProducto" class="form-label">Descripción del Producto</label>
+                        <textarea class="form-control" id="descripcionDelProducto" rows="5"></textarea>
+                    </div>
+                    <!--Button para Agregar Imagen-->
+                    <button class="buttonSM buttonAgregarImagen" id="btnAgregarImagen">Agregar Imagen</button>
+                    <input type="file" accept=".png, .jpg, .jpeg" id="fileInput" style="display: none;">
 
+                    <button type="submit" class="buttonEn buttonAmarillo" id="btnEnviar">Enviar</button>
+
+                    
+
+                </form> <!--Fin de mi Form-->
+            </div> <!--Fin de la Columnas-->
+        </div> <!--Fin del Row-->
+
+    </div> <!--Fin Container-->
         
  
 
 
     <!--JavaScript-->
-    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/common.js" type="module"></script> <!--Nav Bar & footer-->
+
+    <script src="./assets/js/form-product.js" type="module"></script>
 
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
