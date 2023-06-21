@@ -1,0 +1,35 @@
+
+/* Estilos para las secciones del listado*/
+#contenedor-inflables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .inflable {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+ 
+  .inflable img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+ /*Responsividad Tablet*/
+ 
+  @media (max-width: 768px) {
+    .inflable {
+      width: 100%;
+    }
+  }
+  /*Responsividad Móvil*/
+  @media (max-width: 480px) {
+    .inflable {
+      margin: 10px 0;
+    }
+  }

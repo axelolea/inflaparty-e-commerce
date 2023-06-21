@@ -1,10 +1,6 @@
 // Importando componentes
 import {indicadorComponent, sugerenciaComponent, resenasComponent} from './components.js'
-
-// Elementos del carrousel
-const carrousel = document.querySelector("#carouselExampleIndicators")
-const indicadoresContainer = carrousel.querySelector(".carousel-indicators")
-const carrouselContainer = carrousel.querySelector(".carousel-inner")
+import { carrito } from './shoppingCartManagement.js'
 
 // Elementos Sugerencias
 const sugerenciasContainer = document.querySelector("#sugerencias")
@@ -14,6 +10,8 @@ const resenasContainer = document.querySelector("#reviews")
 
 // URL de fecth de datos para la pagina
 const dataDetailsUrl = "./assets/detailsData.json";
+
+const hiddenClass = "hidden";
 
 (async function (){
 
@@ -36,9 +34,39 @@ const dataDetailsUrl = "./assets/detailsData.json";
     actualizarSugerencias(json.sugerencias)
     // Actualizar reseñas
     actualizarResenas(json.resenas)
+
+    // botones condicionales
+    const agregarCarrito = document.querySelector("#addCart")
+    const infoCarrito = document.querySelector("#cartInfo")
+
+    if(carrito.isInCart(json.id)){
+        infoCarrito.classList.remove(hiddenClass)
+    }
+    else{
+        agregarCarrito.classList.remove(hiddenClass)
+    }
+
+    agregarCarrito.addEventListener('click', () => {
+        carrito.setItemCart(json.id)
+        infoCarrito.classList.remove(hiddenClass)
+        agregarCarrito.classList.add(hiddenClass)
+    })
+
+    infoCarrito.addEventListener('click', () => {
+        carrito.deleteItemCart(json.id)
+        agregarCarrito.classList.remove(hiddenClass)
+        infoCarrito.classList.add(hiddenClass)
+    })
+
 })()
 
 function actualizatCarrousel(images){
+
+    // Elementos del carrousel
+    const carrousel = document.querySelector("#carouselExampleIndicators")
+    const indicadoresContainer = carrousel.querySelector(".carousel-indicators")
+    const carrouselContainer = carrousel.querySelector(".carousel-inner")
+
     // Crear fragment para contener todos los indicadores a crear
     const indicadoresFragment = document.createDocumentFragment()
 
