@@ -26,10 +26,18 @@ h2 {
     padding-bottom: 10px;
 }*/
 
-.eye-icon {
+.bi-eye-fill {
     font-size: 18px;
     position: absolute;
     right: 10px;
-    transform: translateY(-140%);
+    transform: translateY(-120%);
+    cursor: pointer;
+}
+
+.bi-eye-slash{
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    transform: translateY(-120%);
     cursor: pointer;
 }
