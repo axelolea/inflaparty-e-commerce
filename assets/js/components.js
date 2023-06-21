@@ -28,12 +28,10 @@ export const sugerenciaComponent = data => {
         componente,
         previewItem,
         infoContainer,
-        addBtn,
         titleItem,
         priceItem
     ] = [
         "a",
-        "div",
         "div",
         "div",
         "span",
@@ -48,16 +46,17 @@ export const sugerenciaComponent = data => {
     previewItem.style.backgroundImage = `url(${data.imagen})`;    
 
     if(!carrito.isInCart(data.id)){
-
+        const addBtn = document.createElement("div");
         previewItem.appendChild(addBtn)
 
         addBtn.classList.add("buttonCarritoEstatico", "position-absolute", "top-0", "end-0")
         addBtn.innerHTML = '<div class="iconSE"><i class="fas fa-plus"></i></div>'
 
-        addBtn.onclick = () => {
+        addBtn.addEventListener('click', (e) => {
+            e.preventDefault()
             addBtn.remove()
             carrito.setItemCart(data.id)
-        }
+        })
     }
 
 

@@ -5,29 +5,37 @@ class ShoppingCartManagement {
     #defaultCart = []
 
     constructor(){
+        // Pedir al crear una instancia el carrito del localStorage
         this.#currentCart = this.#getCartLocalStorage();
     }
 
+    // Getter
     getCart(){
+        // Devolver el carrito
         return this.#currentCart;
     }
 
-    setItemCart(item){
+    // Numeros
+    setItemCart(itemId){
 
-        if(typeof item !== 'number') throw new Error(`Valor ${item} no valido`)
+        // Validar que el itemID es un numero
+        if(typeof itemId !== 'number') throw new Error(`Valor ${itemId} no valido`)
 
-        this.#currentCart.push(item)
+        this.#currentCart.push(itemId)
         this.#saveCartLocalStorage(this.#currentCart)
 
     }
 
-    deleteItemCart(item){
+    deleteItemCart(itemId){
 
-        if(typeof item !== 'number') throw new Error(`Valor ${item} no valido`)
+        // Validar que el itemID es un numero
+        if(typeof itemId !== 'number') throw new Error(`Valor ${itemId} no valido`)
 
-        const indice = this.#currentCart.indexOf(item)
+        // Obtener el indice del elemento
+        const indice = this.#currentCart.indexOf(itemId) // -1
 
-        if(indice === -1) throw new Error(`No se encontro ${item} en carrito`)
+        // Validar si esta en el carrito
+        if(indice === -1) throw new Error(`No se encontro ${itemId} en carrito`)
 
         this.#currentCart.splice(indice, 1)
         this.#saveCartLocalStorage(this.#currentCart)
@@ -40,19 +48,21 @@ class ShoppingCartManagement {
     }
 
     isInCart(itemSearch){
-        return this.#currentCart.some(item => itemSearch == item)
+        return this.#currentCart.some(itemId => itemSearch == itemId)
     }
 
     #getCartLocalStorage(){
-        // datos de local storage
         
+        // obtener datos de local storage, con la key
         const dataLS = localStorage.getItem(this.#keyLocalStorage);
-
         
+        // Si no hay datos en el LocalStorage, devolver carrito por defecto
         if(!dataLS) return this.#defaultCart;
         
+        // Convertir mi data a array
         const dataClean = JSON.parse(dataLS)
         
+        // Imprimi contenido del carrito
         console.log(dataClean)
 
         return dataClean
@@ -68,7 +78,7 @@ class ShoppingCartManagement {
         this.#currentCart = data
         const dataString = JSON.stringify(data);
         localStorage.setItem(this.#keyLocalStorage, dataString)
-        
+
     }
 }
 
