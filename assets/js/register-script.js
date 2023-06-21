@@ -119,18 +119,3 @@ function validarFormulario(event) {
   alert("Se ha registrado con exito");
   this.submit();
 }
-
-
-
-
-
-
-
-/*
-  const procesaTodo = (event) =>{
-    event.preventDefault();
-    const datos = new FormData(event.target);
-    const datosCompletos = Object.fromEntries(datos.entries());
-    console.log(JSON.stringify(datosCompletos));
-  }
-*/
