@@ -59,9 +59,10 @@
                     <div class="form-group">
                         <label for="pwd">Contraseña:</label>
                         <input type="password" class="form-control password" id="pwd"
-                            placeholder="Ingresa tu Contraseña" name="contraseña1" onChange="onChange()" onkeyup='check();'
+                            placeholder="Ingresa tu Contraseña" name="contraseña1" 
+                       
                             >
-                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-eye-slash"></i>
                     </div>
                     <div class="form-group">
                         <span>Mínimo 8 caracteres, una mayuzcula, un número y un simbolo.</span>
@@ -70,8 +71,8 @@
                     <div class="form-group">
                         <label for="pwd">Re-ingresa tu contraseña:</label>
                         <input type="password" class="form-control password" id="rpwd"
-                            placeholder="Vuelve a ingresar tu contraseña" name="contraseña2" onChange="onChange()"
-                            onkeyup='check();' >
+                            placeholder="Vuelve a ingresar tu contraseña" name="contraseña2" 
+                            >
                         <span id='message'></span>
                     </div>
                     <br>
@@ -90,7 +91,7 @@
 
     <!--JavaScript-->
     <script src="./assets/js/common.js" type="module"></script>
-    <script src="./assets/js/register-script.js"></script>
+    <script src="./assets/js/register-script.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
