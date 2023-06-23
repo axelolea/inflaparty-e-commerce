@@ -1,25 +1,15 @@
-import httpClient from './httpClient.js'
-import { endpoints } from './constants.js'
-
 class SessionManagement{
 
     #tokenSessionStorage = "inflaparty-token";
 
     constructor(){}
 
-    isLogin(session){
-        sessionStorage.setItem(this.#tokenSessionStorage, session)
+    isLogin(){
+        return !!sessionStorage.get(this.#tokenSessionStorage);
     }
 
-    login(body){
-
-        const data = httpClient.post(endpoints.registerUser, body)
-        
-    }
-
-
-    register(data){
-        httpClient.post()
+    login(token){
+        sessionStorage.set(this.#tokenSessionStorage, token);
     }
 
     logout(){
