@@ -64,11 +64,13 @@
                         </tr>
                     </table>
                 </div>
-                <div id="buttons d-flex flex-column justify-content-center">
+                <div id="buttons" class="d-flex flex-column justify-content-center align-items-center">
                     <button class="buttones hidden" id="addCart">Agregar al Carrito</button>
-                    <div class="d-flex flex-column flex-lg-row justify-content-between gap-3 align-items-center hidden" id="cartInfo">
-                        <button class="buttones">Ir al carrito <i class="far fa-shopping-cart"></i></button>
-                        <button class="buttones">Eliminar <i class="fas fa-times"></i></button>
+                    <div class="d-flex flex-column justify-content-between gap-2 align-items-center hidden" id="cartInfo">
+                        <a href="./shopping-cart.html">
+                            <button class="buttones">Ir al carrito <i class="far fa-shopping-cart"></i></button>
+                        </a>
+                        <button class="buttones" id="deleteItem">Eliminar <i class="fas fa-times"></i></button>
                     </div>
                 </div>
             </div>
