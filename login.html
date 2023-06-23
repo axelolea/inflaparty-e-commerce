@@ -3,71 +3,126 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Inicio de Sesíon</title>
+    <!-- Link CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Favicon -->
     <link rel="icon" href="./assets/marca/favicon.ico" type="image/x-icon">
-    <!-- Bootstrap CDN  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <!--Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
-    <!--CSS Botones-->
+
+    <!-- Link de login2.css -->
+    <link rel="stylesheet" href="./assets/css/login2.css">
+
+    <!-- Link common.css -->
+    <link rel="stylesheet" href="./assets/css/common.css">
+
+    <!-- Link Botones -->
     <link rel="stylesheet" href="./assets/css/buttons.css">
-    <!-- Local CSS COMMON -->
-    <link rel="stylesheet" href="assets/css/common.css">
-    <!-- Link CSS lOGIN -->
-<link rel="stylesheet" href="./assets/css/login.css">
 </head>
 
 <body>
+    <!-- Div padre -->
+    <div class="divPadre d-flex justify-content-center aligne-item-center vh-100">
+        <!-- Div Container -->
+        <div class="container p-5">
+            <!-- Div Login Icon-->
 
-    <div class="container">
-        <div class="row">
-            <div class="titulos">
-                <h2 id="tituloLogin">Log In</h2>
-            </div>
-            <div class="loginForm" id="nombreUsuario">
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label" id="nombreUsuario">Nombre de Usuario</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput"
-                        >
+            <!-- Div row -->
+            <div class="row">
+
+                <!--  -->
+                <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+
+                    <div class=" d-flex justify-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle loginIcon mb-3" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </div>
+                    <!-- Cierre Login icon y Titulo -->
+
+                    <!-- Div Titulo -->
+                    <div class="titulo mb-3">
+                        <h2>Inicio de sesión</h2>
+                    </div>
+                    <!-- Cierre de Titulo -->
+
+                    <!-- Div correo electronico -->
+                    <div class="email input-group mb-3">
+                        
+                        <label for=""></label>
+                        <input type="text" placeholder="Correo electrónico" class="usuarioInput border-0 form-control rounded"
+                            id="formGroupExampleInput1">
+                    </div>
+                    <!-- Cierre correo electronico -->
+
+                    <!-- Div Contrasenia  -->
+                    <div class="contrasenia input-group mb-3">
+                       <input type="password" placeholder="Contraseña" class="lockInput form-control border-0 rounded">
+                    </div>
+                    <!-- Cierre Contrasenia -->
+
+                    <!-- Div Recuerdame -->
+                    <div class="divRecuerdame d-flex justify-content mb-2">
+                        <div class="d-flex align-item-center gap-1">
+                            <input class="recuerdameCheck form-check-input" type="checkbox" value=""
+                                id="flexCheckChecked" checked>
+                            <div class="recuerdameText ">Recuerdame</div>
+                        </div>
+                    </div>
+                    <!-- Cierre Recuerdame -->
+
+                    <!-- Div Recuperar Contrasenia -->
+                    <div class="textoCursivas mb-2" id="contrasenia">
+                        <a href="a">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <!-- Cierre Recuperar Contrasenia -->
+
+                    <!-- Div Boton Ingresar -->
+
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="col-md-4">
+                            <a href="/register.html">
+                                <button class="buttonAmarillo " id="buttonRegistrar">Ingresar</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Cierre Boton Ingresar -->
+
+                    <!-- Div Crear Cuenta -->
+                    <div>
+                        <p> ¿Aún no tienes cuenta?<a href="e" class="textoCursivas">Registrate</a></p>
+                    </div>
+                    <!-- Dic Creat Cuenta -->
+
                 </div>
+                <!-- Cierre div  -->
+
 
             </div>
-            <div class="loginForm" id="password">
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label" id="password">Contraseña</label>
-                    <input type="password" class="form-control" id="formGroupExampleInput2"
-                        placeholder="Ingrese su contraseña">
-                </div>
-            </div>
+            <!-- Cierre div row -->
+
+
         </div>
-
-        <div class="botones">
-            <!--Button de Ingresar-->
-            <div class="col-md-4 mb-3">
-                <button type="button" class="btn buttonIngresar">Ingresar</button>
-            </div>
-
-            <!--Button de Registrar-->
-            <div class="col-md-4">
-                <a href="/register.html">
-                    <button class="buttonAmarillo ">Registrar</button>
-                </a>
-            </div>
-            <!--Fin button de Registrar-->
-        </div>
-
+        <!-- Cierre Div container -->
 
     </div>
+    <!-- Cierre Div Padre -->
 
 
-    <script src="./assets/js/common.js"></script>
+        <!-- Bootstrap Scripts -->
+    <script src="./assets/js/common.js" type="module"></script>
+    <script src="./assets/js/dialog.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <!-- Bootstrap Scripts -->
+
+
 </body>
 
 </html>
