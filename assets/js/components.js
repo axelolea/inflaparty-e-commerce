@@ -1,3 +1,5 @@
+import carrito from './shoppingCartManagement.js'
+
 // Funciones flecha para crear componentes
 export const indicadorComponent = num => {
     
@@ -24,36 +26,62 @@ export const sugerenciaComponent = data => {
     // Craendo elemntos
     const [
         componente,
-        imgContainer,
+        previewItem,
         infoContainer,
-        imgItem,
         titleItem,
-        priceItem
+        priceItem,
+        ratingItem
     ] = [
+        "a",
         "div",
         "div",
-        "div",
-        "img",
         "span",
-        "button"
+        "button",
+        "span"
     ].map( selector => document.createElement(selector));
+
     // Agregando valores al componente
     componente.href = `${data.enlace}`;
-    componente.classList.add("col-lg-4", "col-md-6", "col-12", "item", "anim-conntainer")
+    componente.classList.add("col-lg-4", "col-md-6", "col-12", "item", "anim-container")
 
     //agregando clases a img container
-    imgContainer.classList.add("rounded-4", "mb-2", "img-container")
-    imgContainer.appendChild(imgItem)
+    previewItem.classList.add("rounded-4", "mb-2", "img-container", "wrapperCarritoEstatico", "position-relative")
+    previewItem.style.backgroundImage = `url(${data.imagen})`;    
+
+    // Agregar elemento rating
+    previewItem.appendChild(ratingItem)
+    
+    // Cambiando elemento rating
+    ratingItem.classList.add("position-absolute", "bottom-0", "end-0", "rating")
+    ratingItem.innerHTML = `${data.puntaje} <i class="bi bi-star-fill star-rate"></i>`
+
+    // Si el item esta en la lista de compras:
+    if(!carrito.isInCart(data.id)){
+        
+        // - Habilitar boton para agregar al carrito y su evento onClick
+        const addBtn = document.createElement("div");
+        previewItem.appendChild(addBtn)
+
+        addBtn.classList.add("buttonCarritoEstatico", "position-absolute", "top-0", "end-0", "addBtn")
+        addBtn.innerHTML = '<div class="iconSE"><i class="fas fa-plus"></i></div>'
+
+        addBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            addBtn.remove()
+            carrito.setItemCart(data.id)
+        })
+    }
+
+
 
     // agregando clases a info  container
-    infoContainer.classList.add("d-flex", "justify-content-between")
+    infoContainer.classList.add("d-flex", "justify-content-between", "info")
     infoContainer.appendChild(titleItem)
     infoContainer.appendChild(priceItem)
 
     // Agregando propiedades a imagen
-    imgItem.classList.add("imgItem", "card-img");
-    imgItem.alt = `Imagen de sugerencia de ${data.nombre}`;
-    imgItem.src = `${data.imagen}`
+    // imgItem.classList.add("imgItem", "card-img");
+    
 
     // Agregando propiedades a titulo y precio
     titleItem.classList.add("titleItem", "align-self-center");
@@ -63,10 +91,31 @@ export const sugerenciaComponent = data => {
     priceItem.textContent = `${data.precio} MXN`;
 
     // Agregando hijos a componente
-    componente.appendChild(imgContainer)
+    componente.appendChild(previewItem)
     componente.appendChild(infoContainer)
 
     return componente
+}
+
+export const itemCarrouselComponent = (data, pos) => {
+    // Crear img element
+    const anchor = document.createElement("a")
+    const img = document.createElement("img");
+    
+    // Agregar propiedades a img
+    anchor.classList.add("carousel-item")
+    anchor.href = `${data.enlace}`
+    img.classList.add("d-block", "w-100")
+    img.src = `${data.image}`
+    img.alt = `${data.nombre}`
+    // Si es el primer elemento, agregar la clase active
+    if(pos === 0){
+        anchor.classList.add("active")
+    }
+
+    anchor.append(img)
+
+    return anchor;
 }
 
 export const resenasComponent = ({nombre, puntaje, resena}) => {

@@ -39,7 +39,7 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="col-12 col-lg-4 d-flex flex-column">
+            <div class="col-12 col-lg-4 d-flex flex-column justify-content-between">
                 <div class="score d-flex justify-content-between">
                     <h1 id="title"></h1>
                     <div>
@@ -48,8 +48,8 @@
                     </div>
                 </div>
                 <p id="description" class="body-text"></p>
-                <div>
-                    <table>
+                <div id="info" class="w-100">
+                    <table class="w-100">
                         <tr>
                             <td>Precio por dia:</td>
                             <td id="price"></td>
@@ -63,7 +63,15 @@
                             <td id="finalPrice"></td>
                         </tr>
                     </table>
-                    <button class="buttones">Agregar al Carrito</button>
+                </div>
+                <div id="buttons" class="d-flex flex-column justify-content-center align-items-center">
+                    <button class="buttones hidden" id="addCart">Agregar al Carrito</button>
+                    <div class="d-flex flex-column justify-content-between gap-2 align-items-center hidden" id="cartInfo">
+                        <a href="./shopping-cart.html">
+                            <button class="buttones">Ir al carrito <i class="far fa-shopping-cart"></i></button>
+                        </a>
+                        <button class="buttones" id="deleteItem">Eliminar <i class="fas fa-times"></i></button>
+                    </div>
                 </div>
             </div>
         </div>

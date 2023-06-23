@@ -1,4 +1,5 @@
 {
+    "id": 10,
     "nombre": "Infleble divertido 1",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit orci tellus, nec condimentum sem pharetra non. Integer vestibulum, orci et fringilla scelerisque, orci risus volutpat diam, dapibus malesuada leo lorem et nulla. Phasellus hendrerit ullamcorper tellus non imperdiet.",
     "puntaje": 4.5,
@@ -23,6 +24,7 @@
     ],
     "sugerencias": [
         {
+            "id": 1,
             "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
             "nombre": "Inflable 1",
             "precio": 122,
@@ -30,6 +32,7 @@
             "enlace": "./details-product.html"
         },
         {
+            "id": 2,
             "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
             "nombre": "Inflable 2",
             "precio": 122,
@@ -37,6 +40,7 @@
             "enlace": "./details-product.html"
         },
         {
+            "id": 3,
             "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
             "nombre": "Inflable 3",
             "precio": 122,

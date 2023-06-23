@@ -1,44 +1,66 @@
 // Importando componentes
-import {indicadorComponent, sugerenciaComponent, resenasComponent} from './components.js'
-
-// Elementos del carrousel
-const carrousel = document.querySelector("#carouselExampleIndicators")
-const indicadoresContainer = carrousel.querySelector(".carousel-indicators")
-const carrouselContainer = carrousel.querySelector(".carousel-inner")
+import { indicadorComponent, sugerenciaComponent, resenasComponent } from './components.js'
+import carrito from './shoppingCartManagement.js'
+// Http functions
+import httpClient from './httpClient.js'
+import { endpoints } from './constants.js'
 
 // Elementos Sugerencias
 const sugerenciasContainer = document.querySelector("#sugerencias")
 
 // Reseñas container
 const resenasContainer = document.querySelector("#reviews")
-
-// URL de fecth de datos para la pagina
-const dataDetailsUrl = "./assets/detailsData.json";
+const hiddenClass = "hidden";
 
 (async function (){
 
     // fetch al json con contenido
-    const resp = await fetch(dataDetailsUrl)
-    
-    // si no salio bien, tirar un error
-    if(!resp.ok) new Error("No se encontro los datos")
+    const data = await httpClient.get(endpoints.detailProduct)
 
-    // convertir json
-    const json = await resp.json()
-
-    // Actualizar con los datos de json
+    httpClient.get(endpoints.detailProduct)
 
     // altualizar imagenes del carrousel
-    actualizatCarrousel(json.imagenes)
+    actualizatCarrousel(data.imagenes)
     // Actualizar informacion principal
-    actualizarPrincipal(json)
+    actualizarPrincipal(data)
     // Actualizar sugerencias
-    actualizarSugerencias(json.sugerencias)
+    actualizarSugerencias(data.sugerencias)
     // Actualizar reseñas
-    actualizarResenas(json.resenas)
+    actualizarResenas(data.resenas)
+
+    // botones condicionales
+    const agregarCarrito = document.querySelector("#addCart")
+    const infoCarrito = document.querySelector("#cartInfo")
+    const deleteItemBtn = document.querySelector("#deleteItem")
+
+    if(carrito.isInCart(data.id)){
+        infoCarrito.classList.remove(hiddenClass)
+    }
+    else{
+        agregarCarrito.classList.remove(hiddenClass)
+    }
+
+    agregarCarrito.addEventListener('click', () => {
+        carrito.setItemCart(data.id)
+        infoCarrito.classList.remove(hiddenClass)
+        agregarCarrito.classList.add(hiddenClass)
+    })
+
+    deleteItemBtn.addEventListener('click', () => {
+        carrito.deleteItemCart(data.id)
+        agregarCarrito.classList.remove(hiddenClass)
+        infoCarrito.classList.add(hiddenClass)
+    })
+
 })()
 
 function actualizatCarrousel(images){
+
+    // Elementos del carrousel
+    const carrousel = document.querySelector("#carouselExampleIndicators")
+    const indicadoresContainer = carrousel.querySelector(".carousel-indicators")
+    const carrouselContainer = carrousel.querySelector(".carousel-inner")
+
     // Crear fragment para contener todos los indicadores a crear
     const indicadoresFragment = document.createDocumentFragment()
 
