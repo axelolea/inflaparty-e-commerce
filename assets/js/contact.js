@@ -1,3 +1,8 @@
+import httpClient from './httpClient.js'
+import { endpoints } from './constants.js'
+
+
+
 //1.- Traer los elemnto del Html
 const formularioContacto = document.getElementById("formularioContacto");
 
@@ -73,9 +78,22 @@ function validarFormulario(event) {
     alert("su mensaje se ha enviado con exito");
 
     
-    this.submit();
+   // this.submit();
 
-}
+    const data={
+        nombre, email, telefono, asunto
+    };
+    httpClient.post(endpoints.contacto,data)
+    .then(JSON=>console.log(JSON))
+    .catch (error=>console.log(error))
+
+    console.log(data);
+
+};
+
+
+
+
 
 
 
