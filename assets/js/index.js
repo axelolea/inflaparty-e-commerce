@@ -1,9 +1,6 @@
-import {indicadorComponent, sugerenciaComponent} from './components.js'
-
-const dataUrl = "./assets/indexData.json"
-
-// imagenes en carrousel
-const imagesCarrousel = document.querySelectorAll(".carousel-inner .carousel-item img")
+import { indicadorComponent, itemCarrouselComponent, sugerenciaComponent } from './components.js'
+import { endpoints } from './constants.js'
+import httpClient from './httpClient.js'
 
 // items  en listado de productos
 const inflablesContainer = document.querySelector("#inflables-container")
@@ -12,14 +9,8 @@ const trampolinesContainer = document.querySelector("#trampolines-container")
 // funcion para fetch de datos y inyectar
 async function getDataAndInject(){
 
-    // fetch al json con contenido
-    const resp = await fetch(dataUrl)
-    
-    // si no salio bien, tirar un error
-    if(!resp.ok) new Error("No se encontro los datos")
-
-    // convertir json
-    const json = await resp.json()
+    // Obtener datos con el httpClient
+    const json = await httpClient.get(endpoints.mainData)
 
     // altualizar imagenes del carrousel con datos del json
     actualizarCarrousel(json.carrousel)
@@ -59,23 +50,9 @@ function actualizarCarrousel(items){
 
     // Iterar imagenes y crear componentes 
     items.forEach((element, pos) => {
-        // Crear img element
-        const anchor = document.createElement("a")
-        const img = document.createElement("img");
-        
-        anchor.append(img)
-        // Agregar propiedades a img
-        anchor.classList.add("carousel-item")
-        anchor.href = `${element.enlace}`
-        img.classList.add("d-block", "w-100")
-        img.src = `${element.image}`
-        img.alt = `${element.nombre}`
-        // Si es el primer elemento, agregar la clase active
-        if(pos === 0){
-            anchor.classList.add("active")
-        }
+        const imageComponent = itemCarrouselComponent(element, pos)
         // Agregar img al fragment
-        imagenesFragment.append(anchor);
+        imagenesFragment.append(imageComponent);
     });
     // agregar imagenes al carrousel
     carrouselContainer.append(imagenesFragment)
