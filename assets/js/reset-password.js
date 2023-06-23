@@ -1,3 +1,8 @@
+import httpClient from './httpClient.js'
+import { endpoints } from './constants.js'
+
+
+
 // Traer elementos del html
 const formularioRetablecerContraseña = document.getElementById("formularioRestablecerContraseña");
 const contraseña = document.getElementById("contraseña");
@@ -11,12 +16,11 @@ formularioRestablecerContraseña.addEventListener("submit", validarFormulario);
 function validarFormulario(event) {
     event.preventDefault();
 
-    
+
     const datoContraseña = contraseña.value;
     const datoConfirmarContraseña = confirmarContraseña.value;
-    let isValid = true; // Variable de validación
 
-    
+
 
     // Validacion de la primera contraseña
     function validarContraseña(datoContraseña) {
@@ -29,27 +33,39 @@ function validarFormulario(event) {
     if (!validarContraseña(datoContraseña) || datoContraseña.length == 0) {
 
         alert("Es necesario ingresar una contraseña valida");
-        isValid = false;
+
+        return
     };
 
     // Validacion de confirmarContraseña
     if (!validarContraseña(datoConfirmarContraseña) || datoConfirmarContraseña.length == 0) {
 
         alert("Es necesario ingresar una contraseña valida");
-        isValid = false;
+
+        return
 
     } else if (datoConfirmarContraseña !== datoContraseña) {
 
         alert("las contraseñas no coinciden");
-        isValid = false;
+
+        return
 
     };
 
+    alert("Su mensaje se ha enviado con éxito");
+    // this.submit();
+    
 
-    if (isValid) {
-        alert("Su mensaje se ha enviado con éxito");
-        this.submit();
-    }
+
+const datos = {
+    datoContraseña, datoConfirmarContraseña
+};
+
+httpClient.post(endpoints.reset,datos)
+    .then(JSON => console.log(JSON))
+    .catch(error => console.log(error))
+
+console.log(datos);
 
 };
 

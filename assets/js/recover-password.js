@@ -1,3 +1,7 @@
+import httpClient from './httpClient.js'
+import { endpoints } from './constants.js'
+
+
 // Traer elementos del html
 const formularioRecuperarContraseña = document.getElementById("formularioRecuperarContraseña");
 const correo = document.getElementById("email");
@@ -10,7 +14,7 @@ function validarFormulario(event) {
     event.preventDefault();
 
     const email = correo.value;
-    let isValid = true; // Variable de validación
+    
 
    
     //validar correo
@@ -23,13 +27,26 @@ function validarFormulario(event) {
     if (!validarCorreo(email) || email.length == 0) {
 
         alert("Es necesario ingresar un correo electronico valido");
-        isValid = false;
+        
+        return
     };
 
     
-    if (isValid) {
+    
         alert("Su correo se ha enviado con éxito");
-        this.submit();
-    }
+        //this.submit();
+        
+    
+
+    const datos={
+        email
+    };
+
+    httpClient.post(endpoints.recover,datos)
+    .then(JSON=>console.log(JSON))
+    .catch (error=>console.log(error))
+
+    console.log(datos);
+
 
 };
