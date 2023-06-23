@@ -21,6 +21,8 @@ class ShoppingCartManagement {
         // Validar que el itemID es un numero
         if(typeof itemId !== 'number') throw new Error(`Valor ${itemId} no valido`)
 
+        // Todo evitar elementos duplicados
+
         this.#currentCart.push(itemId)
         this.#saveCartLocalStorage(this.#currentCart)
 
@@ -82,4 +84,7 @@ class ShoppingCartManagement {
     }
 }
 
+// Carrito weh o.Ó
 export const carrito = new ShoppingCartManagement()
+
+export default carrito;

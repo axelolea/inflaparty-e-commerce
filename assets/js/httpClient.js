@@ -16,6 +16,22 @@ class HTTPClient{
 
     constructor(){}
 
+    get(url, params = null){
+        return this.#requestHandler(url, params, this.#methodsRequest.get)
+    }
+
+    post(url, params = null){
+        return this.#requestHandler(url, params, this.#methodsRequest.post)
+    }
+
+    put(url, params = null){
+        return this.#requestHandler(url, params, this.#methodsRequest.put)
+    }
+
+    delete(url, params = null){
+        return this.#requestHandler(url, params, this.#methodsRequest.delete)
+    }
+
     async #requestHandler(urlRequest, paramsBody, methodRequest){
 
         // Creando las opciones para el fetch
@@ -44,4 +60,6 @@ class HTTPClient{
     }
 }
 
-export const httpClient = new HTTPClient()
+const httpClient = new HTTPClient();
+
+export default httpClient;

@@ -1,4 +1,4 @@
-import { carrito } from './shoppingCartManagement.js'
+import carrito from './shoppingCartManagement.js'
 
 // Funciones flecha para crear componentes
 export const indicadorComponent = num => {
@@ -29,14 +29,17 @@ export const sugerenciaComponent = data => {
         previewItem,
         infoContainer,
         titleItem,
-        priceItem
+        priceItem,
+        ratingItem
     ] = [
         "a",
         "div",
         "div",
         "span",
-        "button"
+        "button",
+        "span"
     ].map( selector => document.createElement(selector));
+
     // Agregando valores al componente
     componente.href = `${data.enlace}`;
     componente.classList.add("col-lg-4", "col-md-6", "col-12", "item", "anim-container")
@@ -45,11 +48,21 @@ export const sugerenciaComponent = data => {
     previewItem.classList.add("rounded-4", "mb-2", "img-container", "wrapperCarritoEstatico", "position-relative")
     previewItem.style.backgroundImage = `url(${data.imagen})`;    
 
+    // Agregar elemento rating
+    previewItem.appendChild(ratingItem)
+    
+    // Cambiando elemento rating
+    ratingItem.classList.add("position-absolute", "bottom-0", "end-0", "rating")
+    ratingItem.innerHTML = `${data.puntaje} <i class="bi bi-star-fill star-rate"></i>`
+
+    // Si el item esta en la lista de compras:
     if(!carrito.isInCart(data.id)){
+        
+        // - Habilitar boton para agregar al carrito y su evento onClick
         const addBtn = document.createElement("div");
         previewItem.appendChild(addBtn)
 
-        addBtn.classList.add("buttonCarritoEstatico", "position-absolute", "top-0", "end-0")
+        addBtn.classList.add("buttonCarritoEstatico", "position-absolute", "top-0", "end-0", "addBtn")
         addBtn.innerHTML = '<div class="iconSE"><i class="fas fa-plus"></i></div>'
 
         addBtn.addEventListener('click', (e) => {
@@ -60,8 +73,9 @@ export const sugerenciaComponent = data => {
     }
 
 
+
     // agregando clases a info  container
-    infoContainer.classList.add("d-flex", "justify-content-between")
+    infoContainer.classList.add("d-flex", "justify-content-between", "info")
     infoContainer.appendChild(titleItem)
     infoContainer.appendChild(priceItem)
 
@@ -81,6 +95,27 @@ export const sugerenciaComponent = data => {
     componente.appendChild(infoContainer)
 
     return componente
+}
+
+export const itemCarrouselComponent = (data, pos) => {
+    // Crear img element
+    const anchor = document.createElement("a")
+    const img = document.createElement("img");
+    
+    // Agregar propiedades a img
+    anchor.classList.add("carousel-item")
+    anchor.href = `${data.enlace}`
+    img.classList.add("d-block", "w-100")
+    img.src = `${data.image}`
+    img.alt = `${data.nombre}`
+    // Si es el primer elemento, agregar la clase active
+    if(pos === 0){
+        anchor.classList.add("active")
+    }
+
+    anchor.append(img)
+
+    return anchor;
 }
 
 export const resenasComponent = ({nombre, puntaje, resena}) => {
