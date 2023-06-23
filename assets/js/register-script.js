@@ -1,7 +1,9 @@
-const forms = document.querySelector(".forms"),
-  formularioContacto = document.getElementById("formulario");
+import httpClient from "./httpClient.js";
+import {endpoints} from "./constants.js";
 
-pwShowHide = document.querySelectorAll(".bi-eye-fill");
+const forms = document.querySelector(".forms"),
+formularioContacto = document.getElementById("formulario"),
+pwShowHide = document.querySelectorAll(".bi-eye-slash");
 
 //Mostrar contraseñas
 
@@ -22,18 +24,12 @@ pwShowHide.forEach(eyeIcon => {
 })
 
 //Validar contraseñas
+//La funcion check muestra un mensaje de coincidencia
 
-function onChange() {
-  const password = document.querySelector('input[name=contraseña1]');
-  const confirm = document.querySelector('input[name=contraseña2]');
-  if (confirm.value === password.value) {
-    confirm.setCustomValidity('');
-  } else {
-    confirm.setCustomValidity('Las contraseñas no coinciden');
-  }
-}
+document.getElementById("pwd").addEventListener("keyup", check);
+document.getElementById("rpwd").addEventListener("keyup", check);
 
-var check = function () {
+function check(){
   if (document.getElementById('pwd').value ==
     document.getElementById('rpwd').value) {
     document.getElementById('message').style.color = 'green';
@@ -43,6 +39,7 @@ var check = function () {
     document.getElementById('message').innerHTML = 'No Coinciden';
   }
 }
+
 
 //llamar el evento
 
@@ -96,25 +93,54 @@ function validarFormulario(event) {
   }
   //validacion del mensaje
 
-  // validacion de correo, usamos Regexp
+  // validacion de contraseña, usamos Regexp
   function validarContraseña(contraseña) {
     const regexContra = /^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/; // Expresión regular para validar un correo
     return regexContra.test(contraseña);
 
     //pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
   }
-  // validacion de correo, usamos Regexp
+
+
+
+  // validacion de contraseña, usamos Regexp
   if (!validarContraseña(contraseña) || contraseña.length == 0) {
     alert("La contraseña no es valida, por favor ingrese una contraseña cumpliendo con los datos requeridos.");
     return
   }
 
+  //Validacion de contraseña 1 y contraseña 2
+  function onChange(){
+    const password = document.querySelector('input[name=contraseña1]');
+    const confirm = document.querySelector('input[name=contraseña2]');
+    if (confirm.value === password.value) {
+      confirm.setCustomValidity('');
+    } else {
+      return false;
+    }
+  }
+  
+  if (onChange()==false) {
+    alert("Las contraseñas no coinciden.");
+    return
+  }
+
+
+//Funcion procesaTodo sive para el JSON y el http
   function procesaTodo() {
     const datos = new FormData(event.target);
     const datosCompletos = Object.fromEntries(datos.entries());
-    console.log(JSON.stringify(datosCompletos));
+    console.log(datosCompletos);
+
+    httpClient.post(endpoints.registerUser,datosCompletos)
+    .then(response=>
+      console.log(response)
+    )
+    .catch(err=>
+      console.log(err)
+    )
   }
-  
+
   procesaTodo();  
   alert("Se ha registrado con exito");
   this.submit();
