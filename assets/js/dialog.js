@@ -1,4 +1,4 @@
-import { lecturaHTML, injectLastChild, parseComponent } from './common.js';
+import { lecturaHTML, injectLastChild, parseComponent } from './common.js'
 
 const dialog = './assets/templates/dialog.html'
 const calendario = './assets/templates/boton-calendario.html'
@@ -10,11 +10,13 @@ async function createDialogComponents(){
     const dialogComponent = parseComponent(dialogText)
     const calendarioBtn = parseComponent(calendarioText)
 
+    injectLastChild(dialogComponent)
+    injectLastChild(calendarioBtn)
+
     const closeBtn = dialogComponent.querySelector('#close')
 
     calendarioBtn.addEventListener('click', () => dialogComponent.showModal())
     closeBtn.addEventListener('click', () => dialogComponent.close())
-
 }
 
 createDialogComponents()

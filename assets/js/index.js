@@ -1,74 +1,81 @@
-const dataUrl = "./assets/index-data.json"
-
-// imagenes en carrousel
-const imagesCarrousel = document.querySelectorAll(".carousel-inner .carousel-item img")
+import { indicadorComponent, itemCarrouselComponent, sugerenciaComponent } from './components.js'
+import { endpoints } from './constants.js'
+import httpClient from './httpClient.js'
 
 // items  en listado de productos
-const inflablesItems = document.querySelectorAll("#inflables-container .item")
-const trampolinesItems = document.querySelectorAll("#trampolines-container .item")
+const inflablesContainer = document.querySelector("#inflables-container")
+const trampolinesContainer = document.querySelector("#trampolines-container")
 
 // funcion para fetch de datos y inyectar
 async function getDataAndInject(){
 
-    // fetch al json con contenido
-    const resp = await fetch(dataUrl)
-    
-    // si no salio bien, tirar un error
-    if(!resp.ok) new Error("No se encontro los datos")
-
-    // convertir json
-    const json = await resp.json()
+    // Obtener datos con el httpClient
+    const json = await httpClient.get(endpoints.mainData)
 
     // altualizar imagenes del carrousel con datos del json
-    updateDataCarrousel(json.carrousel)
+    actualizarCarrousel(json.carrousel)
 
     // actualizar los elementos del listados
-    updateDataItems(json.inflables, inflablesItems)
-    updateDataItems(json.inflables, trampolinesItems)
+    updateDataItems(json.inflables, inflablesContainer)
+    updateDataItems(json.trampolines, trampolinesContainer)
 }
 
-// funcion para cambiar src delas imagenes
-function updateDataCarrousel(data){
+// carrousel
 
-    // bucle para el array
-    for(let i = 0; i < data.length; i++){
-        // url de imagen y elemento de imagen
-        const imageUrl = data[i]
-        const img = imagesCarrousel[i]
-        
-        // set src con la url
-        img.src = imageUrl
+function actualizarCarrousel(items){
+
+    // Elementos del carrousel
+    const carrousel = document.querySelector("#carouselExampleIndicators")
+    const indicadoresContainer = carrousel.querySelector(".carousel-indicators")
+    const carrouselContainer = carrousel.querySelector(".carousel-inner")
+
+    // Crear fragment para contener todos los indicadores a crear
+    const indicadoresFragment = document.createDocumentFragment()
+
+    // iterar al numero de elementos del array para los indicadores
+    for(let i = 0; i < items.length; i++){
+
+        // Crear componente indicador
+        const indicator = indicadorComponent(i);
+        // Integrar componente al fragment 
+        indicadoresFragment.append(indicator);
+
     }
 
+    // Agregar indicadores al container
+    indicadoresContainer.append(indicadoresFragment)
+
+    // Crear fragment de imagenes
+    const imagenesFragment = document.createDocumentFragment()
+
+    // Iterar imagenes y crear componentes 
+    items.forEach((element, pos) => {
+        const imageComponent = itemCarrouselComponent(element, pos)
+        // Agregar img al fragment
+        imagenesFragment.append(imageComponent);
+    });
+    // agregar imagenes al carrousel
+    carrouselContainer.append(imagenesFragment)
 }
 
 // actualizar datos de lista de items
-function updateDataItems(data, items){
-    // iterar los datos
-    for(let i = 0; i < items.length; i++){
+function updateDataItems(items, container){
+    // Creando fragment para contener las sugerencias a crear
+    const sugerenciasFragment = document.createDocumentFragment()
 
-        // datos y item a modificar
-        const item = items[i]
-        const dataItem = data[i]
+    // Iterar el array de las sugerencias
+    items.forEach(obj => {
 
-        // Busqueda de elementos title, imagen y tag de precion en item
-        const [
-            titleComponent,
-            imgComponent,
-            priceComponent
-        ] = [
-            ".titleItem",
-            ".imgItem",
-            ".priceItem"
-        ].map(selector => item.querySelector(selector)) // codigo elegante pero dudoso
+        // Creando componente sugerencia con cada elemento del array
+        const sugerencia = sugerenciaComponent(obj);
 
-        // añadiendo contenido o atributos
-        imgComponent.src = dataItem.image
-        imgComponent.alt = `Imagen de ${dataItem.name}`
-        titleComponent.textContent = dataItem.name
-        priceComponent.textContent = `${dataItem.price} MXN`
+        // Integrar al fragment
+        sugerenciasFragment.appendChild(sugerencia);
 
-    }
+    });
+
+    // Agregar el fragment al contenedor de sugerencias 
+    container.append(sugerenciasFragment)
 }
 
 getDataAndInject()

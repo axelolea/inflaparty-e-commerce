@@ -14,12 +14,16 @@
     --primary-light-color: #ffa2da;
     --secondary-light-color: #ffeaba;
     --third-light-color: #bbf1f5;
+    --background-score: #01040066;
 }
 
 /* Asignar font Fredoka a todos los elementos */
 body
 {
     min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: 'Fredoka', sans-serif;
 }
 
@@ -128,6 +132,55 @@ footer a:hover
 #btn-calendario
 {
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.img-container
+{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    overflow: hidden;
+}
+
+.anim-container .info
+{
+    transition: all 500ms ease-in-out;
+}
+
+.anim-container:hover .img-container
+{
+    background-size: 120%;
+}
+
+.anim-container:hover .info
+{
+    color: var(--primary-color);
+}
+
+.star-rate
+{
+    color: var(--secondary-color);
+}
+
+.hidden
+{
+    display: none !important;
+    visibility: hidden;
+}
+
+.rating
+{
+    background-color: var(--background-score);
+    color: var(--white-color);
+    font-size: 1.3rem;
+    padding: 0.5rem 0.7rem;
+    border-start-start-radius: 50%;
+}
+
+.addBtn
+{
+    margin: 0.5rem;
 }

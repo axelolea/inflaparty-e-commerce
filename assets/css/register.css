@@ -1,0 +1,43 @@
+.form-group {
+    margin: 0 auto;
+    max-width: 400px;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: white;
+    max-width: 430px;
+}
+
+/*.box{
+    border: 1px solid black;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}*/
+
+.bi-eye-fill {
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    transform: translateY(-120%);
+    cursor: pointer;
+}
+
+.bi-eye-slash{
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    transform: translateY(-120%);
+    cursor: pointer;
+}

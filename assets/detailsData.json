@@ -1,0 +1,63 @@
+{
+    "id": 10,
+    "nombre": "Castillo Saltos Mágicos",
+    "descripcion": "Sumérgete en un mundo lleno de magia y diversión con este brincolín en forma de castillo, donde los niños pueden disfrutar de emocionantes saltos y rebotes. Este brincolín transporta a los pequeños a un mundo de fantasía, donde pueden saltar junto a personajes mágicos y sumergirse en aventuras increíbles.",
+    "puntaje": 4.5,
+    "precio": 800,
+    "imagenes": [
+        {
+            "url": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "nombre": "Inflable 1"
+        },
+        {
+            "url": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "nombre": "Inflable 2"
+        },
+        {
+            "url": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "nombre": "Inflable 3"
+        },
+        {
+            "url": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "nombre": "Inflable 4"
+        }
+    ],
+    "sugerencias": [
+        {
+            "id": 1,
+            "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "nombre": "Castillo Saltos Mágicos",
+            "precio": 122,
+            "puntaje": 5.0,
+            "enlace": "./details-product.html"
+        },
+        {
+            "id": 2,
+            "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "nombre": "Castillo Reino de la Diversión",
+            "precio": 122,
+            "puntaje": 5.0,
+            "enlace": "./details-product.html"
+        },
+        {
+            "id": 3,
+            "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "nombre": "Castillo Dulce",
+            "precio": 122,
+            "puntaje": 5.0,
+            "enlace": "./details-product.html"
+        }
+    ],
+    "resenas": [
+        {
+            "nombre": "Maria Perez",
+            "puntaje": 5,
+            "resena": "El brincolín fue un éxito total en la fiesta de cumpleaños de mi hijo. Los niños estaban emocionados y no podían parar de saltar y rebotar durante horas. La calidad del brincolín era excelente, y todas las medidas de seguridad estaban en su lugar.  Definitivamente, recomendaría este brincolín para cualquier evento infantil. ¡Fue una experiencia divertida y segura para todos!"
+        },
+        {
+            "nombre": "Juanito Sanchez",
+            "puntaje": 4,
+            "resena": "El diseño era colorido y atractivo, y la estructura se sentía sólida y resistente. Los niños disfrutaron saltando, escalando y deslizándose por los toboganes inflables. También apreciamos que el brincolín estuviera limpio y en excelente estado. Fue una inversión que valió la pena, ya que mantuvo a los niños entretenidos durante todo el evento. "
+        }
+    ]
+}
