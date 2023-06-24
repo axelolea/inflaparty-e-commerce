@@ -25,10 +25,10 @@
         <!--Iniciando la fila-->
         <div class="row form-wrapper">
             <!--Respetando el Responsive Design con las Columnas-->
-            <div class="col-sm-12 col-md-8 col-lg-6">
+            <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
                 <h1>Formulario del Producto</h1>
                 <!--FORM-->
-                <form>
+                <form id="form">
                     <div class="mb-3">
                         <label for="nombreDelProducto" class="form-label">Nombre del Producto</label>
                         <input type="text" class="form-control" id="nombreDelProducto" placeholder="Nombre de Producto">
@@ -52,13 +52,18 @@
 
                     <div class="mb-3">
                         <label for="descripcionDelProducto" class="form-label">Descripción del Producto</label>
-                        <textarea class="form-control" id="descripcionDelProducto" rows="5"></textarea>
+                        <textarea class="form-control no-resize" id="descripcionDelProducto" rows="5"></textarea>
                     </div>
                     <!--Button para Agregar Imagen-->
                     <button class="buttonSM buttonAgregarImagen" id="btnAgregarImagen">Agregar Imagen</button>
                     <input type="file" accept=".png, .jpg, .jpeg" id="fileInput" style="display: none;">
 
+
                     <button type="submit" class="buttonEn buttonAmarillo" id="btnEnviar">Enviar</button>
+
+                    <div>
+                        <span id="selectedFileName" class="filename"></span>
+                    </div>
 
                     
 

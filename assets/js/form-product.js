@@ -1,8 +1,11 @@
+// Http functions
+import httpClient from './httpClient.js'
+import { endpoints } from './constants.js'
 
 //Implementa una función Javascript que valide los campos del formulario y muestre errores en caso de existir usando las Alertas de Bootstrap.
 
-
-let form = document.querySelector("form");
+//Traemos el id del form, porque alli esta el submit
+let form = document.querySelector("#form");
 
 //Traer mis elementos del formulario form-product.html
 let nombreDelProducto = document.querySelector("#nombreDelProducto");
@@ -15,16 +18,104 @@ let btnAgregarImagen = document.querySelector("#btnAgregarImagen");
 let fileInput = document.querySelector("#fileInput");
 //let btnEnviar = document.querySelector("form");
 
-//Event Listeners:
+//Event Listeners: //Del boton Agregar Imagen
 btnAgregarImagen.addEventListener("click", function(event){
     event.preventDefault();
     fileInput.click();
-})
+});
 
+//La imagen
 fileInput.addEventListener("change", function(){
+    //Get the selected file
+    const selectedFile = fileInput.files[0];
+
+    //Trarme lo del html
+    const selectedFileNaemeElement = document.querySelector("#selectedFileName");
+    selectedFileNaemeElement.innerHTML = selectedFile.name;
 
 });
 
+
+//Función para validar los campos 
+function validar(event){
+    event.preventDefault();
+
+    //Obtener los values de los inputs
+    const nombreProducto = nombreDelProducto.value;
+    let precioProducto = precioDelProducto.value;
+    let tipoProducto = tipoDelProducto.value;
+    let descripcionProducto  = descripcionDelProducto.value;
+
+    //Validando el nombre del producto 
+    if(nombreProducto==""){
+        alert("Este campo Nombre del producto no puede quedarse vacio"); //Sale alerta si el campo no esta llenado
+        return; 
+    }
+
+    //Validamos el precio del producto 
+    if(precioProducto==""){
+        alert("Porfavor ingrese un Precio al Producto que desea registrar"); //Sale alerta si el campo no esta llenado
+        return;
+    }
+
+    //Validamos el tipo de producto
+    if (tipoProducto =="Seleccionar uno"){
+        alert("Porfavor seleccione un tipo de producto"); //Sale alerta si el campo sigue con "seleccionar uno"
+        return;
+
+    }
+
+    //validamos la descripcion del producto
+    if(descripcionProducto ==""){
+        alert("Por favor describa su producto"); //Sale alerta si el campo no esta llenado
+        return; 
+
+    }
+
+    //Validamos Agregar Imagen
+    if(fileInput.files.length === 0) {
+        alert("Por favor, agregue una imagen");
+        return;
+    }
+    
+     //Manda una alerta cuando todo el formulario se haya mandado con exito
+    alert("Haz mandado tu producto con exito!");
+    //Se habilita para que el formulario se pueda mandar:    
+
+    //Una vez validados los campos crea un objeto javascript en formato json con toda la información del formulario.
+
+const formProductdata = {
+    nombreProducto,
+    precioProducto,
+    tipoProducto,
+    descripcionProducto,
+    //imagenProducto: 
+  }
+
+
+//   httpClient.post(endpoints.contacto, formProductdata)
+//     .then(json => console.log(json))
+//     .catch(e => {
+//         console.log("hola")
+//         console.log(e)
+//     })
+
+  //console.log(formProductdata);
+
+  //form.submit();
+
+
+  let formProdctSerializado = JSON.stringify(formProductdata);
+  console.log(formProdctSerializado);
+
+//Por el momento retorna false, para poder ver los objetos en la consola.
+//return false;
+
+} //fin de la funcion validar
+
+//console.log('Testing console');
+//Creamos el evento con el boton Enviar (Se pasa le funcion (validar))
+form.addEventListener("submit", validar);
 
 //Event Listener para poner el simbolo $ en el input
 precioDelProducto.addEventListener("blur", function(){
@@ -42,75 +133,6 @@ precioDelProducto.addEventListener("input", function(){
     //Despues de . , solo permite 2 numeros decimales. 
     this.value = this.value.replace(/^(\d+)\.(\d{0,2}).*$/, '$1.$2');
 });
-
-//Creamos el evento con el boton Enviar (Se pasa le funcion (validar))
-form.addEventListener("submit", validar);
-
-//Función para validar los campos 
-function validar(event){
-    event.preventDefault();
-
-    //Obtener los values de los inputs
-    let valorInputnombreDelProducto = nombreDelProducto.value;
-    let valorInputprecioDelProducto = precioDelProducto.value;
-    let valorInputtipoDelProducto = tipoDelProducto.value;
-    let valorInputdescripcionDelProducto  = descripcionDelProducto.value;
-
-    //Validando el nombre del producto 
-    if(valorInputnombreDelProducto==""){
-        alert("Este campo Nombre del producto no puede quedarse vacio"); //Sale alerta si el campo no esta llenado
-        return; 
-    }
-    //Validamos el precio del producto 
-    if(valorInputprecioDelProducto==""){
-        alert("Porfavor ingrese un Precio al Producto que desea registrar"); //Sale alerta si el campo no esta llenado
-        return;
-    }
-    //Validamos el tipo de producto
-    if (valorInputtipoDelProducto =="Seleccionar uno"){
-        alert("Porfavor seleccione un tipo de producto"); //Sale alerta si el campo sigue con "seleccionar uno"
-        return;
-
-    }
-
-    //validamos la descripcion del producto
-    if(valorInputdescripcionDelProducto ==""){
-        alert("Por favor describa su producto"); //Sale alerta si el campo no esta llenado
-        return; 
-
-    }
-
-    //Validamos Agregar Imagen
-    if(fileInput.files.length === 0) {
-        alert("Por favor, agregue una imagen");
-        return;
-    }
-
-    //Una vez validados los campos crea un objeto javascript en formato json con toda la información del formulario.
-
-let formProduct = {
-    nombreProducto: valorInputnombreDelProducto,
-    precioProducto: valorInputprecioDelProducto,
-    tipoProducto: valorInputtipoDelProducto,
-    descripcionProducto: valorInputdescripcionDelProducto,
-    //imagenProducto: 
-  };
-
-
-  let formProdctSerializado = JSON.stringify(formProduct);
-  console.log(formProdctSerializado);
-
-
-    //Manda una alerta cuando todo el formulario se haya mandado con exito
-alert("Haz mandado tu producto con exito!");
-//Se habilita para que el formulario se pueda mandar:    
-//form.submit();
-
-//Por el momento retorna false, para poder ver los objetos en la consola.
-return false;
-
-}
-
 
 
 

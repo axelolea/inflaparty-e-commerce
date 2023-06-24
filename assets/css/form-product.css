@@ -25,3 +25,12 @@ h1{
 .buttonEn{
     margin-left: 45px;
 }
+
+.filename{
+    align-items: center;
+}
+
+.no-resize{
+    resize: none;
+    
+}
