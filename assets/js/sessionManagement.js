@@ -17,6 +17,10 @@ class SessionManagement{
         window.location = "./index.html"
     }
 
+    getToken(){
+        return sessionStorage.getItem(this.#tokenSessionStorage)
+    }
+
 }
 
 const sessionManagement = new SessionManagement();

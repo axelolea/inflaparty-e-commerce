@@ -6,7 +6,8 @@ const endpointsTest = {
     loginUser: "",
     contacto: "",
     crearProducto: "",
-    enviarCarrito: ""
+    enviarCarrito: "",
+    getUsuario: ""
 }
 
 // EndPoints (igual que los de test)
