@@ -2,27 +2,27 @@
     "carrousel": [
         {
             "image": "https://live.staticflickr.com/65535/52976257423_340fe6b7ec_b.jpg",
-            "nombre": "Nombre del inflabe 1",
+            "nombre": "Reino Dinosaurios",
             "enlace": "./details-product.html"
         },
         {
             "image": "https://live.staticflickr.com/65535/52976174545_6639f5249e_b.jpg",
-            "nombre": "Nombre del inflabe 2",
+            "nombre": "Castillo Feliz",
             "enlace": "./details-product.html"
         },
         {
             "image": "https://live.staticflickr.com/65535/52975950229_52bf3da045_b.jpg",
-            "nombre": "Nombre del inflabe 3",
+            "nombre": "Castillo Desafío",
             "enlace": "./details-product.html"
         },
         {
             "image": "https://live.staticflickr.com/65535/52975881466_ac09f84c84_b.jpg",
-            "nombre": "Nombre del inflabe 4",
+            "nombre": "Escaladora Extrema",
             "enlace": "./details-product.html"
         },
         {
             "image": "https://live.staticflickr.com/65535/52976250125_47a7fe29c4_b.jpg",
-            "nombre": "Nombre del inflabe 5",
+            "nombre": "Escaladora de Batman",
             "enlace": "./details-product.html"
         }
     ],
@@ -30,49 +30,49 @@
         {
             "id": 1,
             "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
-            "nombre": "Inflable 1",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Castillo Saltos Mágicos",
+            "precio": 800,
+            "puntaje": 4.5,
             "enlace": "./details-product.html"
         },
         {
             "id": 2,
             "imagen": "https://live.staticflickr.com/65535/52975804976_08cc447a38_c.jpg",
-            "nombre": "Inflable 2",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Castillo Reino de la Diversión",
+            "precio": 900,
+            "puntaje": 4.6,
             "enlace": "./details-product.html"
         },
         {
             "id": 3,
             "imagen": "https://live.staticflickr.com/65535/52975949914_e74a96a8a9_c.jpg",
-            "nombre": "Inflable 3",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Castillo Dulce",
+            "precio": 800,
+            "puntaje": 4.4,
             "enlace": "./details-product.html"
         },
         {
             "id": 4,
             "imagen": "https://live.staticflickr.com/65535/52976257193_feefb1a2ab_c.jpg",
-            "nombre": "Inflable 4",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Escaladora Aventuras",
+            "precio": 1150,
+            "puntaje": 4.5,
             "enlace": "./details-product.html"
         },
         {
             "id": 5,
             "imagen": "https://live.staticflickr.com/65535/52975949909_27b96d9f69_c.jpg",
-            "nombre": "Inflable 5",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Castillo Encantado",
+            "precio": 800,
+            "puntaje": 4.5,
             "enlace": "./details-product.html"
         },
         {
             "id": 6,
             "imagen": "https://live.staticflickr.com/65535/52975949534_0215a8bb1c_n.jpg",
-            "nombre": "Inflable 6",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Castillo Reino Dinosaurios",
+            "precio": 1250,
+            "puntaje": 4.8,
             "enlace": "./details-product.html"
         }
     ],
@@ -80,49 +80,49 @@
         {
             "id": 7,
             "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
-            "nombre": "Inflable 1",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Trampolín Clásico",
+            "precio": 500,
+            "puntaje": 4.3,
             "enlace": "./details-product.html"
         },
         {
             "id": 8,
             "imagen": "https://live.staticflickr.com/65535/52975804976_08cc447a38_c.jpg",
-            "nombre": "Inflable 2",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "TrampoDiversión",
+            "precio": 550,
+            "puntaje": 4.5,
             "enlace": "./details-product.html"
         },
         {
             "id": 9,
             "imagen": "https://live.staticflickr.com/65535/52975949914_e74a96a8a9_c.jpg",
-            "nombre": "Inflable 3",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "TrampoAventuras",
+            "precio": 600,
+            "puntaje": 4.6,
             "enlace": "./details-product.html"
         },
         {
             "id": 10,
             "imagen": "https://live.staticflickr.com/65535/52976257193_feefb1a2ab_c.jpg",
-            "nombre": "Inflable 4",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Mini Trampolín",
+            "precio": 400,
+            "puntaje": 4.1,
             "enlace": "./details-product.html"
         },
         {
             "id": 11,
             "imagen": "https://live.staticflickr.com/65535/52975949909_27b96d9f69_c.jpg",
-            "nombre": "Inflable 5",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Trampolín Mágico",
+            "precio": 650,
+            "puntaje": 4.7,
             "enlace": "./details-product.html"
         },
         {
             "id": 12,
             "imagen": "https://live.staticflickr.com/65535/52975949534_0215a8bb1c_n.jpg",
-            "nombre": "Inflable 6",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Trampolín Fantasías",
+            "precio": 550,
+            "puntaje": 4.5,
             "enlace": "./details-product.html"
         }
     ]

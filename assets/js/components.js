@@ -63,7 +63,7 @@ export const sugerenciaComponent = data => {
         previewItem.appendChild(addBtn)
 
         addBtn.classList.add("buttonCarritoEstatico", "position-absolute", "top-0", "end-0", "addBtn")
-        addBtn.innerHTML = '<div class="iconSE"><i class="fas fa-plus"></i></div>'
+        addBtn.innerHTML = '<div class="iconSE"><i class="bi bi-plus"></i></div>'
 
         addBtn.addEventListener('click', (e) => {
             e.preventDefault()

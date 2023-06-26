@@ -1,33 +1,42 @@
-.container{
-    margin-top: 50px;
+
+
+.loginIcon{
+    height: 7rem;
+    color: #FBAF00;
+
+}
+
+.titulo{
+    text-align: center ;
+}
+
+/* .divUserIcon{
+    background-color: #ec058e; 
+    border-color: black;
+    color: #FFFBFC;
+} */
+
+.usuarioInput{
+    border-color: black;
+    border-style: solid;
+    background-color: #5a595925;
+
 }
 
 
-#tituloLogin{
-    margin-bottom: 25px;
+.divLockIcon{
+    background-color: #ec058e; /*Jugar con colores de guia de diseño*/
+    border-color: black;
+    color: #FFFBFC;
 }
 
-button{
-    display:inline
+.lockInput{
+    border-color: black;
+    border: radius 5px;
+    background-color: rgba(90, 89, 89, 0.144);
 }
 
-.loginForm{
-    margin: 10PX;
-    text-align: left;
+.textoCursivas{
+ font-style: italic;
+ color: #62bbc1; 
 }
-
-.form-label{
-    font-weight:bolder
-}
-
-.form-control{
-        
-        background-color: rgba(90, 89, 89, 0.144);
-       width: 500px;
-    
-
-    
-}
-
-
- 

@@ -8,24 +8,51 @@
     --secondary-color: #FBAF00;
     --third-color: #62BBC1;
     --white-color: #FFFBFC;
+    --grey-light-color:#adadad;
+    --primary-light-color: #ffa2da;
 }
 
 .container{
     padding-top: 50px;
 }
 
+#sobreNosotros{
+    background-color: #ffa2da;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #containerMisionVision{
-    display: grid;
-    grid-column-gap: 50px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-bottom: 60px;
+   margin-top: 60px;
+}
+
+#mision{
+    padding-top: 10px;
+    background-color: #62BBC1;
+    border-radius: 10px;
+    margin-left: 70px;
+}
+
+#vision{
+    padding-top: 10px;
+    background-color: #62BBC1;
+    border-radius: 10px;
+    margin-left: 50px;
 }
 
 .containerValores{
     padding-top: 30px;
+    background-color:#ffc43a;
+    border-radius: 10px;
 }
 
 .listaValores{  
     list-style: inside disc;
-    text-align: center;
+    text-align: justify;
 }
 
 .img{
@@ -71,4 +98,8 @@
 .parrafos{
     text-align: center;
     padding-top: 5px;
+}
+
+body{
+    background-color: #EEEEEE;
 }
