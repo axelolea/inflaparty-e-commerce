@@ -7,7 +7,8 @@ const endpointsTest = {
     contacto: "",
     crearProducto: "",
     enviarCarrito: "",
-    getUsuario: ""
+    getUsuario: "",
+    listProduct: "./assets/list-products.json"
 }
 
 // EndPoints (igual que los de test)
