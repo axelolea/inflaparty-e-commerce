@@ -65,7 +65,7 @@ function validarFormulario(event) {
   }
   //validacion de apellido
   if (apellido.length == 0) {
-    alert("Es necesario ingresar sus appellidos");
+    alert("Es necesario ingresar sus apellidos");
     return;
   }
 
@@ -88,7 +88,7 @@ function validarFormulario(event) {
   }
 
   if (!validarTelefono(telefono) || telefono.length == 0) {
-    alert("El dato que ingreso no es un numero de telefono correcto, por favor ingrese un numero de 10 digitos");
+    alert("El dato que ingreso no es un número de teléfono correcto, por favor ingrese un número de 10 digitos");
     return
   }
   //validacion del mensaje
