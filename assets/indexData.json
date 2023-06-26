@@ -70,7 +70,7 @@
         {
             "id": 6,
             "imagen": "https://live.staticflickr.com/65535/52975949534_0215a8bb1c_n.jpg",
-            "nombre": "Reino Dinosaurios",
+            "nombre": "Castillo Reino Dinosaurios",
             "precio": 1250,
             "puntaje": 4.8,
             "enlace": "./details-product.html"
@@ -80,49 +80,49 @@
         {
             "id": 7,
             "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
-            "nombre": "Inflable 1",
-            "precio": 900,
-            "puntaje": 4.6,
+            "nombre": "Trampolín Clásico",
+            "precio": 500,
+            "puntaje": 4.3,
             "enlace": "./details-product.html"
         },
         {
             "id": 8,
             "imagen": "https://live.staticflickr.com/65535/52975804976_08cc447a38_c.jpg",
-            "nombre": "Inflable 2",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "TrampoDiversión",
+            "precio": 550,
+            "puntaje": 4.5,
             "enlace": "./details-product.html"
         },
         {
             "id": 9,
             "imagen": "https://live.staticflickr.com/65535/52975949914_e74a96a8a9_c.jpg",
-            "nombre": "Inflable 3",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "TrampoAventuras",
+            "precio": 600,
+            "puntaje": 4.6,
             "enlace": "./details-product.html"
         },
         {
             "id": 10,
             "imagen": "https://live.staticflickr.com/65535/52976257193_feefb1a2ab_c.jpg",
-            "nombre": "Inflable 4",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Mini Trampolín",
+            "precio": 400,
+            "puntaje": 4.1,
             "enlace": "./details-product.html"
         },
         {
             "id": 11,
             "imagen": "https://live.staticflickr.com/65535/52975949909_27b96d9f69_c.jpg",
-            "nombre": "Inflable 5",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Trampolín Mágico",
+            "precio": 650,
+            "puntaje": 4.7,
             "enlace": "./details-product.html"
         },
         {
             "id": 12,
             "imagen": "https://live.staticflickr.com/65535/52975949534_0215a8bb1c_n.jpg",
-            "nombre": "Inflable 6",
-            "precio": 122,
-            "puntaje": 5.0,
+            "nombre": "Trampolín Fantasías",
+            "precio": 550,
+            "puntaje": 4.5,
             "enlace": "./details-product.html"
         }
     ]
