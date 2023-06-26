@@ -15,38 +15,26 @@
     margin-bottom: 50px;
 }
 
-#imagenes{
-    margin-top: 30px;
+#containerRow{
+    margin-top: 50px;
 }
 
-#nombres{
-    margin-top: 30px;
-}
-
-
-
-.card-title{
-    margin-top: 5px;
-    text-align: center;
-}
 
 
 .btn{
     margin-top: 115px;
-    margin-left: 170px;
+    
 }
 
 
 #table{
     margin-top: 50px;
+    margin-left: 10px;
 }
 
-.subtotal{
-    margin-top: 20px;
-}
 
 .resumen{
-    margin-top: 200px;
+    margin-top: 0px;
 }
 
 .servicio{
@@ -55,11 +43,12 @@
 
 #subtotal{
     margin-top: 10px;
+    margin-left: 15px;
 }
 
 #totales{
     margin-top: 100px;
-    text-align: center;
+    margin-left: 15px;
 }
 
 .buttones{
@@ -69,91 +58,75 @@
 
 
 
-/*Boton eliminar*/
-.wrapperCarritoEstatico .buttonCarritoEstatico{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin: 0 5px;
-    overflow: hidden;
-    background: var(--secondary-color);
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease-out;
-}
-
-.wrapperCarritoEstatico .buttonCarritoEstatico:hover {
-    transform: translateY(2px);
-}
-
-.wrapperCarritoEstatico .buttonCarritoEstatico .iconSE{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    box-sizing: border-box;
-    line-height: 40px;
-    border-radius: 40px;
-}
-
-.wrapperCarritoEstatico .buttonCarritoEstatico .iconSE i{
-    font-size: 20px;
-    line-height: 40px;
-    color: var(--white-color);
-}
-
 #back-img1{
     background-image: url("https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg");
-    background-size: contain;
+    background-size:cover;
     background-repeat: no-repeat;
-    height: 300px;
     width: 350px;
+    height: 200px;
     text-align: right;
     padding-top: 10px;
     padding-right: 5px;
+    border-radius: 10px;
 }
+
+
 
 #back-img2{
     background-image: url("https://live.staticflickr.com/65535/52975804976_08cc447a38_c.jpg");
-    background-size: contain;
+    background-size:cover;
     background-repeat: no-repeat;
-    height: 300px;
     width: 350px;
+    height: 200px;
     text-align: right;
     padding-top: 10px;
     padding-right: 5px;
+    border-radius: 10px;
 }
 
 #back-img3{
     background-image: url("https://live.staticflickr.com/65535/52975949914_e74a96a8a9_c.jpg");
-    background-size: contain;
+    background-size:cover;
     background-repeat: no-repeat;
-    height: 300px;
     width: 350px;
+    height: 200px;
     text-align: right;
     padding-top: 10px;
     padding-right: 5px;
+    border-radius: 10px;
 }
 
 #back-img4{
     background-image: url("https://live.staticflickr.com/65535/52976257193_feefb1a2ab_c.jpg");
-    background-size: contain;
+    background-size:cover;
     background-repeat: no-repeat;
-    height: 300px;
     width: 350px;
+    height: 200px;
     text-align: right;
     padding-top: 10px;
     padding-right: 5px;
+    border-radius: 10px;
 }
 
 #back-img5{
     background-image: url("https://live.staticflickr.com/65535/52975949909_27b96d9f69_c.jpg");
-    background-size: contain;
+    background-size:cover;
     background-repeat: no-repeat;
-    height: 300px;
     width: 350px;
+    height: 200px;
     text-align: right;
     padding-top: 10px;
     padding-right: 5px;
+    border-radius: 10px;
+}
+
+.item{
+    display: flex;
+    padding-top: 5px;
+    margin-bottom: 50px;
+}
+
+.itemContent{
+    margin-left: 80px;
+    text-align: right;
 }
