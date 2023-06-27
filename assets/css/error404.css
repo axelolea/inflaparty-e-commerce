@@ -1,0 +1,23 @@
+body {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding-top: auto;
+  }
+
+ /*Responsividad Tablet*/
+ 
+ @media (max-width: 768px) {
+    .inflable {
+      width: 100%;
+    }
+  }
+  /*Responsividad Móvil*/
+  @media (max-width: 480px) {
+    .inflable {
+      margin: 10px 0;
+    }
+  }
+
+#imageElement {
+
+  }

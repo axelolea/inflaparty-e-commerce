@@ -55,59 +55,6 @@
 
 
 
-/*Boton de Agregar Imagen*/
-.buttonAgregarImagen{
-    /*Background color: Yellow*/
-    background-color: var(--white-color);
-    color: var(--secondary-color);
-    /*Redondear todo los bordes */
-    border-radius: 50px;
-    height: 40px;
-    width: 250px;
-    text-align: center;
-    border: none ;
-    font-family: 'Open Sans', sans-serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    position:relative;
-    font-size:20px;
-    padding:0 2em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
-}
-
-
-.buttonAgregarImagen:hover {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    transform: translateY(2px);
-} 
-
-
-.buttonAgregarImagen:before,.buttonAgregarImagen:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:15px;
-    height:2px;
-    width:0;
-    background: var(--white-color);
-    transition:400ms ease all;
-  }
-  .buttonAgregarImagen:after{
-    right:inherit;
-    top:inherit;
-    left: 15px;
-    bottom:0;
-  }
-  .buttonAgregarImagen:hover:before,.buttonAgregarImagen:hover:after{
-    width:88%;
-    transition:800ms ease all;
-  }
-
-
-
-
 /*Boton de Registrar Y de Enviar*/
 .buttonAmarillo{
     /*Background color: Yellow*/
