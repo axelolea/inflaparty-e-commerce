@@ -23,20 +23,29 @@ class SessionManagement{
     }
 
     registerLocalStorage(data){
-        const data = localStorage.getItem(this.#usersSessionStorage)
-        const users = JSON.parse(data)
-        localStorage.setItem(this.#usersSessionStorage, [...users, data])
+        const dataClean = localStorage.getItem(this.#usersSessionStorage)
+        if(!dataClean){
+            const newData = [data]
+            localStorage.setItem(this.#usersSessionStorage, JSON.stringify(newData))
+            return;
+        }
+        const users = JSON.parse(dataClean)
+        if(Array.isArray(users)){
+            const newData = [...users, data]
+            localStorage.setItem(this.#usersSessionStorage, JSON.stringify(newData))
+        }
     }
 
     loginLocalStorage(data){
-        const data = localStorage.getItem(this.#usersSessionStorage)
-        const users = JSON.parse(data)
-
+        const dataClean = localStorage.getItem(this.#usersSessionStorage)
+        const users = JSON.parse(dataClean)
+        let flag = false
         users.forEach(user => {
+            if(flag) return;
             const { email, password } = user
-            if(data.email === email && data.password === password) return true;
-            return false
+            if(data.email === email && data.password === password) flag = true;
         });
+        return flag
     }
 
 }
