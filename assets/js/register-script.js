@@ -1,5 +1,6 @@
 import httpClient from "./httpClient.js";
 import {endpoints} from "./constants.js";
+import session from "./sessionManagement.js";
 
 const forms = document.querySelector(".forms"),
 formularioContacto = document.getElementById("formulario"),
@@ -111,8 +112,8 @@ function validarFormulario(event) {
 
   //Validacion de contraseña 1 y contraseña 2
   function onChange(){
-    const password = document.querySelector('input[name=contraseña1]');
-    const confirm = document.querySelector('input[name=contraseña2]');
+    const password = document.querySelector('input[name=password]');
+    const confirm = document.querySelector('input[name=password2]');
     if (confirm.value === password.value) {
       confirm.setCustomValidity('');
     } else {
@@ -131,6 +132,8 @@ function validarFormulario(event) {
     const datos = new FormData(event.target);
     const datosCompletos = Object.fromEntries(datos.entries());
     console.log(datosCompletos);
+
+    session.registerLocalStorage(datosCompletos);
 
     httpClient.post(endpoints.registerUser,datosCompletos)
     .then(response=>
