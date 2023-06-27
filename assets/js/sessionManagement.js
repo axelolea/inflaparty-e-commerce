@@ -24,28 +24,22 @@ class SessionManagement{
 
     registerLocalStorage(data){
         const dataClean = localStorage.getItem(this.#usersSessionStorage)
-        if(!dataClean){
-            const newData = [data]
-            localStorage.setItem(this.#usersSessionStorage, JSON.stringify(newData))
-            return;
+        const newData = [];
+        if(!dataClean && typeof data === 'object') newData.push(data);
+        else {
+            const users = JSON.parse(dataClean)
+            if(Array.isArray(users)) newData.push(...users, data);
         }
-        const users = JSON.parse(dataClean)
-        if(Array.isArray(users)){
-            const newData = [...users, data]
-            localStorage.setItem(this.#usersSessionStorage, JSON.stringify(newData))
-        }
+        localStorage.setItem(this.#usersSessionStorage, JSON.stringify(newData))
     }
 
     loginLocalStorage(data){
-        const dataClean = localStorage.getItem(this.#usersSessionStorage)
-        const users = JSON.parse(dataClean)
-        let flag = false
-        users.forEach(user => {
-            if(flag) return;
-            const { email, password } = user
-            if(data.email === email && data.password === password) flag = true;
-        });
-        return flag
+        const users = JSON.parse(localStorage.getItem(this.#usersSessionStorage))
+        return users.reduce((acc, user) => {
+            if(acc) return;
+            const { email, password } = user;
+            return data.email === email && data.password === password;
+        }, false)
     }
 
 }
