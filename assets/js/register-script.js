@@ -1,5 +1,6 @@
 import httpClient from "./httpClient.js";
 import {endpoints} from "./constants.js";
+import session from "./sessionManagement.js";
 
 const forms = document.querySelector(".forms"),
 formularioContacto = document.getElementById("formulario"),
@@ -65,7 +66,7 @@ function validarFormulario(event) {
   }
   //validacion de apellido
   if (apellido.length == 0) {
-    alert("Es necesario ingresar sus appellidos");
+    alert("Es necesario ingresar sus apellidos");
     return;
   }
 
@@ -88,7 +89,7 @@ function validarFormulario(event) {
   }
 
   if (!validarTelefono(telefono) || telefono.length == 0) {
-    alert("El dato que ingreso no es un numero de telefono correcto, por favor ingrese un numero de 10 digitos");
+    alert("El dato que ingreso no es un número de teléfono correcto, por favor ingrese un número de 10 digitos");
     return
   }
   //validacion del mensaje
@@ -111,8 +112,8 @@ function validarFormulario(event) {
 
   //Validacion de contraseña 1 y contraseña 2
   function onChange(){
-    const password = document.querySelector('input[name=contraseña1]');
-    const confirm = document.querySelector('input[name=contraseña2]');
+    const password = document.querySelector('input[name=password]');
+    const confirm = document.querySelector('input[name=password2]');
     if (confirm.value === password.value) {
       confirm.setCustomValidity('');
     } else {
@@ -131,6 +132,8 @@ function validarFormulario(event) {
     const datos = new FormData(event.target);
     const datosCompletos = Object.fromEntries(datos.entries());
     console.log(datosCompletos);
+
+    session.registerLocalStorage(datosCompletos);
 
     httpClient.post(endpoints.registerUser,datosCompletos)
     .then(response=>
