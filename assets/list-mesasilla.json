@@ -1,0 +1,65 @@
+
+[
+    {
+        "id": 21,
+        "nombre": "Mesa Café",
+        "imagen": "https://live.staticflickr.com/65535/53008460669_f9526555b6_n.jpg",
+        "precio": 100,
+        "puntaje": 4.6,
+        "enlace": "./details-product.html",
+        "descripcion": "Incluye un mantel blanco y 10 sillas.",
+        "tipo": "mesasillas"
+    },
+    {
+        "id": 22,
+        "nombre": "Mesa Redonda",
+        "imagen": "https://live.staticflickr.com/65535/53008677535_5bfd3564b5_n.jpg",
+        "precio": 130,
+        "puntaje": 4.8,
+        "enlace": "./details-product.html",
+        "descripcion": " Incluye un mantel blanco y 10 sillas.",
+        "tipo": "mesasillas"
+
+    },
+    {
+        "id": 23,
+        "nombre": "Mesa Madera",
+        "imagen": "https://live.staticflickr.com/65535/53008296831_279f6a6fd1_n.jpg",
+        "precio": 90,
+        "puntaje": 4.5,
+        "enlace": "./details-product.html",
+        "descripcion": "Incluye bancos sin respaldo",
+        "tipo": "mesasillas"
+    },
+    {
+        "id": 24,
+        "nombre": "Mesa Clásica",
+        "imagen":"https://live.staticflickr.com/65535/53008419989_2686a3de57_n.jpg",
+        "precio": 400,
+        "puntaje": 4.1,
+        "enlace": "./details-product.html",
+        "descripcion": " Incluye 10 sillas  y mantel blanco",
+        "tipo": "mesasillas"
+    },
+    {
+        "id": 25,
+        "nombre": "Mesa Elegante",
+        "imagen": "https://live.staticflickr.com/65535/53007701792_9624183d97_n.jpg",
+        "precio": 180,
+        "puntaje": 4.8,
+        "enlace": "./details-product.html",
+        "descripcion": " Incluye 6 sillas de madera y mantel blanco",
+        "tipo": "mesasillas"
+    },
+    {
+        "id": 26,
+        "nombre": "Mesa Blanca",
+        "imagen": "https://live.staticflickr.com/65535/53008296816_2afa9c8dd6_n.jpg",
+        "precio": 120,
+        "puntaje": 4.5,
+        "enlace": "./details-product.html",
+        "descripcion": " Incluye 10 diyas y un mantel blanco.",
+        "tipo": "mesasillas"
+    }
+   
+]
