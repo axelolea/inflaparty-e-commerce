@@ -5,6 +5,8 @@ import httpClient from './httpClient.js'
 // items  en listado de productos
 const inflablesContainer = document.querySelector("#inflables-container")
 const trampolinesContainer = document.querySelector("#trampolines-container")
+const mesasillasContainer=document.querySelector("#mesasillas-container")
+
 
 // funcion para fetch de datos y inyectar
 async function getDataAndInject(){
@@ -18,6 +20,9 @@ async function getDataAndInject(){
     // actualizar los elementos del listados
     updateDataItems(json.inflables, inflablesContainer)
     updateDataItems(json.trampolines, trampolinesContainer)
+    updateDataItems(json.mesasillas, mesasillasContainer)
+    
+
 }
 
 // carrousel
