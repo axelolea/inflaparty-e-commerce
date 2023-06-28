@@ -1,6 +1,7 @@
 class SessionManagement{
 
     #tokenSessionStorage = "inflaparty-token";
+    #usersSessionStorage = "inflaparty-users";
 
     constructor(){}
 
@@ -19,6 +20,26 @@ class SessionManagement{
 
     getToken(){
         return sessionStorage.getItem(this.#tokenSessionStorage)
+    }
+
+    registerLocalStorage(data){
+        const dataClean = localStorage.getItem(this.#usersSessionStorage)
+        const newData = [];
+        if(!dataClean && typeof data === 'object') newData.push(data);
+        else {
+            const users = JSON.parse(dataClean)
+            if(Array.isArray(users)) newData.push(...users, data);
+        }
+        localStorage.setItem(this.#usersSessionStorage, JSON.stringify(newData))
+    }
+
+    loginLocalStorage(data){
+        const users = JSON.parse(localStorage.getItem(this.#usersSessionStorage))
+        return users.reduce((acc, user) => {
+            if(acc) return;
+            const { email, password } = user;
+            return data.email === email && data.password === password;
+        }, false)
     }
 
 }
