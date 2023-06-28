@@ -19,10 +19,8 @@
     margin-top: 50px;
 }
 
-
-
 .btn{
-    margin-top: 115px;
+    max-width: 150px;
     
 }
 
@@ -127,6 +125,5 @@
 }
 
 .itemContent{
-    margin-left: 80px;
-    text-align: right;
+    text-align: left;
 }
