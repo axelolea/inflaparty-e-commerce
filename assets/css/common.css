@@ -160,6 +160,7 @@ footer a:hover
     color: var(--primary-color);
 }
 
+/*Rating con las estrellas*/
 .star-rate
 {
     color: var(--secondary-color);
