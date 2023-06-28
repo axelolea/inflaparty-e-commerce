@@ -235,7 +235,6 @@ footer a:hover
   }
   
   .calendar .header .btns .btn:hover {
-    background-color: #db0933;
     transform: scale(1.05);
   }
   
