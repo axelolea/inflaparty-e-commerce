@@ -1,6 +1,6 @@
 /* Nahomi*/
 
-
+import carrito from "./shoppingCartManagement.js";
 export function appendItemsCart(items = []) {
     /*Integrar elementos de un array al dom*/
 
@@ -23,8 +23,9 @@ export function appendItemsCart(items = []) {
 
         //div del wrapperCarrito
         const previewItem = document.createElement('div');
-        previewItem.classList.add('wrapperCarritoEstatico');
+        previewItem.classList.add('wrapperCarritoEstatico', 'back-img');
         previewItem.style.backgroundImage = `url(${item.imagen})`;
+        
 
         //div del buttonCarritoEstatico
         const deleteBtn = document.createElement('div');
@@ -34,6 +35,10 @@ export function appendItemsCart(items = []) {
         const deleteIcon = document.createElement('div');
         deleteIcon.classList.add('iconSE');
         deleteIcon.innerHTML = '<i class="fas fa-times"></i>';
+        deleteIcon.addEventListener('click',() => {
+            console.log(item.id)
+            carrito.deleteItemCart(item.id)
+        })
 
         //agregamos como hijos del boton eliminar
         deleteBtn.appendChild(deleteIcon);
