@@ -1,6 +1,6 @@
 .form-group {
     margin: 0 auto;
-    max-width: 400px;
+    /*max-width: 400px;*/
     position: relative;
 }
 
@@ -12,11 +12,12 @@ h2 {
 
 .container {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;/*
     padding-right: 20px;
     padding-left: 20px;
+    max-width: 430px;*/
     background-color: white;
-    max-width: 430px;
+
 }
 
 /*.box{
@@ -40,4 +41,26 @@ h2 {
     right: 10px;
     transform: translateY(-120%);
     cursor: pointer;
+}
+
+.form-control{
+    border-color: #5a595925;
+    border-style: solid;
+    background-color: #5a595925;
+
+}
+
+.lockInput{
+    border-color: #5a595925;
+    border: radius 5px;
+    background-color: rgba(90, 89, 89, 0.144);
+}
+
+.form-link{
+    text-align: center;
+}
+
+.login_link{
+    font-style: italic;
+    color: #62bbc1; 
 }
