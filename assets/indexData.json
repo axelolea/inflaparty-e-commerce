@@ -78,50 +78,100 @@
     ],
     "trampolines": [
         {
-            "id": 7,
-            "imagen": "https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg",
+            "id": 11,
+            "imagen": "https://live.staticflickr.com/65535/53008255986_3b893ba0b6_n.jpg",
             "nombre": "Trampolín Clásico",
             "precio": 500,
             "puntaje": 4.3,
             "enlace": "./details-product.html"
         },
         {
-            "id": 8,
-            "imagen": "https://live.staticflickr.com/65535/52975804976_08cc447a38_c.jpg",
+            "id": 12,
+            "imagen": "https://live.staticflickr.com/65535/53007661542_ec9bb55457_n.jpg",
             "nombre": "TrampoDiversión",
             "precio": 550,
             "puntaje": 4.5,
             "enlace": "./details-product.html"
         },
         {
-            "id": 9,
-            "imagen": "https://live.staticflickr.com/65535/52975949914_e74a96a8a9_c.jpg",
+            "id": 13,
+            "imagen": "https://live.staticflickr.com/65535/53007661512_7219d4abda_n.jpg",
             "nombre": "TrampoAventuras",
             "precio": 600,
             "puntaje": 4.6,
             "enlace": "./details-product.html"
         },
         {
-            "id": 10,
-            "imagen": "https://live.staticflickr.com/65535/52976257193_feefb1a2ab_c.jpg",
+            "id": 14,
+            "imagen": "https://live.staticflickr.com/65535/53008419989_2686a3de57_n.jpg",
             "nombre": "Mini Trampolín",
             "precio": 400,
             "puntaje": 4.1,
             "enlace": "./details-product.html"
         },
         {
-            "id": 11,
-            "imagen": "https://live.staticflickr.com/65535/52975949909_27b96d9f69_c.jpg",
+            "id": 15,
+            "imagen": "https://live.staticflickr.com/65535/53008739123_23d501da09_n.jpg",
             "nombre": "Trampolín Mágico",
             "precio": 650,
             "puntaje": 4.7,
             "enlace": "./details-product.html"
         },
         {
-            "id": 12,
-            "imagen": "https://live.staticflickr.com/65535/52975949534_0215a8bb1c_n.jpg",
+            "id": 16,
+            "imagen": "https://live.staticflickr.com/65535/53008419999_d9312aaa1f_n.jpg",
             "nombre": "Trampolín Fantasías",
             "precio": 550,
+            "puntaje": 4.5,
+            "enlace": "./details-product.html"
+        }
+    ],
+    "mesasillas": [
+        {
+            "id": 21,
+            "imagen": "https://live.staticflickr.com/65535/53008460669_f9526555b6_n.jpg",
+            "nombre": "Mesa Café",
+            "precio": 100,
+            "puntaje": 4.6,
+            "enlace": "./details-product.html"
+        },
+        {
+            "id": 22,
+            "imagen": "https://live.staticflickr.com/65535/53008677535_5bfd3564b5_n.jpg",
+            "nombre": "Mesa Redonda",
+            "precio": 130,
+            "puntaje": 4.8,
+            "enlace": "./details-product.html"
+        },
+        {
+            "id": 23,
+            "imagen": "https://live.staticflickr.com/65535/53008296831_279f6a6fd1_n.jpg",
+            "nombre": "Mesa Madera",
+            "precio": 90,
+            "puntaje": 4.5,
+            "enlace": "./details-product.html"
+        },
+        {
+            "id": 24,
+            "imagen": "https://live.staticflickr.com/65535/53007701807_7408cac506_n.jpg",
+            "nombre": "Mesa Clásica",
+            "precio": 100,
+            "puntaje": 4.5,
+            "enlace": "./details-product.html"
+        },
+        {
+            "id": 25,
+            "imagen": "https://live.staticflickr.com/65535/53007701792_9624183d97_n.jpg",
+            "nombre": "Mesa Elegante",
+            "precio": 650,
+            "puntaje": 4.7,
+            "enlace": "./details-product.html"
+        },
+        {
+            "id": 26,
+            "imagen": "https://live.staticflickr.com/65535/53008296816_2afa9c8dd6_n.jpg",
+            "nombre": "Mesa Blanca",
+            "precio": 120,
             "puntaje": 4.5,
             "enlace": "./details-product.html"
         }
