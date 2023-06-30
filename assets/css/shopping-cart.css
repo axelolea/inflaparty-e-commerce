@@ -56,8 +56,7 @@
 
 
 
-#back-img1{
-    background-image: url("https://live.staticflickr.com/65535/52975804996_660c5b742d_c.jpg");
+.back-img{
     background-size:cover;
     background-repeat: no-repeat;
     width: 350px;
@@ -69,54 +68,6 @@
 }
 
 
-
-#back-img2{
-    background-image: url("https://live.staticflickr.com/65535/52975804976_08cc447a38_c.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    width: 350px;
-    height: 200px;
-    text-align: right;
-    padding-top: 10px;
-    padding-right: 5px;
-    border-radius: 10px;
-}
-
-#back-img3{
-    background-image: url("https://live.staticflickr.com/65535/52975949914_e74a96a8a9_c.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    width: 350px;
-    height: 200px;
-    text-align: right;
-    padding-top: 10px;
-    padding-right: 5px;
-    border-radius: 10px;
-}
-
-#back-img4{
-    background-image: url("https://live.staticflickr.com/65535/52976257193_feefb1a2ab_c.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    width: 350px;
-    height: 200px;
-    text-align: right;
-    padding-top: 10px;
-    padding-right: 5px;
-    border-radius: 10px;
-}
-
-#back-img5{
-    background-image: url("https://live.staticflickr.com/65535/52975949909_27b96d9f69_c.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    width: 350px;
-    height: 200px;
-    text-align: right;
-    padding-top: 10px;
-    padding-right: 5px;
-    border-radius: 10px;
-}
 
 .item{
     display: flex;
