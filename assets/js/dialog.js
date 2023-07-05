@@ -19,144 +19,229 @@ async function createDialogComponents() {
   closeBtn.addEventListener("click", () => dialogComponent.close());
 
   /*------------------------------*/
-  //Traerme los elementos del dialog.html
-  const daysContainer = document.querySelector(".days");
-  const month = document.querySelector(".month");
-  //Botones 
-  const nextBtn = document.querySelector(".next-btn");
-  const todayBtn = document.querySelector(".today-btn");
+    // Obtén las referencias a los elementos relevantes
+    const monthElement = dialogComponent.querySelector('.calendar .header .month');
+    const prevButton = dialogComponent.querySelector('.calendar .header .prev-btn');
+    const nextButton = dialogComponent.querySelector('.calendar .header .next-btn');
+    const daysContainer = dialogComponent.querySelector('.calendar .days');
+    const todayButton = dialogComponent.querySelector('.calendar .header .today-btn');
+  
+    // Define los nombres de los meses
+    const monthNames = [
+      'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+      'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+    ];
+  
+    // Obtén la fecha actual
+    const currentDate = new Date();
+  
+    // Define la fecha actual como la fecha mostrada inicialmente
+    let displayedDate = currentDate;
 
-  //Array de los 12 meses
-  const months = [
-    "enero",
-    "febrero",
-    "marzo",
-    "abril",
-    "mayo",
-    "junio",
-    "julio",
-    "agosto",
-    "septiembre",
-    "octubre",
-    "noviembre",
-    "diciembre",
-  ];
-
-  const date = new Date();
-
-  //Traer el mes actual
-  let currentMonth = date.getMonth();
-  //Traer año actual
-  let currentYear = date.getFullYear();
-  //console.log(date, currentMonth, currentYear);
-
-  //funcion
-  function Calendario() {
-
-    //Establecemos la fecha del objeto (date) en el primer día del mes. 
-    //Nos asegura que empezamos a contar desde el principio del mes.
-    date.setDate(1);
-
-    //firstDay representa el primer día del mes en curso. 
-    //Se utiliza para determinar el día de la semana (por ejemplo, domingo, lunes) en el que comienza el mes.
-    const firstDay = new Date(currentYear, currentMonth, 1);
-
-    //crea un nuevo objeto Date lastDay que representa el último día del mes actual. 
-    //Al poner el día a 0, (se refiere al último día del mes anterior). Esto es útil para determinar el número total de días del mes actual.
-    const lastDay = new Date(currentYear, currentMonth + 1, 0);
-
-    //obtiene el índice del día de la semana (0-6, donde 0 es domingo y 6 es sábado) para el último día del mes actual. 
-    //Ayuda a determinar la posición inicial de los días del mes siguiente en el calendario.
-    const lastDayIndex = lastDay.getDay();
-
-    //obtiene la fecha (día del mes) del último día del mes en curso. Proporciona el número total de días del mes en curso.
-    const lastDayDate = lastDay.getDate();
-
-    //crea un nuevo objeto Date prevLastDay que representa el último día del mes anterior. 
-    //Al poner el día a 0, (se refiere al último día del mes anterior al mes anterior). Esto es útil para mostrar los días restantes del mes anterior en el calendario.
-    const prevLastDay = new Date(currentYear, currentMonth, 0);
-
-    //obtiene la fecha (día del mes) del último día del mes anterior. Proporciona el número total de días del mes anterior.
-    const prevLastDayDate = prevLastDay.getDate();
-
-    //calcula el número de días del mes siguiente que deben mostrarse en el calendario del mes actual. 
-    //Resta el lastDayIndex (el índice del último día del mes actual) de 7 (total de días en una semana) y luego resta 1 para tener en cuenta el día actual. 
-    const nextDays = 7 - lastDayIndex - 1;
-
-    // Actualizar el año y mes en la cabecera 
-    month.innerHTML = `${months[currentMonth]} ${currentYear}`;
-
-    // actualizar days en el html
-    let days = "";
-
-    // prev days html
-    for (let x = firstDay.getDay(); x > 0; x--) {
-      days += `<div class="day prev">${prevLastDayDate - x + 1}</div>`;
+    // Variables para almacenar las fechas seleccionadas
+    let startDate = null;
+    let endDate = null;
+    let dayElements = null; // Variable global para los elementos de los días
+  
+    // Función para mostrar el mes y año actual
+    function displayMonth() {
+      const month = displayedDate.getMonth();
+      const year = displayedDate.getFullYear();
+      monthElement.textContent = `${monthNames[month]} ${year}`;
     }
 
-    // current month days
-    for (let i = 1; i <= lastDayDate; i++) {
-      // Revisa si es el dia de hoy, then add today class
-      if (
-        i === new Date().getDate() &&
-        currentMonth === new Date().getMonth() &&
-        currentYear === new Date().getFullYear()
-      ) {
-        // si date mes año coincide añadir today
-        days += `<div class="day today">${i}</div>`;
-      } else {
-        //si no, no añada today
-        days += `<div class="day ">${i}</div>`;
+
+     
+  
+    // Función para generar los días del mes actual
+    function generateCalendar() {
+      const year = displayedDate.getFullYear();
+      const month = displayedDate.getMonth();
+      const today = new Date();
+    
+      // Determina el primer y último día del mes
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+    
+      // Calcula el número de días en el mes anterior y siguiente para rellenar el calendario
+      const prevMonthDays = firstDay.getDay();
+      const nextMonthDays = 6 - lastDay.getDay();
+    
+      // Crea la lista de días del mes actual
+      let daysHTML = '';
+    
+      // Agrega los días del mes anterior al principio
+      for (let i = prevMonthDays; i > 0; i--) {
+        const day = new Date(year, month, -i + 1);
+        daysHTML += `<div class="day prev disabled">${day.getDate()}</div>`;
       }
-    }
+    
+      // Agrega los días del mes actual
+      for (let i = 1; i <= lastDay.getDate(); i++) {
+        const day = new Date(year, month, i);
+        const isCurrentDay = day.toDateString() === currentDate.toDateString();
+        const isPastDay = day < today;
+        let isSelectedDay = startDate && endDate && day >= startDate && day <= endDate;
+        let className = isCurrentDay ? 'day today' : isPastDay ? 'day prev disabled' : 'day';
+        if (isSelectedDay) {
+          className += ' selected';
+        }
+        daysHTML += `<div class="${className}">${i}</div>`;
+      }
+    
+      // Agrega los días del mes siguiente al final
+      for (let i = 1; i <= nextMonthDays; i++) {
+        const day = new Date(year, month + 1, i);
+        daysHTML += `<div class="day next">${day.getDate()}</div>`;
+      }
+    
+      // Actualiza el contenido del contenedor de días
+      daysContainer.innerHTML = daysHTML;
 
-    // próximos días del Month (mes)
-    for (let j = 1; j <= nextDays; j++) {
-      days += `<div class="day next">${j}</div>`;
-    }
+       // Query the day elements within the dialog component
+      // Attach the event listener to the day elements
+      dayElements = dialogComponent.querySelectorAll('.days .day');
+      dayElements.forEach((dayElement) => {
+      dayElement.addEventListener('click', handleDayClick);
+    });
+    } //fin de funcion  (GenerateCalendar)
 
-    // Invocar la funcion 
-    hideTodayBtn();
-
-    daysContainer.innerHTML = days;
-  } //fin de la funcion
-  //invocar la funcion 
-  Calendario();
-
-  //AddEventListener para el boton del nextBtn
-  nextBtn.addEventListener("click", () => {
-    // aumentar en uno el mes en curso
-    currentMonth++;
-    if (currentMonth > 11) {
-      // si el mes es mayor que 11 hazlo 0 y aumenta el año en uno
-      currentMonth = 0;
-      currentYear++;
-    }
-    // rerender calendar
-    Calendario();
-  });
+    
 
 
-  // go to today
-  todayBtn.addEventListener("click", () => {
-    // poner el mes y el año en curso
-    currentMonth = date.getMonth();
-    currentYear = date.getFullYear();
-    // Invocar la funcion
-    Calendario();
-  });
 
-  // Funcion que permite ocultar btnToday si ya es el mes actual y viceversa
-  function hideTodayBtn() {
-    if (
-      currentMonth === new Date().getMonth() &&
-      currentYear === new Date().getFullYear()
-    ) {
-      todayBtn.style.display = "none";
+   
+
+
+
+// Función para manejar el evento de clic en un día
+  function handleDayClick(event) {
+    const selectedDay = event.target;
+    const year = displayedDate.getFullYear();
+    const month = displayedDate.getMonth();
+    const selectedDate = new Date(year, month, parseInt(selectedDay.textContent));
+
+    if (!startDate || (startDate && endDate)) {
+      // No hay fecha de inicio o ya se seleccionaron dos fechas, establecer una nueva fecha de inicio
+      startDate = selectedDate;
+      endDate = null;
+    } else if (startDate && !endDate) {
+      // Hay una fecha de inicio pero no una fecha de fin, establecer una nueva fecha de fin
+      endDate = selectedDate;
+
+      // Verificar si la fecha de inicio es posterior a la fecha de fin, intercambiarlas si es necesario
+      if (endDate < startDate) {
+        const temp = startDate;
+        startDate = endDate;
+        endDate = temp;
+      }
     } else {
-      todayBtn.style.display = "flex";
+      // Reset the selection and set the clicked day as the new start date
+      startDate = selectedDate;
+      endDate = null;
     }
-  } //fin de la funcion
+
+    //dayElements = daysContainer.querySelectorAll('.day');
+
+    // Highlight the selected day
+    dayElements.forEach((dayElement) => {
+      const day = new Date(year, month, parseInt(dayElement.textContent));
+      const isInRange = startDate && endDate && day >= startDate && day <= endDate;
+  
+      if (startDate && !endDate && day.toDateString() === selectedDate.toDateString()) {
+        // Single day selection
+        dayElement.classList.toggle('selected');
+      } else if (isInRange) {
+        // Range selection
+        dayElement.classList.add('selected');
+      } else {
+        dayElement.classList.remove('selected');
+      }
+    });
+  
+    
+
+   
+  
+    generateCalendar();
+
+  } //fin de funcion
+
+
+
+
+    
+
+
+
+  
+    // Función para manejar el evento del botón anterior
+    function handlePrevButtonClick() {
+      // Resta un mes a la fecha mostrada
+      displayedDate = new Date(displayedDate.getFullYear(), displayedDate.getMonth() - 1);
+  
+      // Actualiza el mes y genera el nuevo calendario
+      displayMonth();
+      generateCalendar();
+  
+      // Verifica si se debe deshabilitar el botón prev
+      checkPrevButtonState();
+    }
+  
+    // Función para manejar el evento del botón siguiente
+    function handleNextButtonClick() {
+      // Añade un mes a la fecha mostrada
+      displayedDate = new Date(displayedDate.getFullYear(), displayedDate.getMonth() + 1);
+  
+      // Actualiza el mes y genera el nuevo calendario
+      displayMonth();
+      generateCalendar();
+  
+      // Verifica si se debe deshabilitar el botón prev
+      checkPrevButtonState();
+    }
+  
+    // Función para verificar y actualizar el estado del botón prev
+    function checkPrevButtonState() {
+      const today = new Date();
+      prevButton.classList.toggle('disabled', displayedDate <= today);
+    }
+  
+    // Asigna los manejadores de eventos a los botones
+    prevButton.addEventListener('click', handlePrevButtonClick);
+    nextButton.addEventListener('click', handleNextButtonClick);
+  
+    // Muestra el mes y año actual y genera el calendario
+    displayMonth();
+    generateCalendar();
+  
+    // Verifica y establece el estado inicial del botón prev
+    checkPrevButtonState();
+    /*------------------------------*/
+    
+    // Función para manejar el evento del botón "Hoy"
+function handleTodayButtonClick() {
+  // Establece la fecha actual como la fecha mostrada
+  displayedDate = currentDate;
+
+  // Actualiza el mes y genera el nuevo calendario
+  displayMonth();
+  generateCalendar();
+
+  // Verifica si se debe deshabilitar el botón prev
+  checkPrevButtonState();
+}
+
+// Asigna el manejador de eventos al botón "Hoy"
+todayButton.addEventListener('click', handleTodayButtonClick);
 
   //fin del funcion createDialogComponents
-}document.addEventListener("DOMContentLoaded", createDialogComponents);
+}
+
+// Invoking the calendar component function when the DOM content is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  
+  // Invoke the function to create dialog components
+  createDialogComponents();
+});
+
