@@ -51,7 +51,7 @@
 
 .lockInput{
     border-color: black;
-    border: radius 5px;
+    border-radius: 5px;
     background-color: rgba(90, 89, 89, 0.144);
     height: 3rem;
 }

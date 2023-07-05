@@ -297,3 +297,6 @@ footer a:hover
   }
   
   /*Fin del calendario*/
+.priceItem{
+    max-width: 200px;
+}

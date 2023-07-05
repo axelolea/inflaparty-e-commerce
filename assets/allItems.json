@@ -1,0 +1,103 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "El nombre de inflable 1",
+        "imagen": "https://live.staticflickr.com/65535/52976256873_591beedc10_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 2,
+        "nombre": "El nombre de inflable 2",
+        "imagen": "https://live.staticflickr.com/65535/52976256838_3f0212f796_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 3,
+        "nombre": "El nombre de inflable 3",
+        "imagen": "https://live.staticflickr.com/65535/52975949549_806bb018c3_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 4,
+        "nombre": "El nombre de inflable 4",
+        "imagen": "https://live.staticflickr.com/65535/52976256828_9828078cc5_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 5,
+        "nombre": "El nombre de inflable 5",
+        "imagen": "https://live.staticflickr.com/65535/52975205287_6d4eaaa687_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 6,
+        "nombre": "El nombre de inflable 6",
+        "imagen": "https://live.staticflickr.com/65535/52975949534_0215a8bb1c_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 7,
+        "nombre": "El nombre de inflable 7",
+        "imagen": "https://live.staticflickr.com/65535/52976173920_822d75f4d4_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 8,
+        "nombre": "El nombre de inflable 8",
+        "imagen": "https://live.staticflickr.com/65535/52975205292_c757d36477_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 9,
+        "nombre": "El nombre de inflable 9",
+        "imagen": "https://live.staticflickr.com/65535/52976025709_eeea4b7a5f_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    },
+    {
+        "id": 10,
+        "nombre": "El nombre de inflable 10",
+        "imagen": "https://live.staticflickr.com/65535/52976331818_b798568e67_n.jpg",
+        "precio": 400,
+        "puntaje": 5.0,
+        "enlace": "./details-product.html",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "tipo": "inflable"
+    }
+]
