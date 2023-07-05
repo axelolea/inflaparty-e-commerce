@@ -1,6 +1,20 @@
 class DateManagement{
 
-    constructor(){ }
+    #date;
+    #dateNow;
+    #keyLocalStorage = "inflaparty-date"
+
+    constructor(){
+        this.#dateNow = new Date();
+    }
+
+    isValidDay(){
+        
+    }
+
+    saveDate(){
+        
+    }
 
 }
 

@@ -73,9 +73,8 @@ export const sugerenciaComponent = data => {
     }
 
 
-
     // agregando clases a info  container
-    infoContainer.classList.add("d-flex", "justify-content-between", "info")
+    infoContainer.classList.add("d-flex", "justify-content-between", "info", "flex-column", "flex-md-row", "justify-content-start")
     infoContainer.appendChild(titleItem)
     infoContainer.appendChild(priceItem)
 
