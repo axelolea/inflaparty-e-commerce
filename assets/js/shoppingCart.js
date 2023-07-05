@@ -3,43 +3,43 @@ import { generateSummary } from './summaryBuy.js'
 
 const fakeData = [
     {
-        "id": 7,
-        "nombre": "El nombre de inflable 7",
-        "imagen": "https://live.staticflickr.com/65535/52976173920_822d75f4d4_n.jpg",
-        "precio": 400,
-        "puntaje": 5.0,
+        "id": 1,
+        "nombre": "Castillo Saltos Mágicos",
+        "imagen": "https://live.staticflickr.com/65535/52976256873_591beedc10_n.jpg",
+        "precio": 800,
+        "puntaje": 4.5,
         "enlace": "./details-product.html",
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "descripcion": "Sumérgete en un mundo lleno de magia y diversión con este brincolín en forma de castillo, donde los niños pueden disfrutar de emocionantes saltos y rebotes. Este brincolín transporta a los pequeños a un mundo de fantasía, donde pueden saltar junto a personajes mágicos y sumergirse en aventuras increíbles.",
         "tipo": "inflable"
     },
     {
-        "id": 8,
-        "nombre": "El nombre de inflable 8",
-        "imagen": "https://live.staticflickr.com/65535/52975205292_c757d36477_n.jpg",
-        "precio": 400,
-        "puntaje": 5.0,
+        "id": 2,
+        "nombre": "Castillo Reino de la Diversión",
+        "imagen": "https://live.staticflickr.com/65535/52976256838_3f0212f796_n.jpg",
+        "precio": 900,
+        "puntaje": 4.6,
         "enlace": "./details-product.html",
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "descripcion": "Este brincolín en forma de castillo crea un reino de diversión para niños de todas las edades. Con sus torres inflables, paredes coloridas y amplias áreas de salto, ofrece un espacio seguro y emocionante donde los niños pueden disfrutar de horas de diversión saltando, corriendo y deslizándose.",
         "tipo": "inflable"
     },
     {
-        "id": 9,
-        "nombre": "El nombre de inflable 9",
-        "imagen": "https://live.staticflickr.com/65535/52976025709_eeea4b7a5f_n.jpg",
-        "precio": 400,
-        "puntaje": 5.0,
+        "id": 3,
+        "nombre": "Castillo Dulce",
+        "imagen": "https://live.staticflickr.com/65535/52975949549_806bb018c3_n.jpg",
+        "precio": 800,
+        "puntaje": 4.4,
         "enlace": "./details-product.html",
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "descripcion": "Sumérgete en un mundo encantador y lleno de magia con este hermoso brincolin de color rosa. Sus paredes suaves crean un ambiente de cuento de hadas donde los sueños se hacen realidad. Las niñas y niños pueden disfrutar de emocionantes aventuras dentro de esta casita, saltando en las amplias áreas de salto, deslizándose y explorando cada rincón.",
         "tipo": "inflable"
     },
     {
-        "id": 10,
-        "nombre": "El nombre de inflable 10",
-        "imagen": "https://live.staticflickr.com/65535/52976331818_b798568e67_n.jpg",
-        "precio": 400,
-        "puntaje": 5.0,
+        "id": 4,
+        "nombre": "Escaladora Aventuras",
+        "imagen": "https://live.staticflickr.com/65535/52976256828_9828078cc5_n.jpg",
+        "precio": 1150,
+        "puntaje": 4.5,
         "enlace": "./details-product.html",
-        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, est a laoreet malesuada, orci libero tincidunt quam, eu euismod ex sapien vel est. Duis rhoncus metus sagittis ex vestibulum, id facilisis nisi rutrum. Fusce nec quam lectus. Nulla dignissim, odio quis consequat dapibus, eros ex mattis eros, a mollis nisi mauris sed nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec aliquet pretium urna, at ornare lorem egestas eget.",
+        "descripcion": "Sumérgete en una experiencia de escalada única con esta escaladora. Este brincolín combina la emoción de escalar con la diversión de un inflable. Los niños pueden desafiar su agilidad y coordinación mientras suben por las paredes inflables y superan obstáculos. Con su diseño colorido y seguro, brinda a los pequeños escaladores un entorno estimulante donde pueden disfrutar de una emocionante aventura.",
         "tipo": "inflable"
     }
 ]
@@ -50,7 +50,7 @@ const userInfoFake = {
     address: "Calle 12, colonia tal nombre, EdoMex"
 }
 
-function updateShoppingCartData(){
+export function updateShoppingCartData(){
 
     /* Aqui finjimos peticion al servidor */
 
@@ -58,7 +58,7 @@ function updateShoppingCartData(){
     const infoUser = userInfoFake;
 
     appendItemsCart(data);
-    generateSummary(data, infoUser);
+    generateSummary(data, infoUser, 2);
     
 }
 

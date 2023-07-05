@@ -1,6 +1,7 @@
 /* Nahomi*/
 
 import carrito from "./shoppingCartManagement.js";
+import { updateShoppingCartData } from "./shoppingCart.js"
 export function appendItemsCart(items = []) {
     /*Integrar elementos de un array al dom*/
 
@@ -38,6 +39,7 @@ export function appendItemsCart(items = []) {
         deleteIcon.addEventListener('click',() => {
             console.log(item.id)
             carrito.deleteItemCart(item.id)
+            updateShoppingCartData()
         })
 
         //agregamos como hijos del boton eliminar

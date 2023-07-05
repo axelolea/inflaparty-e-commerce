@@ -288,4 +288,15 @@ footer a:hover
     color: #ccc;
   }
 
+
+  /* dias seleccionado*/
+  .days .day.selected {
+    background-color: #00bcd4;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
   /*Fin del calendario*/
+.priceItem{
+    max-width: 200px;
+}

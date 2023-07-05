@@ -10,7 +10,6 @@ const containerList = document.querySelector("div#contenedor-inflables");
     const itemsFragment = document.createDocumentFragment()
     
     resp.forEach(el => {
-        console.log(el)
         const item = sugerenciaComponent(el)
         itemsFragment.appendChild(item)
     });
