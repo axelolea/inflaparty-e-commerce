@@ -81,8 +81,8 @@ async function createDialogComponents() {
         const day = new Date(year, month, i);
         const isCurrentDay = day.toDateString() === currentDate.toDateString();
         const isPastDay = day < today;
-        const isSelectedDay = startDate && endDate && day >= startDate && day <= endDate;
-        const className = isCurrentDay ? 'day today' : isPastDay ? 'day prev disabled' : 'day';
+        let isSelectedDay = startDate && endDate && day >= startDate && day <= endDate;
+        let className = isCurrentDay ? 'day today' : isPastDay ? 'day prev disabled' : 'day';
         if (isSelectedDay) {
           className += ' selected';
         }
@@ -99,12 +99,14 @@ async function createDialogComponents() {
       daysContainer.innerHTML = daysHTML;
 
        // Query the day elements within the dialog component
+      // Attach the event listener to the day elements
       dayElements = dialogComponent.querySelectorAll('.days .day');
       dayElements.forEach((dayElement) => {
-        dayElement.addEventListener('click', handleDayClick);
-      });
+      dayElement.addEventListener('click', handleDayClick);
+    });
+    } //fin de funcion  (GenerateCalendar)
 
-    } //fin de funcion 
+    
 
 
 
@@ -133,31 +135,36 @@ async function createDialogComponents() {
         startDate = endDate;
         endDate = temp;
       }
+    } else {
+      // Reset the selection and set the clicked day as the new start date
+      startDate = selectedDate;
+      endDate = null;
     }
 
-    // Query the day elements within the dialog component
-    dayElements = dialogComponent.querySelectorAll('.days .day');
+    //dayElements = daysContainer.querySelectorAll('.day');
 
     // Highlight the selected day
     dayElements.forEach((dayElement) => {
-      dayElement.classList.remove('selected');
-    });
-    selectedDay.classList.add('selected');
+      const day = new Date(year, month, parseInt(dayElement.textContent));
+      const isInRange = startDate && endDate && day >= startDate && day <= endDate;
   
-
+      if (startDate && !endDate && day.toDateString() === selectedDate.toDateString()) {
+        // Single day selection
+        dayElement.classList.toggle('selected');
+      } else if (isInRange) {
+        // Range selection
+        dayElement.classList.add('selected');
+      } else {
+        dayElement.classList.remove('selected');
+      }
+    });
+  
     
 
-    // Marcar el rango de fechas seleccionadas al generar el calendario
+   
+  
     generateCalendar();
 
-    // Highlight the selected day
-
-    
-   // Query the day elements within the dialog component
-  dayElements = dialogComponent.querySelectorAll('.days .day');
-  dayElements.forEach((dayElement) => {
-  dayElement.addEventListener('click', handleDayClick);
-});
   } //fin de funcion
 
 
