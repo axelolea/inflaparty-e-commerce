@@ -78,3 +78,21 @@
 .itemContent{
     text-align: left;
 }
+
+table tr th:nth-child(1),
+table tr td:nth-child(1)
+{
+    text-align: left;
+}
+
+table th:nth-child(2),
+table td:nth-child(2)
+{
+    text-align: right;
+}
+
+table tbody tr
+{
+    display: flex;
+    justify-content: space-between;
+}
