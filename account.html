@@ -2,64 +2,76 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account</title>
-    <!-- Favicon -->
-    <link rel="icon" href="./assets/marca/favicon.ico" type="image/x-icon">
-    <!-- Bootstrap CDN  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!--Icons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!--CSS Botones-->
-    <link rel="stylesheet" href="./assets/css/buttons.css">
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="assets/css/common.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/marca/favicon.ico" type="image/x-icon">
+  <!-- Bootstrap CDN  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!--Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!--CSS Botones-->
+  <link rel="stylesheet" href="./assets/css/buttons.css">
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/account.css">
 </head>
+
 <body>
-    
-    <div class="container-fluid">
-        
-        <h1>Perfil</h1>
+  <!-- Recomendaciones de Axel. 
+        Colocar imputs y usar el form-product - aún en proceso-->
 
-        <form action="" id="accountForm">
-            <!-- Campo de nombre -->
-            <label for="nombre">
-                Nombre:
-                <input type="text" name="nombre" id="nombre" class="form-control" aria-label="Disabled input example" disabled readonly>
-            </label>
-            <!-- Campo de apellidos -->
-            <label for="apellidos">
-                Apellidos:
-                <input type="apellidos" name="apellidos" id="apellidos" class="form-control" aria-label="Disabled input example" disabled readonly>
-            </label>
-            <!-- Campo de correo electronico -->
-            <label for="correo">
-                Correo Electronico:
-                <input type="text" name="correo" id="correo" class="form-control" aria-label="Disabled input example" disabled readonly>
-            </label>
-            <!-- Campo de telefono -->
-            <label for="telefono">
-                Telefono:
-                <input type="text" name="telefono" id="telefono" class="form-control" aria-label="Disabled input example" disabled readonly>
-            </label>
-            <!-- Campo direccion de envio de servicio -->
-            <label for="direccion">
-                Telefono:
-                <input type="text" name="direccion" id="direccion" class="form-control" aria-label="Disabled input example" disabled readonly>
-            </label>
-        </form>
+  <div class="container">
+    <h1>Perfil</h1>
 
-        <p class="body-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius excepturi, est enim tempore sunt dolorum saepe omnis officiis aspernatur qui corporis dignissimos debitis iste autem impedit ipsa quo fugiat facere?</p>
-    </div>
+    <form action="" id="accountForm">
+      <div class="profile">
+        <div class=" d-flex justify-content-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle loginIcon mb-3"
+            viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+          </svg>
+        </div>
 
-    
-    <!-- Bootstrap Scripts -->
-    <script src="./assets/js/common.js" type="module"></script>
-    <script src="./assets/js/dialog.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="./assets/js/account.js" type="module"></script>
+        <div>
+          <label for="fotoPerfilInput">Seleccione una imagen de perfil:</label>
+          <input type="file" id="fotoPerfilInput" accept="image/*" 
+          <img id="fotoPerfil" src="" alt="">
+        </div>
+
+        <h1 id="nombreUsuario">Nombre de Usuario</h1>
+        <p id="descripcionUsuario">Descripción del usuario</p>
+
+        <textarea id="descripcionTextarea" placeholder="Descripción"></textarea>
+
+        <h2>Productos favoritos</h2>
+        <div id="product-section">
+          <!-- Contenedor de productos -->
+        </div>
+
+        <h2>Reservas favoritas</h2>
+        <div id="reservation-section">
+          <!-- Contenedor de reservas -->
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+
+
+  <!-- Bootstrap Scripts -->
+  <script src="./assets/js/common.js" type="module"></script>
+  <script src="./assets/js/dialog.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/account.js" type="module"></script>
 </body>
+
 </html>

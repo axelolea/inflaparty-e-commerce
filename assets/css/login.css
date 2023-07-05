@@ -6,37 +6,61 @@
 
 }
 
-.titulo{
-    text-align: center ;
+.recuerdameCheck{
+    height: 1rem;
 }
 
-/* .divUserIcon{
-    background-color: #ec058e; 
-    border-color: black;
-    color: #FFFBFC;
-} */
+.recuerdameTest{
+    font-size: xx-large;
+}
+
+.titulo{
+    text-align: center ;
+    
+}
+
+#emailLabel{
+    font-size: large;
+   
+}
+
+#passwordLabel{
+    font-size: large;
+   
+}
+
+#recuerdameText{
+    font-size: large;
+    }
+
+#rememberPassword{
+    font-size: large;
+}
+
+#crearCuenta{
+    font-size: large;
+}
 
 .usuarioInput{
     border-color: black;
     border-style: solid;
     background-color: #5a595925;
+    height: 3rem;
 
-}
-
-
-.divLockIcon{
-    background-color: #ec058e; /*Jugar con colores de guia de diseño*/
-    border-color: black;
-    color: #FFFBFC;
 }
 
 .lockInput{
     border-color: black;
-    border: radius 5px;
+    border-radius: 5px;
     background-color: rgba(90, 89, 89, 0.144);
+    height: 3rem;
 }
 
 .textoCursivas{
  font-style: italic;
  color: #62bbc1; 
+}
+
+#buttonRegistrar{
+    height: 3rem;
 }

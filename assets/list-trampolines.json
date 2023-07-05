@@ -1,0 +1,65 @@
+
+[
+    {
+        "id": 11,
+        "nombre": "Trampolín Clásico",
+        "imagen": "https://live.staticflickr.com/65535/53008255986_3b893ba0b6_n.jpg",
+        "precio": 500,
+        "puntaje": 4.3,
+        "enlace": "./details-product.html",
+        "descripcion": "",
+        "tipo": "trampolin"
+    },
+    {
+        "id": 12,
+        "nombre": "TrampoDiversión",
+        "imagen": "https://live.staticflickr.com/65535/53007661542_ec9bb55457_n.jpg",
+        "precio": 550,
+        "puntaje": 4.5,
+        "enlace": "./details-product.html",
+        "descripcion": "",
+        "tipo": "trampolin"
+
+    },
+    {
+        "id": 13,
+        "nombre": "TrampoAventuras",
+        "imagen": "https://live.staticflickr.com/65535/53007661512_7219d4abda_n.jpg",
+        "precio": 600,
+        "puntaje": 4.6,
+        "enlace": "./details-product.html",
+        "descripcion": "",
+        "tipo": "trampolin"
+    },
+    {
+        "id": 14,
+        "nombre": "Mini Trampolín",
+        "imagen":"https://live.staticflickr.com/65535/53008419989_2686a3de57_n.jpg",
+        "precio": 400,
+        "puntaje": 4.1,
+        "enlace": "./details-product.html",
+        "descripcion": "",
+        "tipo": "trampolin"
+    },
+    {
+        "id": 15,
+        "nombre": "Trampolín Mágico",
+        "imagen": "https://live.staticflickr.com/65535/53008739123_23d501da09_n.jpg",
+        "precio": 650,
+        "puntaje": 4.7,
+        "enlace": "./details-product.html",
+        "descripcion": "",
+        "tipo": "trampolin"
+    },
+    {
+        "id": 16,
+        "nombre": "Trampolín Fantasías",
+        "imagen": "https://live.staticflickr.com/65535/53008419999_d9312aaa1f_n.jpg",
+        "precio": 550,
+        "puntaje": 4.5,
+        "enlace": "./details-product.html",
+        "descripcion": "",
+        "tipo": "trampolin"
+    }
+   
+]
