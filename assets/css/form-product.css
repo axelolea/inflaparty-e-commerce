@@ -3,6 +3,12 @@ h1{
     margin-top: 25px;
 }
 
+.loginIcon{
+    height: 9rem;
+    color: #FBAF00;
+
+}
+
 .form-control{
     background-color: gainsboro;
 
@@ -10,7 +16,8 @@ h1{
 
 .container{
     margin-bottom: 50px;
-}  
+}
+
 
 .form-wrapper{
     display: flex;
