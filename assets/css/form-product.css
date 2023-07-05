@@ -41,3 +41,17 @@ h1{
     resize: none;
     
 }
+
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+}
+
+
+
+.filename {
+    margin-top: 8px;
+    text-align: center;
+    margin-left: 60px;
+}
