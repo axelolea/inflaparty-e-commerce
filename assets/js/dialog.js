@@ -158,6 +158,10 @@ async function createDialogComponents() {
         dayElement.classList.remove('selected');
       }
     });
+
+    //Imprimir las fechas de inicio y fin del dia selccionado
+    console.log('Start Date:', startDate);
+    console.log('End Date:', endDate);
   
     
 
