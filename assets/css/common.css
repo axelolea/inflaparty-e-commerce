@@ -187,6 +187,13 @@ footer a:hover
 }
 
 
+dialog
+{
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.353);
+    padding: 2rem;
+}
 
 /*Calendario*/
 .calendar {
@@ -196,6 +203,7 @@ footer a:hover
     padding: 10px 20px;
     border-radius: 10px;
     background-color: var(--white-color);
+    margin-bottom: 2rem;
   }
   
   .calendar .header {
@@ -298,5 +306,5 @@ footer a:hover
   
   /*Fin del calendario*/
 .priceItem{
-    max-width: 200px;
+    max-width: 150px;
 }
