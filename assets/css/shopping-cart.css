@@ -91,8 +91,8 @@ table td:nth-child(2)
     text-align: right;
 }
 
-table tbody tr
-{
-    display: flex;
-    justify-content: space-between;
+
+table tbody td{
+    width: 100%;
+    
 }

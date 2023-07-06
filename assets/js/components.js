@@ -74,7 +74,7 @@ export const sugerenciaComponent = data => {
 
 
     // agregando clases a info  container
-    infoContainer.classList.add("d-flex", "justify-content-between", "info", "flex-column", "flex-md-row", "justify-content-start")
+    infoContainer.classList.add("d-flex", "info", "flex-column", "justify-content-start")
     infoContainer.appendChild(titleItem)
     infoContainer.appendChild(priceItem)
 
@@ -83,7 +83,7 @@ export const sugerenciaComponent = data => {
     
 
     // Agregando propiedades a titulo y precio
-    titleItem.classList.add("titleItem", "align-self-center");
+    titleItem.classList.add("titleItem", "align-self-start");
     titleItem.textContent = `${data.nombre}`;
 
     priceItem.classList.add("btn", "buttonPrecio", "priceItem")

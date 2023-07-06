@@ -1,6 +1,7 @@
 
 h1{
     margin-top: 25px;
+    text-align: center;
 }
 
 .loginIcon{
@@ -40,4 +41,18 @@ h1{
 .no-resize{
     resize: none;
     
+}
+
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+}
+
+
+
+.filename {
+    margin-top: 8px;
+    text-align: center;
+    margin-left: 60px;
 }
