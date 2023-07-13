@@ -18,44 +18,47 @@
 }
 
 #sobreNosotros{
-    background-color: #ffa2da;
+
     border-radius: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-#containerMisionVision{
+#containerMision, #containerVision{
    padding-left: 10px;
    padding-right: 10px;
    margin-bottom: 60px;
    margin-top: 60px;
 }
 
-#mision{
+.inflableImg{
+    height: 300px;
+    width: 400px;
+    position: relative;
+    border-radius: 30px;
+    margin-left: 50px;
+}
+
+
+#mision, #vision{
     padding: 30px;
-    background-color: #62BBC1;
+
     border-radius: 30px;
-    margin: auto;
 }
 
-#vision{
-    padding: 30px;
-    background-color: #62BBC1;
-    border-radius: 30px;
-    margin: auto;
+#containerValores{
+    text-align: center;
+    margin-top: 30px;
 }
 
-.containerValores{
-    padding-top: 30px;
-    background-color:#ffc43a;
-    border-radius: 30px;
-    padding-right: 20px;
+.valor{
+    margin-top: 40px;
 }
 
-.listaValores{  
-    list-style: inside disc;
-    text-align: justify;
+.bi{
+    font-size: 80px;
 }
+
 
 .img{
     margin-top: 20px; margin-bottom: 20px;
@@ -80,6 +83,7 @@
 
 .card-text{
     background-color: #FBAF00;
+    color: #010400;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -87,6 +91,7 @@
 .card-title{
     margin-top: 30px;
     background-color: #FBAF00;
+    color: #010400;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -94,7 +99,7 @@
 .containerFotos{
     text-align: center;
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .parrafos{
