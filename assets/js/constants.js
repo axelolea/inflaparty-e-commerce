@@ -1,3 +1,5 @@
+const domain = "http://localhost:8080"
+
 // EndPoints Test
 const endpointsTest = {
     mainData: "./assets/indexData.json",
@@ -12,4 +14,7 @@ const endpointsTest = {
 }
 
 // EndPoints (igual que los de test)
-export const endpoints = endpointsTest;
+export const endpoints = {
+    ...endpointsTest,
+    crearProducto: domain + "/products"
+};
