@@ -13,6 +13,7 @@ export function appendItemsCart(items = []) {
     //Limpiamos el contenido existente en el carrito
     cartContainer.innerHTML = "";
 
+    console.log(items)
 
     //Iteramos sobre cada elemento del array utilizando el método forEach
     items.forEach(item => {
@@ -25,7 +26,7 @@ export function appendItemsCart(items = []) {
         //div del wrapperCarrito
         const previewItem = document.createElement('div');
         previewItem.classList.add('wrapperCarritoEstatico', 'back-img', 'position-relative');
-        previewItem.style.backgroundImage = `url(${item.imageUrl})`;
+        previewItem.style.backgroundImage = `url(${item?.imageUrl})`;
         
 
         //div del buttonCarritoEstatico
@@ -37,7 +38,7 @@ export function appendItemsCart(items = []) {
         deleteIcon.classList.add('iconSE');
         deleteIcon.innerHTML = '<i class="fas fa-times"></i>';
         deleteIcon.addEventListener('click',() => {
-            carrito.deleteItemCart(item.id)
+            carrito.deleteItemCart(item?.id)
             updateShoppingCartData()
         })
 
@@ -52,13 +53,13 @@ export function appendItemsCart(items = []) {
         //nombre del producto
         const productName = document.createElement('h3');
         productName.classList.add('card-title');
-        productName.textContent = item.nombre;
+        productName.textContent = item?.nombre;
 
         //precio del producto
         const priceButton = document.createElement('button');
         priceButton.type = 'button';
         priceButton.classList.add('btn', 'buttonPrecio');
-        priceButton.textContent = `${item.precio} MXN`;
+        priceButton.textContent = `${item?.precio} MXN`;
 
 
         //Se agrega cada elemento como hijo al carrito
