@@ -46,13 +46,14 @@ export async function updateShoppingCartData(){
     const itemsPromises = items.map(idItem => {
         return httpClientProxy.get(idItem)
     });
-    console.log(cache)
+
     const data = await Promise.all(itemsPromises);
+    const clearData = data.filter(e => e instanceof Object)
     // console.log(data)
     const infoUser = userInfoFake;
 
-    appendItemsCart(data);
-    generateSummary(data, infoUser, 2);
+    appendItemsCart(clearData);
+    generateSummary(clearData, infoUser, 2);
     
 }
 
