@@ -294,6 +294,7 @@ dialog
   .days .day.next,
   .days .day.prev{
     color: #ccc;
+    pointer-events: none;
   }
 
 
