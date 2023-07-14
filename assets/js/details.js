@@ -5,6 +5,12 @@ import carrito from './shoppingCartManagement.js'
 import httpClient from './httpClient.js'
 import { endpoints } from './constants.js'
 
+// Get params url
+
+const query = document.location.search
+const searchParams = new URLSearchParams(query)
+const queryParams = Object.fromEntries(searchParams.entries())
+
 // Elementos Sugerencias
 const sugerenciasContainer = document.querySelector("#sugerencias")
 
@@ -15,18 +21,17 @@ const hiddenClass = "hidden";
 (async function (){
 
     // fetch al json con contenido
-    const data = await httpClient.get(endpoints.detailProduct)
-
-    httpClient.get(endpoints.detailProduct)
+    const data = await httpClient.get(`${endpoints.detailProduct}/${queryParams.id}`)
+    const data2 = await httpClient.get("./assets/detailsData.json")
 
     // altualizar imagenes del carrousel
-    actualizatCarrousel(data.imagenes)
+    actualizarCarrousel([data.imageUrl, data.imageUrl, data.imageUrl])
     // Actualizar informacion principal
     actualizarPrincipal(data)
     // Actualizar sugerencias
-    actualizarSugerencias(data.sugerencias)
+    actualizarSugerencias(data2.sugerencias)
     // Actualizar reseñas
-    actualizarResenas(data.resenas)
+    actualizarResenas(data2.resenas)
 
     // botones condicionales
     const agregarCarrito = document.querySelector("#addCart")
@@ -54,7 +59,7 @@ const hiddenClass = "hidden";
 
 })()
 
-function actualizatCarrousel(images){
+function actualizarCarrousel(images){
 
     // Elementos del carrousel
     const carrousel = document.querySelector("#carouselExampleIndicators")
@@ -86,8 +91,8 @@ function actualizatCarrousel(images){
         const img = document.createElement("img");
         // Agregar propiedades a img
         img.classList.add("carousel-item")
-        img.src = `${element.url}`
-        img.alt = `${element.nombre}`
+        img.src = `${element}`
+        img.alt = `Image ${pos + 1}`
         // Si es el primer elemento, agregar la clase active
         if(pos === 0){
             img.classList.add("active")

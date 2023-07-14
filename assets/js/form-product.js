@@ -78,8 +78,7 @@ function validar(event){
         return;
     }
     
-     //Manda una alerta cuando todo el formulario se haya mandado con exito
-    alert("Haz mandado tu producto con exito!");
+     
     //Se habilita para que el formulario se pueda mandar:    
 
     //Una vez validados los campos crea un objeto javascript en formato json con toda la información del formulario.
@@ -94,13 +93,18 @@ function validar(event){
         imageUrl 
     }
 
+    console.log(formProductdata)
 
-  httpClient.post(endpoints.crearProducto, formProductdata)
-    .then(json => console.log(json))
-    .catch(e => {
-        console.log("Esto es un error")
-        console.log(e)
-    })
+    httpClient.post(endpoints.crearProducto, formProductdata, httpClient.headersJson)
+        .then(json => {
+            console.log(json)
+            //Manda una alerta cuando todo el formulario se haya mandado con exito
+            alert("Haz mandado tu producto con exito!");
+        })
+        .catch(e => {
+            console.log("Esto es un error")
+            console.log(e)
+        })
 
   //console.log(formProductdata);
 

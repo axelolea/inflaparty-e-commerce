@@ -1,7 +1,5 @@
 class HTTPClient{
 
-    // Dominio para hacer las peticiones
-    #domain = "localhost:5500";
     // Diccionarios con metodos
     #methodsRequest = {
         get: 'GET',
@@ -10,36 +8,41 @@ class HTTPClient{
         delete: 'DELETE'
     }
     // Cabezera
-    #headers = {
+    headersJson = {
         "Content-type": "application/json"
+    }
+
+    headersMultipart = {
+        "Content-type": "multipart/form-data"
     }
 
     constructor(){}
 
-    get(url, params = null){
-        return this.#requestHandler(url, params, this.#methodsRequest.get)
+    get(url, params = null, headers = this.headersJson){
+        return this.#requestHandler(url, params, this.#methodsRequest.get, headers)
     }
 
-    post(url, params = null){
-        return this.#requestHandler(url, params, this.#methodsRequest.post)
+    post(url, params = null, headers = this.headersJson){
+        return this.#requestHandler(url, params, this.#methodsRequest.post, headers)
     }
 
-    put(url, params = null){
-        return this.#requestHandler(url, params, this.#methodsRequest.put)
+    put(url, params = null, headers = this.headersJson){
+        return this.#requestHandler(url, params, this.#methodsRequest.put, headers)
     }
 
-    delete(url, params = null){
-        return this.#requestHandler(url, params, this.#methodsRequest.delete)
+    delete(url, params = null, headers = this.headersJson){
+        return this.#requestHandler(url, params, this.#methodsRequest.delete, headers)
     }
 
-    async #requestHandler(urlRequest, paramsBody, methodRequest){
+    async #requestHandler(urlRequest, paramsBody, methodRequest, headers){
 
         // Creando las opciones para el fetch
         const fecthOptions = {
             // Metodo de la peticion
             method: methodRequest,
             // Cabezera para respuesta json
-            headers: this.#headers,
+            headers: headers,
+            cache: "force-cache",
             // Body con los parametros (Solo si la peticion es diferente a GET)
             body: methodRequest !== this.#methodsRequest.get
                     ? JSON.stringify(paramsBody)

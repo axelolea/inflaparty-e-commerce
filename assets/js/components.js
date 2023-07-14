@@ -39,21 +39,21 @@ export const sugerenciaComponent = data => {
         "button",
         "span"
     ].map( selector => document.createElement(selector));
-
+    
     // Agregando valores al componente
-    componente.href = `${data.enlace}`;
+    componente.href = `/details-product.html?id=${data.id}`;
     componente.classList.add("col-lg-4", "col-md-6", "col-12", "item", "anim-container")
 
     //agregando clases a img container
     previewItem.classList.add("rounded-4", "mb-2", "img-container", "wrapperCarritoEstatico", "position-relative")
-    previewItem.style.backgroundImage = `url(${data.imagen})`;    
+    previewItem.style.backgroundImage = `url(${data.imageUrl ?? data.imagen})`;    
 
     // Agregar elemento rating
     previewItem.appendChild(ratingItem)
     
     // Cambiando elemento rating
     ratingItem.classList.add("position-absolute", "bottom-0", "end-0", "rating")
-    ratingItem.innerHTML = `${data.puntaje} <i class="bi bi-star-fill star-rate"></i>`
+    ratingItem.innerHTML = `5 <i class="bi bi-star-fill star-rate"></i>`
 
     // Si el item esta en la lista de compras:
     if(!carrito.isInCart(data.id)){
