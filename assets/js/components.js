@@ -41,7 +41,7 @@ export const sugerenciaComponent = data => {
     ].map( selector => document.createElement(selector));
     
     // Agregando valores al componente
-    componente.href = `/details-product.html?id=${data.id}`;
+    componente.href = `./details-product.html?id=${data.id}`;
     componente.classList.add("col-lg-4", "col-md-6", "col-12", "item", "anim-container")
 
     //agregando clases a img container
