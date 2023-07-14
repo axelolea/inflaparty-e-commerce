@@ -41,32 +41,32 @@ function validar(event){
     event.preventDefault();
 
     //Obtener los values de los inputs
-    const nombreProducto = nombreDelProducto.value;
-    let precioProducto = precioDelProducto.value;
-    let tipoProducto = tipoDelProducto.value;
-    let descripcionProducto  = descripcionDelProducto.value;
+    const nombre = nombreDelProducto.value;
+    let precio = precioDelProducto.value;
+    const tipo = tipoDelProducto.value;
+    const descripcion  = descripcionDelProducto.value;
 
     //Validando el nombre del producto 
-    if(nombreProducto==""){
+    if(nombre==""){
         alert("Este campo Nombre del producto no puede quedarse vacio"); //Sale alerta si el campo no esta llenado
         return; 
     }
 
     //Validamos el precio del producto 
-    if(precioProducto==""){
+    if(precio==""){
         alert("Porfavor ingrese un Precio al Producto que desea registrar"); //Sale alerta si el campo no esta llenado
         return;
     }
 
     //Validamos el tipo de producto
-    if (tipoProducto =="Seleccionar uno"){
+    if (tipo =="Seleccionar uno"){
         alert("Porfavor seleccione un tipo de producto"); //Sale alerta si el campo sigue con "seleccionar uno"
         return;
 
     }
 
     //validamos la descripcion del producto
-    if(descripcionProducto ==""){
+    if(descripcion ==""){
         alert("Por favor describa su producto"); //Sale alerta si el campo no esta llenado
         return; 
 
@@ -78,27 +78,33 @@ function validar(event){
         return;
     }
     
-     //Manda una alerta cuando todo el formulario se haya mandado con exito
-    alert("Haz mandado tu producto con exito!");
+     
     //Se habilita para que el formulario se pueda mandar:    
 
     //Una vez validados los campos crea un objeto javascript en formato json con toda la información del formulario.
+    const imageUrl = fileInput.files[0].name
+    precio = precio.replace("$", "");
 
-const formProductdata = {
-    nombreProducto,
-    precioProducto,
-    tipoProducto,
-    descripcionProducto,
-    //imagenProducto: 
-  }
+    const formProductdata = {
+        nombre,
+        precio,
+        tipo,
+        descripcion,
+        imageUrl 
+    }
 
+    console.log(formProductdata)
 
-//   httpClient.post(endpoints.contacto, formProductdata)
-//     .then(json => console.log(json))
-//     .catch(e => {
-//         console.log("hola")
-//         console.log(e)
-//     })
+    httpClient.post(endpoints.crearProducto, formProductdata, httpClient.headersJson)
+        .then(json => {
+            console.log(json)
+            //Manda una alerta cuando todo el formulario se haya mandado con exito
+            alert("Haz mandado tu producto con exito!");
+        })
+        .catch(e => {
+            console.log("Esto es un error")
+            console.log(e)
+        })
 
   //console.log(formProductdata);
 

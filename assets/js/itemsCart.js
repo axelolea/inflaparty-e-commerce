@@ -24,20 +24,19 @@ export function appendItemsCart(items = []) {
 
         //div del wrapperCarrito
         const previewItem = document.createElement('div');
-        previewItem.classList.add('wrapperCarritoEstatico', 'back-img');
-        previewItem.style.backgroundImage = `url(${item.imagen})`;
+        previewItem.classList.add('wrapperCarritoEstatico', 'back-img', 'position-relative');
+        previewItem.style.backgroundImage = `url(${item.imageUrl})`;
         
 
         //div del buttonCarritoEstatico
         const deleteBtn = document.createElement('div');
-        deleteBtn.classList.add('buttonCarritoEstatico');
+        deleteBtn.classList.add('buttonCarritoEstatico', 'position-absolute', 'top-0', 'start-100', 'translate-middle');
 
         //div del boton eliminar
         const deleteIcon = document.createElement('div');
         deleteIcon.classList.add('iconSE');
         deleteIcon.innerHTML = '<i class="fas fa-times"></i>';
         deleteIcon.addEventListener('click',() => {
-            console.log(item.id)
             carrito.deleteItemCart(item.id)
             updateShoppingCartData()
         })

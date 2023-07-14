@@ -28,20 +28,20 @@
             <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
                 <h1>Formulario del Producto</h1>
                 <!--FORM-->
-                <form id="form">
+                <form id="form" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="nombreDelProducto" class="form-label">Nombre del Producto</label>
-                        <input type="text" class="form-control" id="nombreDelProducto" placeholder="Nombre de Producto">
+                        <input type="text" class="form-control" id="nombreDelProducto" name="nombre" placeholder="Nombre de Producto">
                     </div>
 
                     <div class="mb-3">
                         <label for="precioDelProducto" class="form-label">Precio del Producto</label>
-                        <input type="text" class="form-control" id="precioDelProducto">
+                        <input type="text" class="form-control" name="precio" id="precioDelProducto">
                     </div>
 
                     <div class="mb-3">
                         <label for="tipoDelProducto">Tipo del Producto</label>
-                        <select class="form-select" aria-label="Default select example" id="tipoDelProducto" class="form-control">
+                        <select class="form-select" aria-label="Default select example" name="tipo" id="tipoDelProducto" class="form-control">
                             <option selected>Seleccionar uno</option>
                             <option value="1">Inflables</option>
                             <option value="2">Trampolines</option>
@@ -52,16 +52,14 @@
 
                     <div class="mb-3">
                         <label for="descripcionDelProducto" class="form-label">Descripción del Producto</label>
-                        <textarea class="form-control no-resize" id="descripcionDelProducto" rows="5"></textarea>
+                        <textarea class="form-control no-resize" name="descripcion" id="descripcionDelProducto" rows="5"></textarea>
                     </div>
                     
                     <!--Button para Agregar Imagen-->
                     <div class="center-buttons">
                         <button class="buttonSM botones" id="btnAgregarImagen">Agregar Imagen</button>
-                        <input type="file" accept=".png, .jpg, .jpeg" id="fileInput" style="display: none;">
-
-
-                    <button type="submit" class="buttonEn buttonAmarillo" id="btnEnviar">Enviar</button>
+                        <input type="file" accept=".png, .jpg, .jpeg" name="file" id="fileInput" style="display: none;">
+                        <button type="submit" class="buttonEn buttonAmarillo" id="btnEnviar">Enviar</button>
                     </div>
 
                     <div>
