@@ -12,50 +12,55 @@
     --primary-light-color: #ffa2da;
 }
 
+.title{
+    background-color: #EC058E;
+    border-radius: 1rem;
+    color: #EEEEEE;
+}
+
 .container{
-    padding-top: 50px;
-    display: grid;
+    padding-top: 1rem;
 }
 
 #sobreNosotros{
-    background-color: #ffa2da;
     border-radius: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 50px;
 }
 
-#containerMisionVision{
+#containerMision, #containerVision{
    padding-left: 10px;
    padding-right: 10px;
-   margin-bottom: 60px;
-   margin-top: 60px;
 }
 
-#mision{
-    padding: 30px;
-    background-color: #62BBC1;
+.inflableImg{
+    height: 300px;
+    width: 400px;
     border-radius: 30px;
-    margin: auto;
 }
 
-#vision{
-    padding: 30px;
-    background-color: #62BBC1;
-    border-radius: 30px;
-    margin: auto;
+#inflablePic{
+    display: flex;
+    justify-content: center;
 }
 
-.containerValores{
-    padding-top: 30px;
-    background-color:#ffc43a;
-    border-radius: 30px;
-    padding-right: 20px;
+
+
+#containerValores{
+    text-align: center;
 }
 
-.listaValores{  
-    list-style: inside disc;
-    text-align: justify;
+.valor{
+    margin-top: 40px;
 }
+
+.icon{
+    font-size: 80px;
+}
+
+
+
 
 .img{
     margin-top: 20px; margin-bottom: 20px;
@@ -80,6 +85,7 @@
 
 .card-text{
     background-color: #FBAF00;
+    color: #010400;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -87,6 +93,7 @@
 .card-title{
     margin-top: 30px;
     background-color: #FBAF00;
+    color: #010400;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -94,14 +101,10 @@
 .containerFotos{
     text-align: center;
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .parrafos{
     text-align: center;
     padding-top: 5px;
-}
-
-body{
-    background-color: #EEEEEE;
 }

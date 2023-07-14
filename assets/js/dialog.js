@@ -18,6 +18,19 @@ async function createDialogComponents() {
   calendarioBtn.addEventListener("click", () => dialogComponent.showModal());
   closeBtn.addEventListener("click", () => dialogComponent.close());
 
+  function resetCalendar() {
+    startDate = null;
+    endDate = null;
+    generateCalendar();
+  }
+
+  dialogComponent.resetCalendar = resetCalendar;
+
+  closeBtn.addEventListener("click", () => {
+    dialogComponent.resetCalendar(); // Resetear el calendario cuando se cierra el calendario
+    dialogComponent.close();
+  });
+
   /*------------------------------*/
     // Obtén las referencias a los elementos relevantes
     const monthElement = dialogComponent.querySelector('.calendar .header .month');
@@ -106,13 +119,6 @@ async function createDialogComponents() {
     });
     } //fin de funcion  (GenerateCalendar)
 
-    
-
-
-
-   
-
-
 
 // Función para manejar el evento de clic en un día
   function handleDayClick(event) {
@@ -161,22 +167,11 @@ async function createDialogComponents() {
 
     //Imprimir las fechas de inicio y fin del dia selccionado
     console.log('Start Date:', startDate);
-    console.log('End Date:', endDate);
-  
-    
-
-   
+    console.log('End Date:', endDate);   
   
     generateCalendar();
 
   } //fin de funcion
-
-
-
-
-    
-
-
 
   
     // Función para manejar el evento del botón anterior
