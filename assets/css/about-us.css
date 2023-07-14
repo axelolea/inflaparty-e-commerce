@@ -12,52 +12,54 @@
     --primary-light-color: #ffa2da;
 }
 
+.title{
+    background-color: #EC058E;
+    border-radius: 1rem;
+    color: #EEEEEE;
+}
+
 .container{
-    padding-top: 50px;
-    display: grid;
+    padding-top: 1rem;
 }
 
 #sobreNosotros{
-
     border-radius: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 #containerMision, #containerVision{
    padding-left: 10px;
    padding-right: 10px;
-   margin-bottom: 60px;
-   margin-top: 60px;
 }
 
 .inflableImg{
     height: 300px;
     width: 400px;
-    position: relative;
     border-radius: 30px;
-    margin-left: 50px;
+}
+
+#inflablePic{
+    display: flex;
+    justify-content: center;
 }
 
 
-#mision, #vision{
-    padding: 30px;
-
-    border-radius: 30px;
-}
 
 #containerValores{
     text-align: center;
-    margin-top: 30px;
 }
 
 .valor{
     margin-top: 40px;
 }
 
-.bi{
+.icon{
     font-size: 80px;
 }
+
+
 
 
 .img{
@@ -105,8 +107,4 @@
 .parrafos{
     text-align: center;
     padding-top: 5px;
-}
-
-body{
-    background-color: #EEEEEE;
 }
